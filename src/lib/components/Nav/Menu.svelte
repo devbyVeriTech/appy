@@ -7,13 +7,26 @@
     import AiOutlineCustomerService from "svelte-icons-pack/ai/AiOutlineCustomerService"; 
     import AiOutlinePhone from "svelte-icons-pack/ai/AiOutlinePhone"; 
     import { fly } from 'svelte/transition';
+    import { currentUser } from '$lib/pocketbase';
 
 
     let search = "" ;
 
 </script>
     <div class="conna"  transition:fly={{x:-200, duration:400}}>
+
         <div class="menutins">
+
+            {#if $currentUser}                
+                <div class="greetings">
+                    Hi, {$currentUser.username}
+                </div>
+                {:else}
+                <div class="greetings">
+                    Hi, Guest
+                </div>
+            {/if}
+
                 <ul>
                     <div class="list">
                         <li>
@@ -78,6 +91,12 @@ a{
     display: flex;
     align-items: center;
     gap: 10px;
+}
+
+.greetings{
+    text-transform: capitalize;
+    padding-left: 40px;
+    margin: -40px 0 20px 0px;
 }
 
 .searchbox{
