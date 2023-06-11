@@ -52,7 +52,6 @@
     export let play;
     export let pause;
 
-    export let seekTo;
 </script>
 
 <!-- <input type="range" min="0" max="100" value="0" class="durationseek" on:change={seekTo}> -->

@@ -85,14 +85,6 @@
 			playerState = "play";
 	}
 
-
-	function seekTo (){
-		
-	}
-
-
-
-
 </script>
 <svelte:head>
 	<title>
