@@ -1,6 +1,6 @@
 <script>
 	import {onMount} from "svelte";
-	import {musicList} from "../musiclist.js"
+	import {musicList} from "$lib/components/musiclist.js"
     
 	
     
