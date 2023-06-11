@@ -26,7 +26,7 @@
                 <div class="spacer"></div>
 
                 <div class="picture">
-                    <img src="/image/my-picture.jpg" alt="Cherrydee" class="my-picture">
+                    <img src="/image/my-picture.webp" alt="Cherrydee" class="my-picture">
                 </div>
 
                 <div class="heading">
