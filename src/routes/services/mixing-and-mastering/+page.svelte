@@ -2,6 +2,8 @@
 	let title = "Mixing and mastering"
 	import RightButton from "$lib/components/NavButton/RightButton.svelte";
   	import LeftButton from "$lib/components/NavButton/LeftButton.svelte";
+	import Icon from 'svelte-icons-pack'
+	import IoBagAddOutline from "svelte-icons-pack/bs/BsBagPlus"; 
 </script>
 
 <svelte:head>
@@ -43,9 +45,9 @@
 								</div>
 
 								<div class="detailss">
-									<a href="/">
+									<a href="https://paystack.com/pay/mixing-and-mastering">
 										<button type="submit" value="order" id="submit" class="details">
-											<i class="fa fa-shopping-bag"></i>  $200.00
+											<Icon src={IoBagAddOutline} size='1.2em' color='black' className='bag' /> $200.00
 										</button>
 									</a>
 									<a href="/">
@@ -78,6 +80,7 @@
 
 
 <style>
+	
 
 	.nav-buttons{
 		display: flex;
