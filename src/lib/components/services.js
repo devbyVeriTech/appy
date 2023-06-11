@@ -4,7 +4,7 @@ export const services = writable ([
 	{
 		id:"1",
 		name:"Mixing and mastering",
-		image:"mixing-and-mastering.png",
+		image:"mixing-and-mastering.webp",
         price:"$200",
         description:"",
 		url:"/services/mixing-and-mastering",
@@ -13,7 +13,7 @@ export const services = writable ([
     {
 		id:"2",
 		name:"Custom Beat Making",
-		image:"custom-beats.png",
+		image:"custom-beats.webp",
         price:"$500",
         description:"",
 		url:"/services/custom-beat-making",
@@ -23,7 +23,7 @@ export const services = writable ([
     {
 		id:"1",
 		name:"Song writing",
-		image:"song-writing.png",
+		image:"song-writing.webp",
         price:"$1000",
         description:"",
 		url:"/services/song-writing",

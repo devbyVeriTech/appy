@@ -45,6 +45,9 @@
 
 
 <style>
+*{
+	scrollbar-color: var(--purple-footer) transparent;
+}
 .license-p{
 	display: flex;
 	margin: 0 25px;

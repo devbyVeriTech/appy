@@ -26,7 +26,7 @@
 
 
 <div class="img">
-	<img src="/image/my-picture.jpg" alt="">
+	<img src="/image/my-picture.webp" alt="">
 </div>
 
 <div class="overlay">

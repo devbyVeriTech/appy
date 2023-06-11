@@ -22,7 +22,7 @@
 					<div class="services-container">
 						<div class="services">
 							<div class="art">
-								<img src="/image/custom-beats.png" alt="" class="artt">
+								<img src="/image/custom-beats.webp" alt="" class="artt">
 							</div>
 
 							<div class="d-rest">
