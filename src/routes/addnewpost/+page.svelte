@@ -120,15 +120,7 @@
     font-weight: 600;
 }
 
-.already{
-    margin-top: 20px;
-    font-size: 12px;
-    text-align: center;
-}
-.already a{
-    color: #f98903;
-    font-weight: bold;
-}
+
 
 .button{
     padding-top: 35px;

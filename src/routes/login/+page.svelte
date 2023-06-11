@@ -103,7 +103,7 @@
                             <div class="rightline"></div>
                         </div>
 
-                        <div class="google" on:click={OAuth2}>
+                        <div class="google">
                             <button name="button" type="submit" value="submit">
                                 <Icon src={FaBrandsGoogle} color='white' size="1.3em"/>
                                     Sign in with Google

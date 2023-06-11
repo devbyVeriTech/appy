@@ -368,10 +368,6 @@ small{
     line-height: 5px
 }
 
-.button-group {
-	
-}
-
 .bgroup{
 	display: flex;
 	align-items: center;

@@ -19,17 +19,4 @@
 
 <style>
 
-      /* *{
-        background: var(--top-bg);
-
-    } */
-    main{
-
-    }
-.spacer{
-    padding: 60px 0px;
-}
-
-.conta{
-}
 </style>

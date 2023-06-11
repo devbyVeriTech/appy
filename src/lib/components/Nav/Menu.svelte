@@ -19,11 +19,19 @@
 
             {#if $currentUser}                
                 <div class="greetings">
-                    Hi, {$currentUser.username}
+                    Hi, 
+                    <p>
+                        <a href="/my-account">
+                            {$currentUser.username}
+                        </a>
+                    </p>
                 </div>
                 {:else}
                 <div class="greetings">
-                    Hi, Guest
+                    Hi, 
+                    <p>
+                        Guest
+                    </p>     
                 </div>
             {/if}
 
@@ -93,7 +101,17 @@ a{
     gap: 10px;
 }
 
+p{
+    font-weight: 550;
+    text-transform: uppercase;
+    margin: auto 0;
+}
+
 .greetings{
+    display: flex;
+    align-items: center;
+    gap: .3rem;
+    font-weight: normal;
     text-transform: capitalize;
     padding-left: 40px;
     margin: -40px 0 20px 0px;

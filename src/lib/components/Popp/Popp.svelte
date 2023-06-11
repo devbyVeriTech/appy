@@ -222,11 +222,6 @@
 	align-self: center;
 }
 
-.usage{
-	padding: 10px;
-	border-radius: 0;
-	font-size: 11px;	
-}
 
 .purchase-btn{
 	display: flex;
@@ -456,14 +451,6 @@ small{
 
 	}
 
-	.button-group{
-		justify-content: flex-start;
-		padding-top: 20px;
-		left: 0;
-		margin-left: 0;
-		margin-right: auto;
-		right: auto;
-	}
 
 	.meta-play{
 		display: flex;

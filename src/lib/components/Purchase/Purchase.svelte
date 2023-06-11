@@ -6,11 +6,7 @@
 
 	
 
-	export let beatavatar;
-	export let beatname;
-	export let beatgenre;
-	export let beatbpm;
-	export let beatkey;
+
 
     
 	
