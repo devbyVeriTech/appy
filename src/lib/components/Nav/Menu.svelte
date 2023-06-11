@@ -1,6 +1,11 @@
 <script>
 	import Icon from 'svelte-icons-pack/Icon.svelte';
 	import AiOutlineSearch from "svelte-icons-pack/ai/AiOutlineSearch"; 
+    import AiOutlineUser from "svelte-icons-pack/ai/AiOutlineUser"; 
+    import AiOutlineHome from "svelte-icons-pack/ai/AiOutlineHome"; 
+    import BsMusicNote from "svelte-icons-pack/bs/BsMusicNote"; 
+    import AiOutlineCustomerService from "svelte-icons-pack/ai/AiOutlineCustomerService"; 
+    import AiOutlinePhone from "svelte-icons-pack/ai/AiOutlinePhone"; 
     import { fly } from 'svelte/transition';
 
 
@@ -10,40 +15,42 @@
     <div class="conna"  transition:fly={{x:-200, duration:400}}>
         <div class="menutins">
                 <ul>
-                    <li>
-                        <a href="/home">
-                            <i class="fa fa-home"></i> 
-                            Home
-                        </a> 
-                    </li>
-                    
-                    <li>
-                        <a href="/tracks">
-                            <i class="fa fa-music"></i> 
-                            All beats
-                        </a> 
-                    </li>
-                    
-                    <li>
-                        <a href="/about">
-                            <i class="fa fa-user"></i> 
-                            About
-                        </a> 
-                    </li>
-                    
-                    <li>
-                        <a href="/services">
-                            <i class="fa fa-compact-disc"></i> 
-                            Services
-                        </a> 
-                    </li>
-                    
-                    <li>
-                        <a href="/contact">
-                            <i class="fa fa-phone"></i> 
-                            Contact
-                        </a> 
-                    </li>
+                    <div class="list">
+                        <li>
+                            <a href="/home">
+                                <Icon src={AiOutlineHome} size='1.4em' color='#69428e'/>
+                                Home
+                            </a> 
+                        </li>
+                        
+                        <li>
+                            <a href="/tracks">
+                                <Icon src={BsMusicNote} size='1.4em' color='#69428e'/>
+                                All beats
+                            </a> 
+                        </li>
+                        
+                        <li>
+                            <a href="/about">
+                                <Icon src={AiOutlineUser} size='1.4em' color='#69428e'/>
+                                About
+                            </a> 
+                        </li>
+                        
+                        <li>
+                            <a href="/services">
+                                <Icon src={AiOutlineCustomerService} size='1.4em' color='#69428e'/>
+                                Services
+                            </a> 
+                        </li>
+                        
+                        <li>
+                            <a href="/contact">
+                                <Icon src={AiOutlinePhone} size='1.4em' color='#69428e'/>
+                                Contact
+                            </a> 
+                        </li>
+                    </div>
                     
 
                     <div class={search ? 'above' : 'searchbox'}>
@@ -67,6 +74,11 @@
     pointer-events: none;
 }
 
+a{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
 
 .searchbox{
     margin-top: 50px;

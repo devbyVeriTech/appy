@@ -6,6 +6,7 @@
   	import Popp from "$lib/components/Popp/Popp.svelte";
 	import Icon from 'svelte-icons-pack'
 	import IoBagAddOutline from "svelte-icons-pack/bs/BsBagPlus"; 
+	import IoEllipsisVertical from "svelte-icons-pack/io/IoEllipsisVertical"; 
 	import { fly } from "svelte/transition";
 
 
@@ -166,7 +167,7 @@
 									</Trigger>
 								  </Modal>
 										<button type="button" class="pay-button">
-											<i class="fa fa-ellipsis-vertical fa-xl"></i>
+											<Icon src={IoEllipsisVertical} size='1.2em' color='white' />
 										</button>
 
 									</div>
@@ -265,9 +266,6 @@
 		display: none;
 }
 
-.gggg{
-
-}
 
 .license-p{
 	overflow-x: scroll;
@@ -348,6 +346,7 @@
 	color: #fff;
 	background: var(--yellow-button);
 	border-radius: 4px;
+	min-height: 41px;
 }
 
 button{
@@ -618,9 +617,6 @@ small{
 }
 button{
 	cursor: pointer;
-}
-button i{
-    width: 20px;
 }
 
 /* element {

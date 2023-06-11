@@ -1,5 +1,10 @@
 <script>
   import { each } from "svelte/internal";
+    import Icon from "svelte-icons-pack";
+    import BsPauseCircleFill from "svelte-icons-pack/bs/BsPauseCircleFill";
+    import BsPlayCircleFill from "svelte-icons-pack/bs/BsPlayCircleFill";
+    import FaSolidStepBackward from "svelte-icons-pack/fa/FaSolidStepBackward";
+    import FaSolidStepForward from "svelte-icons-pack/fa/FaSolidStepForward";
     import { musicList } from "../musiclist.js";
 
 
@@ -60,50 +65,65 @@
             
             <div class="prev">
                 <i type="button" on:click={prev}>
-                    <i class="fa fa-backward-fast"></i>
+                    <Icon src={FaSolidStepBackward} color='white'/>
                 </i>
             </div>
 
             <div class="playpause">
                 <i type="button" on:click={playpausestop}>
-                    {#if playerState=="play"}    
-                    <i class={pause}></i> 
+                    {#if playerState=="play"}
+                        <Icon src={BsPauseCircleFill} size='1.6em' />                        
                     {:else}
-                    <i class={play}></i> 
+                        <Icon src={BsPlayCircleFill} size='1.6em' />                        
                     {/if}
                 </i>
             </div>
 
             <div class="next">
                 <i type="button" on:click={next}>
-                    <i class="fa fa-forward-fast"></i>
+                    <Icon src={FaSolidStepForward} color='white' />
                 </i>
             </div>
 
         </div>
-        
-                <!-- <div class="beatimage">
-                    <img src={beatavata}>
-                </div> -->
 
                 <div class="beattitle">
                     <h3>{beatnam}</h3>
                     <p>{producer}</p>
                 </div>
 
-            <!-- <div class="buy-btn">
-                <button class="buy" type="submit" value="Add" on:click={addToCart}>
-                    <i class="fa-solid fa-shopping-bag fa-lg"></i>
-                    Add
-                </button>
-            </div> -->
+        <div class="control-dis"> 
+            
+            <div class="prev">
+                <i type="button" on:click={prev}>
+                    <Icon src={FaSolidStepBackward} color='white'/>
+                        </i>
+            </div>
+        
+            <div class="playpause">
+                <i type="button" on:click={playpausestop}>
+                    {#if playerState=="play"}
+                        <Icon src={BsPauseCircleFill} size='1.6em' />                        
+                    {:else}
+                        <Icon src={BsPlayCircleFill} size='1.6em' />                        
+                    {/if}
+                </i>
+            </div>
+        
+            <div class="next">
+                <i type="button" on:click={next}>
+                    <Icon src={FaSolidStepForward} color='white' />
+                </i>
+            </div>
+        
+        </div>
             
     </footer>
 <style>
     footer{
-        grid-template-areas: "control img";
-        grid-template-columns: [index] 33%;
-        display: grid;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
         bottom: 0;
         position: fixed;
         margin: 0 auto;
@@ -114,6 +134,10 @@
         padding: 5px;
         gap: 0px;
         box-shadow: 0px 0px 10px 1px var(--bg-color);
+    }
+
+    i{
+        cursor: pointer;
     }
 
     .beattitle{
@@ -150,52 +174,17 @@
 
     .control{
         display: flex;
-        grid-area: "control";
-        justify-content: center;
+        align-items: center;
         padding-left: 20px;
     }
-    .more{right: 0;
-        grid-area: "more";
-        width: 20px;
-        justify-content: flex-end;
+    .control-dis{
+        display: flex;
+        visibility: hidden;
+        align-items: center;
+        padding-left: 20px;
     }
 
-    .more i{
-        right: 0;
-        margin-right: 0;
-        position: fixed;
-        bottom: 15px;
-    }
-    i{
-        cursor: pointer;
-    }
-    
-    .beatimage{
-	aspect-ratio: 1/1;
-	border-radius: 50%;
-	max-height: 2.5em;
-	max-width: 2.5em;
-	min-height: 2.25em;
-	min-width: 4em;
-    padding: 0px 10px;
-    margin: 0 10px;
-    object-fit: cover;
-    
-    
-    }
 
-    .beatimage img {
-        aspect-ratio: 1/1;
-        height: 100%;
-        width: 100%;
-        object-fit: cover;
-        grid-area: "img";
-        border-radius: 50%;
-    }
-.buy-btn{
-    align-self: center;
-	
-}
 
 /* input{
     appearance: none;
@@ -206,9 +195,6 @@
     z-index: 1;
 } */
 
-input::-webkit-slider-thumb{
-    appearance: none;
-}
 
 @media (min-width:720px)    {
     footer{

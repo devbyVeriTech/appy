@@ -5,6 +5,8 @@
 	import Menu from './Menu.svelte';
 	import Icon from 'svelte-icons-pack/Icon.svelte';
 	import AiOutlineSearch from "svelte-icons-pack/ai/AiOutlineSearch"; 
+	import VscAccount from "svelte-icons-pack/vsc/VscAccount"; 
+	import BsCart from "svelte-icons-pack/bs/BsCart"; 
 
     let open="";
 	let search="";
@@ -55,13 +57,13 @@
 		{#if $currentUser}
 			<button class="nav-icon icon-btn no-style">
 				<a href="/checkout">
-					<i class="fa fa-cart-shopping fa-xl"></i>
+					<Icon src={BsCart} size='1.6em' />
 				</a>
 			</button>
 			
 			<button class="nav-icon icon-btn no-style">
 				<a href="/my-account">
-					<i class="fa fa-user-circle fa-xl"></i>
+					<Icon src={VscAccount} size='1.6em' />
 				</a>
 			</button>
 			{:else}
@@ -232,9 +234,6 @@ input::placeholder{
 
 }
 
-.fa-bars{
-	cursor: pointer;
-}
 
 .navvy{
 	background: var(--purple-header);
@@ -335,11 +334,6 @@ button.icon-btn {
 	cursor: pointer;
 }
 
-
-i{
-	width: 10px;
-	height: 10px;
-}
 
 
 

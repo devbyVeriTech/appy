@@ -3,7 +3,7 @@ import {writable} from "svelte/store";
 export const musicList = writable ([
 	{
 		id:"1",
-		image:"Lover.png",
+		image:"Lover.webp",
 		audio:"Lover.wav",
 		name:"Lover",
 		artist:"Cherrydee",
@@ -14,7 +14,7 @@ export const musicList = writable ([
 	},	
 	{
 		id:"2",
-		image:"Trench.png",
+		image:"Trench.webp",
 		audio:"Trench.mp3",
 		name:"Trench",
 		artist:"Cherrydee",
@@ -25,7 +25,7 @@ export const musicList = writable ([
 	},
 	{
 		id:"3",
-		image:"Emotions.png",
+		image:"Emotions.webp",
 		audio:"Emotions.mp3",
 		name:"Emotions",
 		artist:"Cherrydee",
@@ -35,7 +35,7 @@ export const musicList = writable ([
 	},
 	{
 		id:"4",
-		image:"Summer.png",
+		image:"Summer.webp",
 		audio:"Summer.mp3",
 		name:"Summer",
 		artist:"Cherrydee",
@@ -45,7 +45,7 @@ export const musicList = writable ([
 	},
 	{
 		id:"5",
-		image:"OverThem.png",
+		image:"OverThem.webp",
 		audio:"OverThem.mp3",
 		name:"Over Them",
 		artist:"Cherrydee",
@@ -55,7 +55,7 @@ export const musicList = writable ([
 	},	
 	{
 		id:"6",
-		image:"Special.png",
+		image:"Special.webp",
 		audio:"Special.mp3",
 		name:"Special",
 		artist:"Cherrydee",
@@ -65,7 +65,7 @@ export const musicList = writable ([
 	},
 	{
 		id:"7",
-		image:"WestSide.png",
+		image:"WestSide.webp",
 		audio:"Westside.mp3",
 		name:"West Side",
 		artist:"Cherrydee",
