@@ -2,6 +2,7 @@
     let title = "About";
     let producer = "Cherrydee";
     let slug = "Nigerian Record Producer";
+    import { socialLinks } from "$lib/components/socialLinks";
 </script>
 
 <svelte:head>
@@ -38,6 +39,16 @@
 
                 <div class="content">
                     <!-- content -->
+
+
+                    <div class="social-media">
+                        {#each $socialLinks as link}   
+                            <div class="icons">
+                               <img src="./{link.image}" alt=""> 
+                            </div>
+                        {/each}
+                    </div>
+
                 </div>
                 
             </div>
@@ -99,6 +110,23 @@ img{
     font-size: 25px;
     font-weight: 700;
 
+}
+
+.social-media{
+    width: 100%;
+}
+
+.icons{
+    display: flex;
+    background: #fff;
+    flex-direction: row;
+    padding: 0px 10px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+}
+
+.icons img{
+    width: 60px;
 }
 
 .app-content-p {

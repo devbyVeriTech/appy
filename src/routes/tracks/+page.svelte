@@ -1,7 +1,6 @@
 <script>
 	import {onMount} from "svelte";
 	import {musicList} from "$lib/components/musiclist.js"
-	import Pop from '../components/Pop/Pop.svelte';
 	import BottomPlayer from "$lib/components/BottomPlayer/BottomPlayer.svelte";
   	import Popp from "$lib/components/Popp/Popp.svelte";
 	import { licenses } from "$lib/components/licenses.js";
