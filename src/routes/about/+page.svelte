@@ -181,4 +181,17 @@ main {
 .spacer{
     padding:    10px;
 }
+
+@media (min-width:1100px){
+    .social-media{
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        margin: auto;
+    }
+
+    .icons{
+        width: fit-content;
+    }
+}
 </style>
