@@ -42,10 +42,12 @@
 
 
                     <div class="social-media">
-                        {#each $socialLinks as link}   
-                            <div class="icons">
-                               <img src="./{link.image}" alt=""> 
-                            </div>
+                        {#each $socialLinks as link}
+                            <a href={link.url}>
+                                <div class="icons">
+                                    <img src="./{link.image}" alt="" style="height: {link.size};"> 
+                                </div>
+                            </a>
                         {/each}
                     </div>
 
@@ -129,7 +131,7 @@ img{
 
 .icons img{
     width: 40px;
-    height: 40px;
+    max-height: 40px;
 }
 
 .app-content-p {
