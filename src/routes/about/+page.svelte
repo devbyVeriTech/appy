@@ -118,15 +118,18 @@ img{
 
 .icons{
     display: flex;
+    align-items: center;
     background: #fff;
     flex-direction: row;
     padding: 0px 10px;
     margin-bottom: 10px;
     border-radius: 4px;
+    height:40px;
 }
 
 .icons img{
-    width: 60px;
+    width: 40px;
+    height: 40px;
 }
 
 .app-content-p {
