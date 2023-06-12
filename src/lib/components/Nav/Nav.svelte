@@ -16,10 +16,9 @@
 <header>
 <nav class="navvy">
 	<div class="menu">
-		<!-- <i class="fa fa-bars fa-lg"></i> -->
-		<Hamburger bind:open --color="#8658a0" --layer-height="2.6px" --layer-width="20px" --layer-spacing ="3.5px"/>
+		<Hamburger bind:open --color="#8658a0" --active-color="#fff" --layer-height="2.6px" --layer-width="20px" --layer-spacing ="3.5px"/>
 
-			{#if open}
+		{#if open}
 			<Menu />
 		{/if}
 	</div>

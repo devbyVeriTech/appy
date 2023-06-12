@@ -12,14 +12,24 @@
 
     <form action="">
         <div class="formfield">
-            <input type="text" class="beattitle" placeholder="Beat Title" id="beattitle">
-            <input type="text" class="beattitle" placeholder="Producer" id="producer">
-            <input type="text" class="beattitle" placeholder="Collaborator" id="collaborator">
-            <input type="text" class="beattitle" placeholder="BPM" id="bpm">
-            <input type="text" class="beattitle" placeholder="Genre" id="genre">
-            <input type="text" class="beattitle" placeholder="Tag 1, Tag 2, Tag 3" id="tag">
+            <input type="text" name="beatTitle" class="beattitle" placeholder="Beat Title" id="beattitle">
+            <input type="text" name="producer" class="beattitle" placeholder="Producer" id="producer">
+            <input type="text" name="collaborator" class="beattitle" placeholder="Collaborator" id="collaborator">
+            <input type="text" name="beatBPM" class="beattitle" placeholder="BPM" id="bpm">
+            <input type="text" name="beatGenre" class="beattitle" placeholder="Genre" id="genre">
+            <input type="text" name="beatTags" class="beattitle" placeholder="Tag 1, Tag 2, Tag 3" id="tag">
             <input type="datetime-local" name="date" id="date" value="">
-            <input type="file" name="beatimage" id="uploadart" class="upload">
+            <input type="file" name="beatimage" id="beatimage" accept="image/png, image/jpeg" hidden>
+            <input type="file" name="beatMP3" id="beatMP3" accept="audio/mp3" hidden>
+
+            <div class="labels">
+                <label for="beatimage" class="upload">                
+                    Upload Artwork                
+                </label>
+                <label for="beatMP3" class="upload">                
+                    Upload MP3                
+                </label>
+            </div>
         </div>
 
         <button class="buttonn" type="submit" value="submit">Upload Beat</button>
@@ -34,6 +44,12 @@
         font-size: 13px;
         font-weight: 600;
         text-transform: uppercase;
+    }
+
+    .labels{
+        display: flex;
+        justify-content: space-between;
+        padding: 1px;
     }
 
     main{
@@ -55,13 +71,23 @@
         outline: none;
     }
 
+    input[type=file]{
+    }
+
     input::placeholder{
         font-weight: 550;
         font-size: 12px;
     }
 
-    input.upload{
+    .upload{
         border: none;
+        background: white;
+        color: var(--color-text-0);
+        padding: 10px;
+        font-size: 12px;
+        cursor: pointer;
+        font-weight: 550;
+        border-radius: var(--sm-radius);
     }
 
 
