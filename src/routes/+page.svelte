@@ -1,8 +1,6 @@
 <script>
-    import Login from "./components/Login/Login.svelte";
-    import Register from "./components/Register/+page.svelte";
-    import Tabs from "./components/Tabs/Tabs.svelte";
-
+    import Login from "$lib/components/Login/Login.svelte";
+    import Register from "$lib/components/Register/Register.svelte";
 
   //   let items = [
   //   { label: "Login",
