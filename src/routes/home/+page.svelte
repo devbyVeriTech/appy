@@ -282,6 +282,10 @@
 		display: none;
 }
 
+.contactform{
+	margin: 0px 20px;
+}
+
 .view-all{
 	display: flex;
 	text-align: center;
@@ -290,7 +294,7 @@
 
 
 .license-p{
-	overflow-x: scroll;
+	overflow-x: hidden;
 	scroll-snap-type:x mandatory;
 	overflow-anchor:auto mandatory;
 }
