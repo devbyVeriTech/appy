@@ -12,6 +12,7 @@
 
 	import { Modal, Content, Trigger}  from "sv-popup"
 	import Purchase from "$lib/components/Purchase/Purchase.svelte"
+  import ContactForm from "$lib/components/ContactForm/ContactForm.svelte";
 
 
 	// import store from "../components/store/store"
@@ -234,17 +235,32 @@
                             </div>
 
                             </div>
-						
+
+
+							
                         </article>
                     </div>
 				</div>
 				<div class="divider"></div>
 				{/each}
-
-				<div class="gggg">
+				
+				<div class="view-all">
+					<a href="/tracks">
+						<button class="pay-button">
+							  view all beats
+						  </button>
+					</a>
 				</div>
+
 				<div class="license-p">
 					<License />
+				</div>
+
+
+				<div class="space20"></div>
+				<div class="space20"></div>
+				<div class="contactform">
+					<ContactForm />
 				</div>
 
                 </div>
@@ -264,6 +280,12 @@
 	
 	audio {
 		display: none;
+}
+
+.view-all{
+	display: flex;
+	text-align: center;
+	justify-content: center;
 }
 
 
