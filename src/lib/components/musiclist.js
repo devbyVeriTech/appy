@@ -1,17 +1,17 @@
 import {writable} from "svelte/store";
 
 export const musicList = writable ([
-	{
-		id:"1",
-		image:"Lover.webp",
-		audio:"Lover.wav",
-		name:"Lover",
-		artist:"Cherrydee",
-		genre: "Afrobeat",
-		bpm: "100",
-		key: "Cm",
-		tag: [" Burna Boy", " Wizkid", " Skepta",]
-	},	
+	// {
+	// 	id:"1",
+	// 	image:"Lover.webp",
+	// 	audio:"Lover.wav",
+	// 	name:"Lover",
+	// 	artist:"Cherrydee",
+	// 	genre: "Afrobeat",
+	// 	bpm: "100",
+	// 	key: "Cm",
+	// 	tag: [" Burna Boy", " Wizkid", " Skepta",]
+	// },	
 	{
 		id:"2",
 		image:"Trench.webp",
