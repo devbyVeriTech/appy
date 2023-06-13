@@ -31,8 +31,5 @@
 </footer>                                                                                                                                                                                                                                         
 
 <style>
-    main{
-      
-    }
 
 </style>
