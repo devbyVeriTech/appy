@@ -208,7 +208,6 @@
         display:flex;
         justify-content: flex-start;
         margin: auto;
-        padding-right: 6%;
 
     }
     
