@@ -27,9 +27,9 @@
         <div class="space20"></div>
 
             <article>
-                BeatStars Inc. is committed to protecting your privacy online. We are also committed to providing you with the very best experience we can on our website. In order to enhance your experience at our site we gather certain personal information about you that helps us customize our content to your tastes and preferences. Please read the following policy to understand how your personal information will be treated as you make full use of our website.
+                Cherrydee Beatstore is committed to protecting your privacy online. We are also committed to providing you with the very best experience we can on our website. In order to enhance your experience at our site we gather certain personal information about you that helps us customize our content to your tastes and preferences. Please read the following policy to understand how your personal information will be treated as you make full use of our website.
 
-                BeatStars Inc. ("BeatStars", "us", "we", or "our") operates the BeatStars.com website, BeatStars mobile applications and other related websites and applications (the "Service").
+                Cherrydee Beatstore ("Cherrydee Beatstore", "us", "we", or "our") operates the Cherrydee Beatstore.com website, Cherrydee Beatstore mobile applications and other related websites and applications (the "Service").
 
                 This page informs you of our policies regarding the collection, use, and disclosure of personal data when you use our Service and the choices you have associated with that data.
 
@@ -147,15 +147,15 @@
                     <li> To provide such capabilities as personalization services, interactive communications, online shopping, and personalized communication between you and the artists you prefer.</li>
                     <li> To track the progress and number of entries in our promotions and contests</li>
                     <li> To track visits to and business conducted at our online store</li>
-                    <li> To contact you on behalf of certain artists, other third parties, deliver targeted advertisements that may be of interest to you and information regarding special events at BeatStars.</li>
+                    <li> To contact you on behalf of certain artists, other third parties, deliver targeted advertisements that may be of interest to you and information regarding special events at Cherrydee Beatstore.</li>
                 </ul>
 
-                In addition, if we feel that a user abuses the BeatStars.com site in any way, we reserve the right to share certain information with third parties. Abuses include (but are not limited to) possible copyright infringement, possible libel and slander, possible credit card fraud.
+                In addition, if we feel that a user abuses the Cherrydee Beatstore.com site in any way, we reserve the right to share certain information with third parties. Abuses include (but are not limited to) possible copyright infringement, possible libel and slander, possible credit card fraud.
                 
                 <h3>
                     Sharing of Data
                 </h3>
-                BeatStars does not sell, rent, or trade your personal information with others. However, when one or more of our business partners co-sponsor a service, promotion and/or contest, we may share some or all of the information collected in connection with such service, promotion or contest with the co-sponsor(s). If you do not want your information to be shared, you will be able to choose not to allow the transfer by not using or signing up for that particular service, promotion or contest.
+                Cherrydee Beatstore does not sell, rent, or trade your personal information with others. However, when one or more of our business partners co-sponsor a service, promotion and/or contest, we may share some or all of the information collected in connection with such service, promotion or contest with the co-sponsor(s). If you do not want your information to be shared, you will be able to choose not to allow the transfer by not using or signing up for that particular service, promotion or contest.
 
                 In addition, when you make a purchase through our online store, or sign up to receive promotional items from us, we may share some of your personal information with third parties helping us to complete your transaction or send you the items you signed up to receive. When we share your information with such third parties, we will work to ensure that only the information necessary to complete your transaction is disclosed. This privacy policy does not apply to such third parties.
                 
@@ -179,7 +179,7 @@
                 <h3>
                     Datacrushers
                 </h3>
-                Datacrushers is a revenue discovery platform and global leader in site-wide revenue, shopping cart abandonment recovery, and acceleration. Shopping cart data and email addresses are shared with the BeatStars producers that have opted in for the service. BeatStars producers are bound by their terms and conditions located at: <a href="https://www.datacrushers.com/terms-and-conditions"> https://www.datacrushers.com/terms-and-conditions.</a>
+                Datacrushers is a revenue discovery platform and global leader in site-wide revenue, shopping cart abandonment recovery, and acceleration. Shopping cart data and email addresses are shared with the Cherrydee Beatstore producers that have opted in for the service. Cherrydee Beatstore producers are bound by their terms and conditions located at: <a href="https://www.datacrushers.com/terms-and-conditions"> https://www.datacrushers.com/terms-and-conditions.</a>
                 
                 <h3>
                     Retention of Data
@@ -197,7 +197,7 @@
 
                 Your consent to this Privacy Policy followed by your submission of such information represents your agreement to that transfer.
 
-                BeatStars will take all steps reasonably necessary to ensure that your data is treated securely and in accordance with this Privacy Policy and no transfer of your Personal Data will take place to an organization or a country unless there are adequate controls in place including the security of your data and other personal information.
+                Cherrydee Beatstore will take all steps reasonably necessary to ensure that your data is treated securely and in accordance with this Privacy Policy and no transfer of your Personal Data will take place to an organization or a country unless there are adequate controls in place including the security of your data and other personal information.
                 
                 <h3>
                     Disclosure of Data
@@ -205,21 +205,21 @@
                 <h2>
                     Business Transaction
                 </h2>
-                If BeatStars Inc. is involved in a merger, acquisition or asset sale, your Personal Data may be transferred. We will provide notice before your Personal Data is transferred and becomes subject to a different Privacy Policy.
+                If Cherrydee Beatstore is involved in a merger, acquisition or asset sale, your Personal Data may be transferred. We will provide notice before your Personal Data is transferred and becomes subject to a different Privacy Policy.
                 
                 <h2>
                     Disclosure for Law Enforcement
                 </h2>
-                Under certain circumstances, BeatStars Inc. may be required to disclose your Personal Data if required to do so by law or in response to valid requests by public authorities (e.g. a court or a government agency).
+                Under certain circumstances, Cherrydee Beatstore may be required to disclose your Personal Data if required to do so by law or in response to valid requests by public authorities (e.g. a court or a government agency).
                 
                 <h2>
                     Legal Requirements
                 </h2>
-                BeatStars Inc. may disclose your Personal Data in the good faith belief that such action is necessary to:
+                Cherrydee Beatstore may disclose your Personal Data in the good faith belief that such action is necessary to:
 
                 <ul>
                     <li>  To comply with a legal obligation</li>
-                    <li> To protect and defend the rights or property of BeatStars Inc.</li> 
+                    <li> To protect and defend the rights or property of Cherrydee Beatstore /li> 
                     <li> To prevent or investigate possible wrongdoing in connection with the Service</li> 
                     <li> To protect the personal safety of users of the Service or the public</li> 
                     <li> To protect against legal liability</li> 
@@ -240,7 +240,7 @@
                 <h3>
                     Your Rights
                 </h3>
-                BeatStars Inc. aims to take reasonable steps to allow you to correct, amend, delete, or limit the use of your Personal Data.
+                Cherrydee Beatstore aims to take reasonable steps to allow you to correct, amend, delete, or limit the use of your Personal Data.
 
                 Whenever made possible, you can update your Personal Data directly within your account settings section. If you are unable to change your Personal Data, please contact us to make the required changes.
 
@@ -253,7 +253,7 @@
                     <li> To rectify any Personal Data held about you that is inaccurate</li> 
                     <li> To request the deletion of Personal Data held about you</li> 
                 </ul>
-                You have the right to data portability for the information you provide to BeatStars Inc.. You can request to obtain a copy of your Personal Data in a commonly used electronic format so that you can manage and move it.
+                You have the right to data portability for the information you provide to Cherrydee Beatstore  You can request to obtain a copy of your Personal Data in a commonly used electronic format so that you can manage and move it.
 
                 Please note that we may ask you to verify your identity before responding to such requests.
                 
