@@ -13,4 +13,8 @@
     <Footer/>
 </div>
 
-
+<style>
+    main{
+        width: 100%;
+    }
+</style>

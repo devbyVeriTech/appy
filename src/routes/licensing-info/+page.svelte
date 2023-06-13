@@ -11,7 +11,6 @@
 
 <main>
     <div class="page-title">
-
         <div class="headd">
             <div class="back-icon">
                 <span onclick="history.back()">
@@ -32,7 +31,6 @@
                 <div class="license-p">
                     <License />
                 </div>
-
             </div>
         </div>
 
@@ -46,6 +44,7 @@
 </main>
 
 <style>
+
     .page-title{
         display: block;
         background-color: #4c3554;
@@ -58,7 +57,7 @@
         margin-top: 27px;
     }
     .license-p{
-        overflow-x: scroll;
+        margin: 0 auto;
         scroll-snap-type:x mandatory;
         overflow-anchor:auto mandatory;
     }
@@ -80,6 +79,7 @@
 
 .resp-content-width {
 	margin: 0 auto;
-	max-width: calc(100vw - 2.25em) !important;
+	max-width: calc(100dvw - 2.25em) !important;
 }
+
 </style>

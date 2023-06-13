@@ -154,7 +154,7 @@ a{
   }
 
 main {
-	max-width: 82rem;
+	max-width: 100dvw !important;
 }
 button.icon-btn {
 	background-color: transparent;
