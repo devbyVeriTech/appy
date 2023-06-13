@@ -5,6 +5,7 @@
     let title = "Edit Profile";
     import Icon from "svelte-icons-pack";
     import TiArrowBack from "svelte-icons-pack/ti/TiArrowBack";
+    import FaSolidCamera from "svelte-icons-pack/fa/FaSolidCamera";
 
     let loading
     $: loading = false
@@ -116,7 +117,9 @@
                                 id="avatar-preview"
                             >
                             <label for="avatar" class="edit-pic">
-                                <i class="fa fa-camera "></i>
+                                <div class="piccky">
+                                    <Icon src={FaSolidCamera} size='1em' color='white' />
+                                </div>
                             </label>
                         </div>
                         <div class="space20"></div>
@@ -246,7 +249,14 @@
     top: 18%;
     left: 50%;
     cursor: pointer;
-    transform: translateY(-30%) translateX(275%);
+    transform: translateY(-30%) translateX(150%);
+}
+
+.piccky{
+    background: var(--purple-button);
+    padding: 10px;
+    display: flex;
+    border-radius: 50%;
 }
 
 .edit-picture{

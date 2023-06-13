@@ -36,7 +36,7 @@
             <div class="box resp-content-width">
                 <div class="space10"></div>
                 <div class="picture">
-                    <img src="/image/my-picture.jpg" alt="Cherrydee" class="my-picture">
+                    <img src="/image/my-picture.webp" alt="Cherrydee" class="my-picture">
                 </div>
                 <div class="space20"></div>
 
