@@ -196,12 +196,4 @@ main {
 	max-width: calc(100vw - 2.25em) !important;
 }
 
-@media (min-width:960px) {  
-    .page-title{
-		justify-content: center;
-		margin: 0 30px;
-		padding: 0px 20px;
-		width: 36%;
-	}
-}
 </style>
