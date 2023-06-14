@@ -89,6 +89,10 @@
 
 <style>
 
+*{
+	overflow-x: hidden;
+}
+
 :global(.poin) {
     cursor: pointer;
 }
