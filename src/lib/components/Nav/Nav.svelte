@@ -90,7 +90,6 @@
 <style>
 
 *{
-	overflow-x: hidden;
 }
 
 :global(.poin) {
