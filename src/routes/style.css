@@ -112,6 +112,7 @@ html {
 	--form-contrast-bg: hsla(0,0%,41%,.15);
 	--disabled-form-bg: rgba(64,71,73,.75);
 	--disabled-form-fg: #9fa8ab;
+    
 }
 
 html.Dark {
@@ -135,10 +136,11 @@ body, html {
 	margin: 0;
 	max-height: 100%;
 	min-height: 100vh;
-	min-width: 100vw;
+	min-width: 100%;
 	overscroll-behavior: contain;
     scroll-behavior: smooth;
     box-sizing: border-box;
+    
 }
 
 h2{
@@ -152,7 +154,7 @@ a{
   }
 
 main {
-	max-width: 100dvw !important;
+	max-width: 100% !important;
 }
 button.icon-btn {
 	background-color: transparent;

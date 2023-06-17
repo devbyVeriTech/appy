@@ -27,6 +27,7 @@
 	>
 		<div class="modal-container">
 			<slot name="header" />
+				
 			<slot />
 		</div>
 	</div>

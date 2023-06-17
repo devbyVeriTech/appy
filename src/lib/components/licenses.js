@@ -43,7 +43,7 @@ export const licenses = writable ([
 
 	{
 		name:"Unlimited",
-		files:"Everything + beat will be removed from site",
+		files:"Everything + Take down request",
 		price: "MAKE AN OFFER",
 		usage: ["Everything"],
 	},

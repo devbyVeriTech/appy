@@ -105,20 +105,22 @@
 											<span class="secondary subtitle-group">
 											</span>
 										</div>
+										
+										<!-- <em> -->
+											<div class="smallie">
+												<small class="subtitle">
+													<div class="genre">
+														{beatgenre}
+													</div>
+													<div class="bpm">BPM</div>
+													{beatbpm}
+													<div class="key">
+														KEY: {beatkey}                                                    
+													</div>
+												</small>
+											</div>
+											<!-- </em> -->
 									</div>
-									
-												<!-- <em> -->
-													<small class="subtitle">
-														<div class="genre">
-															{beatgenre}
-														</div>
-																<div class="bpm">BPM</div>
-																{beatbpm}
-														<div class="key">
-															KEY: {beatkey}                                                    
-														</div>
-													</small>
-												<!-- </em> -->
 							</div>
 
 							<div class="info-bar"> </div>
@@ -281,8 +283,7 @@ button:hover{
 }
 
 .app-content-p {
-	display: grid;
-	cursor: default;
+	
     
 }
 
@@ -299,6 +300,7 @@ main {
 
 .box {
 	gap: .5rem 1rem;
+	
 }
 
 .box {
@@ -315,13 +317,13 @@ main {
 	-moz-user-select: none;
 	-webkit-user-select: none;
 	user-select: none;
-	width: auto;
+	margin: auto;
 }
 
 .resp-content-width {
 	display: flex;
 	margin: 0 auto;
-	max-width: calc(100vw - 1.6em) !important;
+	width: clamp(200px, 400px, 100%);
 }
 .img {
 	align-self: center;
@@ -389,6 +391,7 @@ small{
 	font-size: 9px;
 	color: rgb(255, 129, 90);
 	gap: 20px;
+	align-items: center;
 }
 
 .genre{

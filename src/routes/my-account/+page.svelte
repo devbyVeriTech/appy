@@ -44,19 +44,6 @@
         {#if currentUser}
             
         
-                <a href="my-account/payment-information">
-                    <div class="panel">
-                        <div class="account-section">
-                            <div class="icons">
-                                <Icon src={BsCreditCard2Back} size='1.2em' color='white'/>
-                            </div>
-                            <p>
-                                Payment Information
-                            </p>
-                        </div>
-                    </div>
-                </a>
-
                 <a href="my-account/downloads">
                     <div class="panel">
                         <div class="account-section">
@@ -65,19 +52,6 @@
                             </div>
                             <p>
                                 Downloads
-                            </p>
-                        </div>
-                    </div>
-                </a>
-
-                <a href="my-account/address">
-                    <div class="panel">
-                        <div class="account-section">
-                            <div class="icons">
-                                <Icon src={FaAddressCard} size='1.2em' color='white'/>
-                            </div>
-                            <p>
-                                Billing Address
                             </p>
                         </div>
                     </div>

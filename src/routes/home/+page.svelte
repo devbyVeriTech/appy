@@ -8,6 +8,7 @@
 	import IoBagAddOutline from "svelte-icons-pack/bs/BsBagPlus"; 
 	import IoEllipsisVertical from "svelte-icons-pack/io/IoEllipsisVertical"; 
 	import { fly } from "svelte/transition";
+	import FaTimesCircle from "svelte-icons-pack/fa/FaTimesCircle";
 
 
 	import { Modal, Content, Trigger}  from "sv-popup"
@@ -153,6 +154,7 @@
 								<Modal>
 									<Content>
 									  <Purchase 
+											<slot/>
 									  			beatname={$musicList[currentSongIndex].name}
 												beatavatar={"./image/"+$musicList[currentSongIndex].image}
 												beatbpm={$musicList[currentSongIndex].bpm}
@@ -221,7 +223,7 @@
 									<div class="form-popup" id="myForm">
 										<div class="pop">
 											<div class="close" on:click={closeForm}>
-												<i class="fa fa-xmark fa-xl icon-btn" ></i>
+												<Icon src={FaTimesCircle} color='white' size='1.4em' className='iconnn'/>
 											</div>
 											<Popp 
 												beatname={$musicList[currentSongIndex].name}
@@ -277,6 +279,10 @@
 		pause="fa fa-pause"/>
 
 <style>
+
+	:global(.iconnn){
+		cursor: pointer;
+	}
 	
 	audio {
 		display: none;
@@ -317,14 +323,12 @@
 	margin-right: 20;
 	margin-left: auto;
 	padding: 20px;
+	z-index: 10;
 }
-.close i{
-	right: 50px;
-}
+
 
 .pop{
 	background: var(--color-bg-purple);
-	width: max-content;
 }
 
 .form-popup{
@@ -338,6 +342,8 @@
 	right: 0px;
 	width: 100%;
 	z-index: 150;
+	width: clamp(200px, 400px, 100%);
+	cursor: default;
 	
 }
 .nospacer{
