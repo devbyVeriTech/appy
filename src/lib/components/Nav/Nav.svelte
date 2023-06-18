@@ -32,6 +32,7 @@
 	</div>
         
 		<div class="menu-items">
+			<li><a href="/tracks">All beats</a></li>
 			<li><a href="/about">About</a></li>
 			<li><a href="/services">Services</a></li>
 			<li><a href="/contact">Contact</a></li>
@@ -103,6 +104,12 @@
 .searchy{
 	width: auto;
 	margin: auto;
+}
+
+li{
+	display: flex;
+	flex-direction: row;
+	widows: 100%;
 }
 
 .searchbox{
@@ -360,6 +367,7 @@ button.icon-btn {
 		display: flex;
 		justify-content: center;
 		margin: auto;
+		width: max-content;
 		transform: translateX(-0%);
 	}
 

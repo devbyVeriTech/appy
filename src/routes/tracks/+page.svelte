@@ -3,10 +3,12 @@
 	import {musicList} from "$lib/components/musiclist.js"
 	import BottomPlayer from "$lib/components/BottomPlayer/BottomPlayer.svelte";
   	import Popp from "$lib/components/Popp/Popp.svelte";
-	import { licenses } from "$lib/components/licenses.js";
+	import License from "$lib/components/License/License.svelte";
 	import Icon from 'svelte-icons-pack'
-	import BsBagPlus from "svelte-icons-pack/bs/BsBagPlus"; 
+	import IoEllipsisVertical from "svelte-icons-pack/io/IoEllipsisVertical"; 
 	import IoBagAddOutline from "svelte-icons-pack/bs/BsBagPlus"; 
+	import FaTimesCircle from "svelte-icons-pack/fa/FaTimesCircle";
+
 	
 
 
@@ -154,7 +156,7 @@
 									</Trigger>
 								  </Modal>
 										<button type="button" class="pay-button">
-											<i class="fa fa-ellipsis-vertical fa-xl"></i>
+											<Icon src={IoEllipsisVertical} size='1.2em' color='white' />
 										</button>
 
 									</div>
@@ -207,7 +209,7 @@
 									<div class="form-popup" id="myForm">
 										<div class="pop">
 											<div class="close" on:click={closeForm}>
-												<i class="fa fa-xmark fa-xl icon-btn" ></i>
+												<Icon src={FaTimesCircle} color='white' size='1.4em' className='iconnn'/>
 											</div>
 											<Popp 
 												beatname={$musicList[currentSongIndex].name}
@@ -323,7 +325,8 @@
 	font-weight: 700;
 	color: #fff;
 	background: var(--yellow-button);
-	border-radius: 5px;
+	border-radius: 4px;
+	min-height: 41px;
 }
 
 button{
