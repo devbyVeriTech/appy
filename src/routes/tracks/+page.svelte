@@ -8,6 +8,7 @@
 	import IoEllipsisVertical from "svelte-icons-pack/io/IoEllipsisVertical"; 
 	import IoBagAddOutline from "svelte-icons-pack/bs/BsBagPlus"; 
 	import FaTimesCircle from "svelte-icons-pack/fa/FaTimesCircle";
+	import Wave from "$lib/components/Wave/wave.svelte";
 
 	
 
@@ -100,6 +101,8 @@
 				<audio src={"./audio/"+$musicList[currentSongIndex].audio}
 				bind:this={audioElement}></audio>
                 <div class="box resp-content-width">
+
+					<div class="here">
 					<div class="boxx">
 						<div class="img">
 							<img class="svelte-1vm3yrq" src={"./image/"+$musicList[currentSongIndex].image} alt="{$musicList[currentSongIndex].name}">
@@ -154,14 +157,21 @@
 										  $45.00
 									  </button>
 									</Trigger>
-								  </Modal>
+								</Modal>
 										<button type="button" class="pay-button">
 											<Icon src={IoEllipsisVertical} size='1.2em' color='white' />
 										</button>
 
-									</div>
 							</div>
-				</div>
+
+							
+						</div>
+						<div class="wave">
+							<Wave />
+						</div>
+					</div>
+
+			</div>
 
 
 
@@ -402,7 +412,14 @@ button{
     font-size: 12px;
 }
 
-
+.wave{
+	padding: 40px 0px;
+	height: 50px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: auto;
+}
 
 
 .thumbnail{
@@ -729,9 +746,14 @@ svg:not(:root) {
 		padding: 40px;
 		align-items: center;
 		vertical-align: middle;
-		
-
+		width: 100%;
 	}
+
+	.here{
+		display: flex;
+		align-items: center;
+	}
+
 	.box img{
 		width: 12rem;
 	}

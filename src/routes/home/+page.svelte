@@ -9,6 +9,8 @@
 	import IoEllipsisVertical from "svelte-icons-pack/io/IoEllipsisVertical"; 
 	import { fly } from "svelte/transition";
 	import FaTimesCircle from "svelte-icons-pack/fa/FaTimesCircle";
+	import Wave from "$lib/components/Wave/wave.svelte";
+
 
 
 	import { Modal, Content, Trigger}  from "sv-popup"
@@ -174,7 +176,11 @@
 										</button>
 
 									</div>
-							</div>
+
+								</div>
+								<div class="wave">
+									<Wave />
+								</div>
 				</div>
 
 
@@ -305,7 +311,14 @@
 	overflow-anchor:auto mandatory;
 }
 
-
+.wave{
+	padding: 40px 0px;
+	height: 50px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: auto;
+}
 
 .tag-btn{
 	display: flex;
@@ -679,7 +692,7 @@ svg:not(:root) {
 	grid-template-rows: 1fr;
 	max-width: inherit;
 	padding: .8rem 0 .4rem;
-	width: 82rem;
+	width: 100%;
     font-size: 12px;
 }
 
@@ -782,7 +795,7 @@ svg:not(:root) {
 		padding: 40px;
 		align-items: center;
 		vertical-align: middle;
-		
+		width: 100%;
 
 	}
 	.box img{
