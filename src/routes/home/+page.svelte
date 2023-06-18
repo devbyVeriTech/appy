@@ -696,8 +696,6 @@ svg:not(:root) {
     font-size: 12px;
 }
 
-
-
 /* .info-bar .index {
 	display: none;
 	justify-self: center;
