@@ -626,7 +626,7 @@ svg:not(:root) {
 	grid-template-rows: 1fr;
 	max-width: inherit;
 	padding: .8rem 0 .4rem;
-	width: 82rem;
+	width: 100%;
     font-size: 12px;
 }
 
