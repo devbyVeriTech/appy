@@ -292,6 +292,7 @@ button.hide-password{
     color: #fff;
     background: var(--yellow-button);
     background-clip: text;
+    -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     gap: 10px;
     border: 1px solid #f98903;
