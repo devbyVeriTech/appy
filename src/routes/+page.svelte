@@ -84,10 +84,14 @@
 
 .overlay{
 	background: linear-gradient(0deg, #69428e, #69428e36);
-	width: 100%;
+	width: 100dvw;
+	height:100vh;
 	height:100dvh;
 	position: fixed;
 	backdrop-filter: blur(1px) ;
+	overflow: hidden;
+	scroll-behavior: smooth;
+	object-fit: cover;
 }
 
 .logo{
@@ -99,7 +103,8 @@
 
 img{
 	height: 100vh;
-	width: 100vw;
+	height: 100dvh;
+	width: 100dvw;
 	overflow: hidden;
 	scroll-behavior: smooth;
 	object-fit: cover;
