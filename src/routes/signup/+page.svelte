@@ -69,6 +69,22 @@
                             <div class="SB-form-control">
                                 <input bind:value={password} type="password" name="password" id="password" placeholder="PASSWORD" required>
                             </div>
+                            <div class="hint" style="color: {password? "" : "#fff"};">
+                                <ul>
+                                    <li>
+                                        password must be at least 8 characters long
+                                    </li>
+                                    <li>
+                                        password must contain at least 1 numerical character
+                                    </li>
+                                    <li>
+                                        passowrd must contain at least 1 special character[@ : ; / % #]
+                                    </li>
+                                    <li>
+                                        password must contain at least 1 UPPERCASE alphabet
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
 
                         <div class="fields">                        
@@ -97,6 +113,15 @@
 </div>
 
 <style>
+
+.hint{
+    margin: 15px 0 0;
+    border-radius: 5px;
+    padding: 10px 5px;
+    background-color: var(--purple-footer);
+    color: var(--purple-footer-text);
+    font-size: 12px;
+}
 
 .SB-form-control {
 	display: flex;

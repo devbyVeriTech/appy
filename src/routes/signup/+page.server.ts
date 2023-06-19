@@ -1,5 +1,6 @@
 import { redirect } from "@sveltejs/kit";
 import type { Actions } from "./$types";
+import { setError } from "sveltekit-superforms/dist/superValidate";
 
 
 export const actions: Actions = {
@@ -20,6 +21,12 @@ export const actions: Actions = {
             console.error(e);
             throw e
         }
+
+        // const form = await superValidate(request, schema);
+
+        // if (locals.pb.collection('users').find({ where: { email: data.email}})){
+        //     return setError(form, 'data.email', 'Email already exists')
+        // }
 
         throw redirect (303, '/login');
     }

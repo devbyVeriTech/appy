@@ -66,7 +66,13 @@
                         <div class="fields">
                             <p class={email ? 'above' : 'center'}>USERNAME or E-MAIL ADDRESS</p>
                             <div class="SB-form-control">
-                                <input bind:value={email} type="text" name="email"placeholder="USERNAME or E-MAIL ADDRESS">
+                                <input 
+                                    bind:value={email} 
+                                    type="email" 
+                                    name="email"
+                                    placeholder="USERNAME or E-MAIL ADDRESS"
+                                    required
+                                    >
                             </div>
                         </div>
           
@@ -79,7 +85,9 @@
                                     name="password" 
                                     id="password" 
                                     placeholder="PASSWORD"
-                                    required>
+                                    required
+                                    pattern="[a-zA-Z0-9]"
+                                    >
                                     
                                     {#if hidePassword}
                                         <button
@@ -97,6 +105,7 @@
                                         </button>
                                     {/if}
                             </div>
+
                         </div>
                         
                         <div class="forgot-pass">
@@ -143,6 +152,11 @@
 </div>
 
 <style>
+
+.hint{
+    color: var(--purple-footer-text);
+    font-size: 12px;
+}
 
 button.hide-password{
     border: none;
