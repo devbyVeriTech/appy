@@ -8,6 +8,10 @@
 	import IoEllipsisVertical from "svelte-icons-pack/io/IoEllipsisVertical"; 
 	import IoBagAddOutline from "svelte-icons-pack/bs/BsBagPlus"; 
 	import FaTimesCircle from "svelte-icons-pack/fa/FaTimesCircle";
+	import BsPlayCircleFill from "svelte-icons-pack/bs/BsPlayCircleFill";
+	import BsPauseCircleFill from "svelte-icons-pack/bs/BsPauseCircleFill";
+	import FaSolidStepBackward from "svelte-icons-pack/fa/FaSolidStepBackward";
+    import FaSolidStepForward from "svelte-icons-pack/fa/FaSolidStepForward";
 
 	
 
@@ -30,15 +34,6 @@
 
 	})
 
-	function playpausestop() {
-		if (playerState == "play"){
-			playerState = "pause";
-			audioElement.pause();
-		} else {
-			playerState = "play";
-			audioElement.play();
-		}
-	}
 
 	function setSong(i){
 		currentSongIndex = i;
@@ -57,20 +52,16 @@
 	}
 	
 
-	// function playpause() {
-	// 	if (playerState == "play"){
-	// 		playerState = "pause";
-	// 		audioElement.pause();
-	// 	} else {
-	// 		playerState = "play";
-	// 		audioElement.play();
-	// 	}
+	function playpause() {
+		if (playerState == "play"){
+			playerState = "pause";
+			audioElement.pause();
+		} else {
+			playerState = "play";
+			audioElement.play();
+		}
 
-	// 	if (playerState == "stop"){
-	// 		playerState = "play";
-	// 		audioElement.play();
-	// 	} 
-	// }
+	}
 
 	
 	function prev() {
@@ -166,7 +157,7 @@
 							
 						</div>
 						<!-- <div class="wave">
-							
+
 						</div> -->
 					</div>
 
@@ -245,7 +236,7 @@
                 </div>
             </main>       
     </div>
-	<BottomPlayer 
+	<!-- <BottomPlayer 
         beatnam={$musicList[currentSongIndex].name}
         beatavata={"./image/"+$musicList[currentSongIndex].image}
         producer={$musicList[currentSongIndex].artist}
@@ -253,7 +244,71 @@
 		next={next}
 		playpausestop={playpausestop}
 		play="fa fa-play-circle fa-xl"
-		pause="fa fa-pause"/>
+		pause="fa fa-pause"/> -->
+
+		<footer bind:this={mainElement}>
+			<!-- <audio src={"./audio/"+$musicList[currentSongIndex].audio}
+			bind:this={audioElement}
+			></audio> -->
+	
+			<div class="control"> 
+				
+				<div class="prev">
+					<i type="button" on:click={prev}>
+						<Icon src={FaSolidStepBackward} color='white'/>
+					</i>
+				</div>
+	
+				<div class="playpause">
+					<i type="button" on:click={playpause}>
+						{#if playerState=="play"}
+							<Icon src={BsPauseCircleFill} size='1.6em' />                        
+						{:else}
+							<Icon src={BsPlayCircleFill} size='1.6em' />                        
+						{/if}
+					</i>
+				</div>
+	
+				<div class="next">
+					<i type="button" on:click={next}>
+						<Icon src={FaSolidStepForward} color='white' />
+					</i>
+				</div>
+	
+			</div>
+	
+					<div class="beattitle">
+						<h3>{$musicList[currentSongIndex].name}</h3>
+						<p>{$musicList[currentSongIndex].artist}</p>
+					</div>
+	
+			<div class="control-dis"> 
+				
+				<div class="prev">
+					<i type="button" on:click={prev}>
+						<Icon src={FaSolidStepBackward} color='white'/>
+							</i>
+				</div>
+			
+				<div class="playpause">
+					<i type="button" on:click={playpause}>
+						{#if playerState=="play"}
+							<Icon src={BsPauseCircleFill} size='1.6em' />                        
+						{:else}
+							<Icon src={BsPlayCircleFill} size='1.6em' />                        
+						{/if}
+					</i>
+				</div>
+			
+				<div class="next">
+					<i type="button" on:click={next}>
+						<Icon src={FaSolidStepForward} color='white' />
+					</i>
+				</div>
+			
+			</div>
+				
+		</footer>
 
 <style>
 	
@@ -709,6 +764,70 @@ svg:not(:root) {
 }
 
 
+footer{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        bottom: 0;
+        position: fixed;
+        margin: 0 auto;
+        overflow: hidden;
+        width: 100%;
+        background: var(--purple-header);
+        align-items: center;
+        padding: 5px;
+        gap: 0px;
+        box-shadow: 0px 0px 10px 1px var(--bg-color);
+    }
+
+    i{
+        cursor: pointer;
+    }
+
+    .beattitle{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        line-height: 0;
+        grid-area: "img";
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap	;
+        flex-wrap: nowrap;
+        max-width: 80%;
+        gap: 2px;
+        text-align: center;
+    }
+
+    .prev,
+    .playpause,
+    .next{
+        padding: 6px;
+    }
+
+
+    h3{
+        font-size: 13px;
+        text-transform: uppercase;
+    }
+    p{
+        font-size: 9px;
+        font-weight: 400;
+        margin-top: 5px;
+    }
+
+    .control{
+        display: flex;
+        align-items: center;
+        padding-left: 20px;
+    }
+    .control-dis{
+        display: flex;
+        visibility: hidden;
+        align-items: center;
+        padding-left: 20px;
+    }
+
 
 /* .featured-artist{
 	color: var(--lt-color-gray-400);
@@ -803,6 +922,21 @@ svg:not(:root) {
 	.subtitle{
 		justify-content: flex-start;
 	}
+
+	footer{
+        display: flex;
+        justify-content: space-evenly;
+    }
+    .control{
+        margin-left: 0;
+    }
+
+    .beattitle{
+        display:flex;
+        justify-content: flex-start;
+        margin: auto;
+
+    }
 
 }
 
