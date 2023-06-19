@@ -84,11 +84,9 @@
 
 .overlay{
 	background: linear-gradient(0deg, #69428e, #69428e36);
-	left: 0;	
-	right: 0;
-	top: 0;
+	width: 100%;
 	height:100dvh;
-	position: absolute;
+	position: fixed;
 	backdrop-filter: blur(1px) ;
 }
 
