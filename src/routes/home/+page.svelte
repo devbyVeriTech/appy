@@ -9,7 +9,6 @@
 	import IoEllipsisVertical from "svelte-icons-pack/io/IoEllipsisVertical"; 
 	import { fly } from "svelte/transition";
 	import FaTimesCircle from "svelte-icons-pack/fa/FaTimesCircle";
-	import Wave from "$lib/components/Wave/Wave.svelte";
 	import BsPlayCircleFill from "svelte-icons-pack/bs/BsPlayCircleFill";
 	import BsPauseCircleFill from "svelte-icons-pack/bs/BsPauseCircleFill";
 	import FaSolidStepBackward from "svelte-icons-pack/fa/FaSolidStepBackward";
@@ -169,9 +168,9 @@
 									</div>
 
 								</div>
-								<div class="wave">
-									<Wave />
-								</div>
+								<!-- <div class="wave">
+
+								</div> -->
 				</div>
 
 
