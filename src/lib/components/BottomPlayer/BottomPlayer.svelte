@@ -19,8 +19,9 @@
 
     export let prev;
     export let next;
-    export let play;
-    export let pause;
+    export let playbtn;
+    export let pausebtn;
+    export let playpause;
     
     function playpausestop() {
 		if (playerState == "play"){
@@ -37,9 +38,9 @@
 
 <!-- <input type="range" min="0" max="100" value="0" class="durationseek" on:change={seekTo}> -->
     <footer bind:this={mainElement}>
-        <audio src={"./audio/"+$musicList[currentSongIndex].audio}
+        <!-- <audio src={"./audio/"+$musicList[currentSongIndex].audio}
         bind:this={audioElement}
-        ></audio>
+        ></audio> -->
 
         <div class="control"> 
             
@@ -50,11 +51,11 @@
             </div>
 
             <div class="playpause">
-                <i type="button" on:click={playpausestop}>
+                <i type="button" on:click={playpause}>
                     {#if playerState=="play"}
-                        <Icon src={pause} size='1.6em' />                        
+                        <Icon src={pausebtn} size='1.6em' />                        
                     {:else}
-                        <Icon src={play} size='1.6em' />                        
+                        <Icon src={playbtn} size='1.6em' />                        
                     {/if}
                 </i>
             </div>
