@@ -56,6 +56,7 @@ main{
     gap: 2px;
     align-items: center;
     width: 100%;
+    visibility: hidden;
 }
 
 .bar{

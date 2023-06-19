@@ -9,7 +9,11 @@
 	import IoEllipsisVertical from "svelte-icons-pack/io/IoEllipsisVertical"; 
 	import { fly } from "svelte/transition";
 	import FaTimesCircle from "svelte-icons-pack/fa/FaTimesCircle";
-	import Wave from "$lib/components/Wave/wave.svelte";
+	import Wave from "$lib/components/Wave/Wave.svelte";
+	import BsPlayCircleFill from "svelte-icons-pack/bs/BsPlayCircleFill";
+	import BsPauseCircleFill from "svelte-icons-pack/bs/BsPauseCircleFill";
+
+
 
 
 
@@ -24,7 +28,7 @@
 	
     
 	let currentSongIndex = 0;
-	let playerState ;
+	let playerState ="pause";
 	let audioElement ;
 	let mainElement ;
 
@@ -281,8 +285,8 @@
 		prev={prev}
 		next={next}
 		playpausestop={playpausestop}
-		play="fa fa-play-circle fa-xl"
-		pause="fa fa-pause"/>
+		play={BsPlayCircleFill}
+		pause={BsPauseCircleFill}/>
 
 <style>
 

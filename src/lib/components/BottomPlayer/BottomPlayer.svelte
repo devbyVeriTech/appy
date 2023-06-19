@@ -13,44 +13,25 @@
 	let audioElement;
 	let mainElement;
     
-
-
-    //  function playpause() {
-	//  	if (playerState == "play"){
-	//  		playerState = "pause";
-	//  		audioElement.pause();
-	//  	} else {
-	//  		playerState = "play";
-	//  		audioElement.play();
-	//  	}
-
-	//  	if (playerState == "stop"){
-	//  		playerState = "play";
-	//  		audioElement.play();
-	//  	} 
-	//  }
-	//  function prev() {
-	//  	if (currentSongIndex == 0) {
-	//  		currentSongIndex = $musicList.length - 1;
-	//  	} else{
-	//  		currentSongIndex = (currentSongIndex - 1) % $musicList.length;
-	//  	}
-	//  	playerState = "play";
-	//  }
-
-	//  function next() {
-	//  		currentSongIndex = (currentSongIndex + 1) % $musicList.length;
-	//  		playerState = "play";
-	// }
     export let beatnam;
     export let beatavata;
     export let producer;
 
     export let prev;
     export let next;
-    export let playpausestop;
     export let play;
     export let pause;
+    
+    function playpausestop() {
+		if (playerState == "play"){
+			playerState = "pause";
+			audioElement.pause();
+		} else {
+			playerState = "play";
+			audioElement.play();
+		}
+	}
+   
 
 </script>
 
@@ -71,9 +52,9 @@
             <div class="playpause">
                 <i type="button" on:click={playpausestop}>
                     {#if playerState=="play"}
-                        <Icon src={BsPauseCircleFill} size='1.6em' />                        
+                        <Icon src={pause} size='1.6em' />                        
                     {:else}
-                        <Icon src={BsPlayCircleFill} size='1.6em' />                        
+                        <Icon src={play} size='1.6em' />                        
                     {/if}
                 </i>
             </div>

@@ -6,6 +6,8 @@
   import Icon from "svelte-icons-pack";
   import FaBrandsGoogle from "svelte-icons-pack/fa/FaBrandsGoogle";
   import BsArrowRight from "svelte-icons-pack/bs/BsArrowRight";
+  import IoEyeSharp from "svelte-icons-pack/io/IoEyeSharp";
+  import FaSolidEyeSlash from "svelte-icons-pack/fa/FaSolidEyeSlash";
  
 
     let title = "Login";
@@ -15,6 +17,7 @@
     let phone = "";
     let password = "";
     let confirmpass = "";
+    let hidePassword = true;
 
     
 </script>
@@ -70,7 +73,29 @@
                         <div class="fields">
                             <p class={password ? 'above' : 'center'}>PASSWORD</p>
                             <div class="SB-form-control">
-                                <input bind:value={password} type="password" name="password" id="password" placeholder="PASSWORD">
+                                <input 
+                                    value={password} 
+                                    type={`${hidePassword ? "password" : "text"}`} 
+                                    name="password" 
+                                    id="password" 
+                                    placeholder="PASSWORD"
+                                    required>
+                                    
+                                    {#if hidePassword}
+                                        <button
+                                            class="hide-password"
+                                            on:click={() => (hidePassword = false)}
+                                            >
+                                            <Icon src={IoEyeSharp} color='#fff' size='1.4em'/>
+                                        </button>
+                                        {:else}
+                                        <button
+                                            on:click={() => (hidePassword = true)}
+                                            class="hide-password"
+                                            >
+                                            <Icon src={FaSolidEyeSlash} color='#fff' size='1.4em'/>
+                                        </button>
+                                    {/if}
                             </div>
                         </div>
                         
@@ -118,6 +143,12 @@
 </div>
 
 <style>
+
+button.hide-password{
+    border: none;
+    background: transparent;
+}
+
 .sep{
     display: flex;
     align-items: center;
