@@ -8,7 +8,6 @@
 	import IoEllipsisVertical from "svelte-icons-pack/io/IoEllipsisVertical"; 
 	import IoBagAddOutline from "svelte-icons-pack/bs/BsBagPlus"; 
 	import FaTimesCircle from "svelte-icons-pack/fa/FaTimesCircle";
-	import Wave from "$lib/components/Wave/wave.svelte";
 
 	
 
@@ -166,9 +165,9 @@
 
 							
 						</div>
-						<div class="wave">
-							<Wave />
-						</div>
+						<!-- <div class="wave">
+							
+						</div> -->
 					</div>
 
 			</div>
