@@ -249,7 +249,7 @@
     top: 18%;
     left: 50%;
     cursor: pointer;
-    transform: translateY(-30%) translateX(150%);
+    transform: translateY(-50%) translateX(50%);
 }
 
 .piccky{

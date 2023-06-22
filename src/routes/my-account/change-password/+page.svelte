@@ -229,6 +229,7 @@ input{
     width: 7rem;
     height: 7rem;
     margin: auto;
+    display: none;
 }
 
 .my-picture{

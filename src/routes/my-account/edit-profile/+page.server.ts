@@ -20,17 +20,6 @@ export const actions: Actions = {
             locals.user.avatar = avatar;
             locals.user.username = username;
 
-            // if (!locals.pb?.collections?.update?.apply){
-            //     return {
-                    
-            //     }
-            // }
-
-            // return {
-            //     success: true
-            // }
-
-
         } catch (e){
             console.error(e);
             throw e

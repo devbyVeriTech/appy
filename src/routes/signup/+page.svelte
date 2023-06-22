@@ -46,7 +46,13 @@
                         <div class="fields">
                             <p class={email ? 'above' : 'center'}>E-MAIL ADDRESS</p>
                             <div class="SB-form-control">
-                                <input bind:value={email} type="email" name="email" id="email" placeholder="E-MAIL ADDRESS" required>
+                                <input 
+                                    bind:value={email} 
+                                    type="email" 
+                                    name="email" 
+                                    id="email" 
+                                    placeholder="E-MAIL ADDRESS" 
+                                    required>
                             </div>
                         </div>
 
@@ -67,7 +73,14 @@
                         <div class="fields">
                             <p class={password ? 'above' : 'center'}>PASSWORD</p>
                             <div class="SB-form-control">
-                                <input bind:value={password} type="password" name="password" id="password" placeholder="PASSWORD" required>
+                                <input 
+                                    bind:value={password} 
+                                    type="password" 
+                                    name="password" 
+                                    id="password" 
+                                    placeholder="PASSWORD" 
+                                    pattern="[a-zA-Z0-9]"
+                                    required>
                             </div>
                             <div class="hint" style="color: {password? "" : "#fff"};">
                                 <ul>

@@ -68,7 +68,7 @@
                             <div class="SB-form-control">
                                 <input 
                                     bind:value={email} 
-                                    type="email" 
+                                    type="text" 
                                     name="email"
                                     placeholder="USERNAME or E-MAIL ADDRESS"
                                     required
@@ -86,7 +86,6 @@
                                     id="password" 
                                     placeholder="PASSWORD"
                                     required
-                                    pattern="[a-zA-Z0-9]"
                                     >
                                     
                                     {#if hidePassword}
@@ -313,6 +312,9 @@ button.hide-password{
 
 }
 
+button{
+    cursor: pointer;
+}
 .fields{
     display: flex;
     flex-direction: column;

@@ -44,7 +44,7 @@
         {#if currentUser}
             
         
-                <a href="my-account/downloads">
+                <!-- <a href="my-account/downloads">
                     <div class="panel">
                         <div class="account-section">
                             <div class="icons">
@@ -55,7 +55,7 @@
                             </p>
                         </div>
                     </div>
-                </a>
+                </a> -->
 
                 <a href="/my-account/edit-profile">
                     <div class="panel">
@@ -105,18 +105,26 @@
                 
                 <div class="space20"></div>
                 <div class="space20"></div>
-                <a href="/delete">
-                    <div class="panel">
-                        <div class="account-section" style="background: #aa0000;">
-                            <div class="icons">
-                                <Icon src={AiOutlineUserDelete} size='1.2em' color='white'/>
+
+                <form method="POST" action="/my-account/delete" use:enhance={() => {
+                    return async ({result}) => {
+                        pb.authStore.delete(locals?.user?.id);
+                        await applyAction(result);
+                    }
+                }}>
+                    <button>
+                        <div class="panel">
+                            <div class="account-section" style="background: #aa0000;">
+                                <div class="icons">
+                                    <Icon src={AiOutlineUserDelete} size='1.2em' color='white'/>
+                                </div>
+                                <p>
+                                    Delete Account
+                                </p>
                             </div>
-                            <p>
-                                Delete Account
-                            </p>
                         </div>
-                    </div>
-                </a>
+                    </button>
+                </form>
             {/if}
         </main>
     </div>
@@ -167,6 +175,7 @@ p{
     width: 8rem;
     height: 8rem;
     margin: auto;
+    visibility: hidden;
 }
 
 .my-picture{

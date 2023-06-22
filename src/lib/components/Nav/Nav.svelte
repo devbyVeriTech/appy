@@ -30,16 +30,22 @@
 			<img src="" alt="Logo"> 
 		</a>
 	</div>
-        
-		<div class="menu-items">
-			<li><a href="/tracks">All beats</a></li>
-			<li><a href="/about">About</a></li>
-			<li><a href="/services">Services</a></li>
-			<li><a href="/contact">Contact</a></li>
+	<div class="searchyy">
+		<div class={search ? 'above' : 'searchbox'}>
+			<input type="search" bind:value={search} name="search" id="search" class="searchbar" placeholder="Search Here">
+			<button class="search-icon" type="submit">
+				<Icon src={AiOutlineSearch} size='1.4em' color={search ? '#fff' : '#69428e'} className={search ? 'poin' : 'nopoin'}/>
+			</button>
 		</div>
+	</div>
+	</div>
 
-
-    </div>
+	<div class="menu-items">
+		<li><a href="/tracks">All beats</a></li>
+		<li><a href="/about">About</a></li>
+		<li><a href="/services">Services</a></li>
+		<li><a href="/contact">Contact</a></li>
+	</div>
 
 	
     <div class="items">
@@ -103,7 +109,9 @@
 
 .searchy{
 	width: auto;
-	margin: auto;
+}
+.searchyy{
+	visibility: hidden;
 }
 
 li{
@@ -195,16 +203,13 @@ input::placeholder{
   }
 
     nav {
-	align-content: center;
 	align-items: center;
 	background: var(--purple-header);
 	border-bottom: .0625rem solid #1f1f1f;
-	display: grid;
-	grid-template-areas: "l m r";
-	grid-template-columns: 3em 4em 1fr;
+	display: flex;
 	height: var(--top-bar-height);
-	justify-content: space-between;
-	min-width: 100vw;
+	justify-content: center;
+	width: 100%;
 	padding-inline: .75em;
 	position: fixed;
 	left: 0;
@@ -215,31 +220,23 @@ input::placeholder{
 	z-index: 150;
 	box-shadow: var(--bg-color) 0px 0px 7px 1px;
 	transition: all 0.3s;
-;
 }
 
 .menu-items{
-	padding-left: 700px;
 	list-style: none;
 	align-items: center;
-	display: flex;
-	grid-area: r;
-	margin-left: auto;
-	margin-right: 0;
+	display: inline-flex;
 	gap: 40px;
-	position: relative;
-	width: 80%;
 	justify-content: center;
+	margin: auto;
+	width: 59%;
 }
 
 .menu{
-	grid-area: l;
-	padding: 0px 10px;
 	padding-left: 0;
-	margin-left: -12px;
+	margin-left: -10px;
 	border-right: 1px solid #1f1f1f;
 	color: #fff;
-	z-index: 999;
 
 }
 
@@ -249,11 +246,7 @@ input::placeholder{
 
 }
 .logo {
-	display: flex;
-	align-self: center;
-	align-items: center;
-	justify-content: center;
-	grid-area: l;
+	padding-left: 10px;
 
 }
 img {
@@ -265,27 +258,22 @@ img {
 }
 
 .middle {
-	justify-content: space-evenly;
 	max-width: 75%;
+	
 }
 
 .middle {
 	align-items: center;
 	display: inline-flex;
 	gap: .275rem;
-	grid-area: m;
-	/* justify-content: space-between; */
 	margin: 0 auto;
-	position: relative;
-	width: 80%;
+	width: 50%;
 }
 
 .items {
 	align-items: center;
 	display: inline-flex;
-	grid-area: r;
 	margin-left: auto;
-	position: relative;
 	width: 50%;
 	justify-content: flex-end;
 	
@@ -363,24 +351,29 @@ button.icon-btn {
 		display: none;
 	}
 
-	.menu-items{
-		display: flex;
-		justify-content: center;
-		margin: auto;
-		width: max-content;
-		transform: translateX(-0%);
-	}
 
 	nav{
 		display: flex;
+		padding: 0 30px;
+		justify-content: space-between;
 	}
+	.items{
+		display: flex;
+		gap: 0px;
+	}
+
+	.middle{
+		display: inline-flex;
+		
+	}
+
 }
 
 @media (max-width:1099px)	{
 	.menu-items{
 		display: none;
 	}
-	.searchy{
+	.searchy, .searchyy{
 		display: none;
 	}
 }

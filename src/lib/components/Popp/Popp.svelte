@@ -283,7 +283,9 @@ button:hover{
 }
 
 .app-content-p {
-	
+	height: 420px;
+	overflow-y: scroll;
+
     
 }
 

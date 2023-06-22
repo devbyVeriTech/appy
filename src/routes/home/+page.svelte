@@ -397,6 +397,8 @@
 
 .pop{
 	background: var(--color-bg-purple);
+	padding-bottom: 10px;
+
 }
 
 .form-popup{
@@ -408,8 +410,7 @@
 	top: 0;
 	bottom: 1;
 	right: 0px;
-	width: 100%;
-	z-index: 150;
+	z-index: 1;
 	width: clamp(200px, 400px, 100%);
 	cursor: default;
 	
