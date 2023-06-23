@@ -870,6 +870,7 @@ footer{
 	.here{
 		display: flex;
 		align-items: center;
+		justify-content: center;
 	}
 
 	.box img{

@@ -96,14 +96,14 @@
                                             class="hide-password"
                                             on:click={() => (hidePassword = false)}
                                             >
-                                            <Icon src={IoEyeSharp} color='#fff' size='1.4em'/>
+                                            <Icon src={IoEyeSharp} color='#fff' size='1.15em'/>
                                         </button>
                                         {:else}
                                         <button
                                             on:click={() => (hidePassword = true)}
                                             class="hide-password"
                                             >
-                                            <Icon src={FaSolidEyeSlash} color='#fff' size='1.4em'/>
+                                            <Icon src={FaSolidEyeSlash} color='#fff' size='1.15em'/>
                                         </button>
                                     {/if}
                             </div>
@@ -141,7 +141,7 @@
 
                         <div class="google">
                             <button name="button" type="submit" value="submit">
-                                <Icon src={FaBrandsGoogle} color='white' size="1.3em"/>
+                                <Icon src={FaBrandsGoogle} color='white' size="1em"/>
                                     Sign in with Google
                             </button>
                         </div>
@@ -163,6 +163,7 @@
 button.hide-password{
     border: none;
     background: transparent;
+    padding-right: 10px;
 }
 
 .sep{
