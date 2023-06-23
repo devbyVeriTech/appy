@@ -10,7 +10,7 @@ export const socialLinks = writable ([
         name: "apple music",
         image: "./Apple_Music_(10).png",
         url: "https://music.apple.com/ng/artist/cherrydee/1475205914",
-        size: "12px",
+        size: "10px",
     },
     {
         name: "spotify",

@@ -8,6 +8,7 @@
   import BsArrowRight from "svelte-icons-pack/bs/BsArrowRight";
   import IoEyeSharp from "svelte-icons-pack/io/IoEyeSharp";
   import FaSolidEyeSlash from "svelte-icons-pack/fa/FaSolidEyeSlash";
+  import TiWarningOutline from "svelte-icons-pack/Ti/TiWarningOutline";
  
 
     let title = "Login";
@@ -52,12 +53,14 @@
 
                     {#if form?.notVerified}
                         <div class="verificationwarning" transition:fade={{duration:400}}>
+                            <Icon src={TiWarningOutline} color='#fff' size='1.7em'/>
                             <span>You must verify your email address</span>
                         </div>
                     {/if} 
                     
                     {#if form?.notCreated}
                         <div class="verificationwarning" transition:fade={{duration:400}}>
+                            <Icon src={TiWarningOutline} color='#fff' size='1.7em'/>
                             <span>You must create an account first</span>
                         </div>
                     {/if}
@@ -214,12 +217,17 @@ button.hide-password{
 }
 
 .verificationwarning{
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
     font-size: 12px;
     font-weight: 550;
-    background: #aa0000;
+    background: var(--purple-button);
+    border: 1px solid #ffffff33;
     padding: 10px;
     border-radius: 4px;
+    color: #fff;
 }
 
 .forgot-pass{
@@ -386,9 +394,9 @@ main {
 .box {
 	-webkit-margin-after: 1.3333em;
 	background-color: rgba(55,69,82,0);
-	border-color: #1f1f1f;
+	/* border-color: #1f1f1f;
 	border-radius: .8em;
-	border-width: 1px;
+	border-width: 1px; */
 	gap: .5rem 1.25rem;
 	max-width: 100%;
 	user-select: none;

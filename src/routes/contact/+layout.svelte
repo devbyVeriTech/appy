@@ -4,7 +4,11 @@
     import '../../app.css'
     import '../style.css'
     import Nav from '$lib/components/Nav/Nav.svelte';
-  import { fly } from 'svelte/transition';
+    import { fly } from 'svelte/transition';
+
+
+
+						
 
 </script>
 

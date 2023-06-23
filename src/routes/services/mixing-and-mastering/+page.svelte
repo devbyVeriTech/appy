@@ -81,6 +81,11 @@
 
 <style>
 	
+	.detailss {
+		justify-content: center;
+		display: flex;
+		gap: 8px;
+	}
 
 	.nav-buttons{
 		display: flex;
@@ -149,7 +154,6 @@
 		padding: 0px;
 		text-transform: uppercase;
 		margin: 0;
-		margin-bottom: -15px;
 	}
 	
 	.service-name h2{
@@ -159,9 +163,7 @@
 		margin-top: 0;
 	}
 
-	.service-price{
-		line-height: 0.3rem;
-	}
+
 	.service-price h2{
 			font-size: 15px;
 		}
@@ -179,6 +181,8 @@
 	}
 	
 	.details{
+		display: flex;
+		align-items: center; gap: 2px;
 		margin-top: 10px;
 		width: 7rem;
 		border-radius: var(--xs-radius);
@@ -228,6 +232,7 @@
 		font-weight: 700;
 		text-transform: uppercase;
 		font-family: inherit;
+		color: black;
 	}
 	
 	

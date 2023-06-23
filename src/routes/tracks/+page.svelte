@@ -529,9 +529,9 @@ main {
 .box {
 	-webkit-margin-after: 1.3333em;
 	background-color: rgba(55,69,82,0);
-	border-color: #1f1f1f;
+	/* border-color: #1f1f1f;
 	border-radius: .8em;
-	border-width: 1px;
+	border-width: 1px; */
 	display: grid;
 	gap: .5rem 1.25rem;
 	grid-template-areas: "img" "metadata" "buttons" "metaplay";

@@ -2,6 +2,8 @@
 	import {onMount} from "svelte";
 	import { licenses } from "../licenses";
 	import {currentUser} from '$lib/pocketbase'
+	import { Accordion, AccordionItem } from '@skeletonlabs/skeleton';
+
 
 
 	
@@ -150,21 +152,24 @@
 												<button type="submit" class="purchase-btn" on:click={payWithPaystack}><i class="fa fa-shopping-bag"></i> <div class="price">${license.price}.00</div></button>
 											</div>
 										<div class="usage-trigger">
-											<div class="" on:click={triggerusage}>
-												{#if triggerbtn=="closed"}
-													<i class="fa fa-arrow-down"></i>
-													Show usage terms
-													{:else}
-													<i class="fa fa-arrow-up"></i>
-													Hide usage terms
-												{/if}
-											</div>
 
-											<div class="usageterms" bind:this={usageterms}>
-												Hello
-												Hi 
-												What's up?
-											</div>
+											<Accordion>
+												<AccordionItem >
+													<svelte:fragment slot="summary">Usage Terms</svelte:fragment>
+
+													<svelte:fragment slot="content">
+														{#each license.usage as use}
+														<ul>
+														</ul>	
+															<li>
+																{use}
+															</li>
+														{/each}
+													</svelte:fragment>
+												</AccordionItem>
+												<!-- ... -->
+											</Accordion>
+
 										</div>
 									</div>
 								{/each}
@@ -185,7 +190,9 @@
 
 <style>
 
-
+ul{
+	margin: 0;
+}
 
 .license-container{
 	display: flex;
@@ -258,11 +265,15 @@ button:hover{
 	color: var(--lt-color-text-very-light);
 	font-size: 12px;
 	cursor: pointer;
-	width: fit-content;
+	width: 100%;
+	list-style: circle;
 }
 
 
-
+.usage-trigger li, .usage-trigger ul{
+	list-style: circle;
+	margin: 0;
+}
 
 .bpm{
 	display: flex;
@@ -308,9 +319,9 @@ main {
 .box {
 	-webkit-margin-after: 1.3333em;
 	background-color: rgba(55,69,82,0);
-	border-color: #1f1f1f;
+	/* border-color: #1f1f1f;
 	border-radius: .8em;
-	border-width: 1px;
+	border-width: 1px; */
 	display: flex;
 	flex-direction: column;
 	justify-content: center;

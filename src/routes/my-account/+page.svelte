@@ -249,9 +249,9 @@ main {
 .box {
 	-webkit-margin-after: 1.3333em;
 	background-color: rgba(55,69,82,0);
-	border-color: #1f1f1f;
+	/* border-color: #1f1f1f;
 	border-radius: .8em;
-	border-width: 1px;
+	border-width: 1px; */
 	gap: .5rem 1.25rem;
 	max-width: 100%;
 	user-select: none;
