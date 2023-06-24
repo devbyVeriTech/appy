@@ -171,6 +171,10 @@ button.icon-btn {
 	width: 44px;
 }
 
+img{
+    pointer-events: none;
+}
+
 .space20 {
     height: 20px;
   }

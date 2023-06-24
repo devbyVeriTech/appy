@@ -65,6 +65,7 @@
     display: flex;
     justify-content: center;
     margin: auto;
+    
 }
 
 .product-image img{
@@ -73,7 +74,7 @@
     width: 100%;
     height: auto;
     border-radius: 4px;
-    box-shadow: 0px 1px 8px 0px var(--color-bg-purple);
+    box-shadow: 0px 1px 8px 0px var(--color-bg-purple);    
 }
 
 .product-details{
