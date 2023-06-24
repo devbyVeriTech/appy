@@ -2,7 +2,14 @@
     /** @type {import('./$types').PageData} */
     export let data;
     import { soundkits } from '$lib/components/soundkits';
+    let title = "Sound Kits"
 </script>
+
+<svelte:head>
+    <title>
+        {title} | Cherrydee Beatstore
+    </title>
+</svelte:head>
 
 <div class="product">
     {#each $soundkits as pack}
