@@ -199,6 +199,17 @@ button{
         box-shadow: 0px 1px 8px 0px var(--color-bg-purple);    
     }
 
+    .product-name{
+        font-size: 20px;
+        font-weight: 550;
+        padding: 3px;
+        margin: auto;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        
+    }
+
     .buttons{
         display: flex;
         justify-content: center;
