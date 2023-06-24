@@ -84,11 +84,16 @@
 .product-name{
     font-size: 20px;
     font-weight: 550;
-    padding: 3px 0px;
+    padding: 3px;
     width: 82%;
     margin: auto;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
     box-shadow: 0px 1px 5px 0px var(--color-bg-purple);
-
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    
 }
 
 .product-price{
@@ -97,6 +102,8 @@
     padding: 2px 0px;
     width: 82%;
     margin: auto;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
     box-shadow: 0px 1px 5px 0px var(--color-bg-purple);
 
 }
