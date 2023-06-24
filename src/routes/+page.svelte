@@ -56,12 +56,12 @@
 						</div>
 	
 						<div class="buttons">
-							<div class="btn">
+							<div class="btttn">
 								<a href="/login">
 									<button type="submit" class="login bttn">Log in</button>
 								</a>
 							</div>
-							<div class="btn">
+							<div class="btttn">
 								<a href="/signup">
 									<button type="submit" class="create bttn">Create an account</button>
 								</a>
@@ -82,6 +82,11 @@
 	position: relative;
 }
 
+.buttons{
+	display: flex;
+	flex-direction: column;
+}
+
 .overlay{
 	background: linear-gradient(0deg, #69428e, #69428e36);
 	width: 100dvw;
@@ -98,7 +103,7 @@
 	display: flex;
 	text-align: center;
 	font-weight: 900;
-	margin-bottom: 12px;
+	margin-bottom: 20px;
 }
 
 img{
@@ -138,10 +143,10 @@ img{
 }
 
 
-.btn{
+.btttn{
 	margin: auto;
 	padding: 10px 20px;
-	max-width: clamp(200px, 670px, 100%);
+	width: clamp(200px, 670px, 100%);
 	z-index: 2;
 }
 
@@ -150,10 +155,11 @@ img{
 	padding: 10px;
 	border-radius: 4px;
 	font-size: 14px;
-	font-weight: 500;
+	font-weight: 550;
 	font-family: inherit;
 	text-transform: uppercase;
 	z-index: 3;
+
 }
 
 .login{
@@ -162,6 +168,9 @@ img{
 	transition: background 75ms linear,color 75ms linear;
 }
 
+.create{
+	border: 1px solid var(--purple-button);
+}
 
 button{
 	border: none;

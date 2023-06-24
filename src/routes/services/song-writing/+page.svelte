@@ -268,5 +268,9 @@
 			display: block;
 			border-radius: 3px;
 		}
+
+		.detailss{
+			justify-content: flex-start;
+		}
 	}
 	</style>

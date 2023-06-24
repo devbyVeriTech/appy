@@ -333,6 +333,10 @@
 			line-height: 2;
 			margin-top: 0;
 		}
+
+		.detailss{
+			justify-content: flex-start;
+		}
 		
 	}
 	</style>

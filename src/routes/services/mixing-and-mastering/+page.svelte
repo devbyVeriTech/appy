@@ -182,7 +182,8 @@
 	
 	.details{
 		display: flex;
-		align-items: center; gap: 2px;
+		align-items: center; 
+		gap: 2px;
 		margin-top: 10px;
 		width: 7rem;
 		border-radius: var(--xs-radius);
@@ -324,6 +325,9 @@
 			border-radius: 3px;
 		}
 
+		.detailss{
+			justify-content: flex-start;
+		}
 		
 	}
 	</style>
