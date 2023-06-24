@@ -139,7 +139,7 @@ img{
 	font-weight: 550;
 	text-shadow: black 0px 0px 4px;
 	text-transform: capitalize;
-	transition: 3s ease;
+	transition: .3s ease;
 }
 
 
@@ -165,21 +165,22 @@ img{
 .login{
 	background: var(--yellow-button);
 	color: #fff;
-	transition: background 75ms linear,color 75ms linear;
+	transition: background 750ms linear,color 750ms linear;
 }
 
 .create{
-	border: 1px solid var(--purple-button);
+	background: var(--purple-button);
 }
 
 button{
 	border: none;
 	cursor: pointer;
 	z-index: 100;
+	transition: 7s ease;
 }
 
 button:hover{
-	background: var(--purple-button);
+	background: rgba(0, 0, 0, 0.301);
 	color: #fff;
 }
 
