@@ -165,7 +165,7 @@ button{
 
     .product{
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(10rem, 500fr));
+        grid-template-columns: repeat(auto-fit, minmax(12rem, 50fr));
         justify-content: center;
         justify-items: center;
         width: 80%;
