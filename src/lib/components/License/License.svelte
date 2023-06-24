@@ -103,7 +103,8 @@
 }
 
 li{
-	list-style:circle
+	list-style:circle;
+	margin-left: 25px;
 }
 
 @media (min-width:1100px) {
