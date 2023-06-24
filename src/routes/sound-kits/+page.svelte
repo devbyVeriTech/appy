@@ -73,6 +73,7 @@
     width: 100%;
     height: auto;
     border-radius: 4px;
+    box-shadow: 0px 1px 8px 0px var(--color-bg-purple);
 }
 
 .product-details{
@@ -82,11 +83,21 @@
 .product-name{
     font-size: 20px;
     font-weight: 550;
+    padding: 3px 0px;
+    width: 82%;
+    margin: auto;
+    box-shadow: 0px 1px 5px 0px var(--color-bg-purple);
+
 }
 
 .product-price{
     font-size: 14px;
     font-weight: 550;
+    padding: 2px 0px;
+    width: 82%;
+    margin: auto;
+    box-shadow: 0px 1px 5px 0px var(--color-bg-purple);
+
 }
 
 
@@ -116,6 +127,7 @@ button{
     color: #fff;
     border-radius: 4px;
     padding: 7px;
+    box-shadow: 0px 1px 5px 0px var(--color-bg-purple);
 }
 
 </style>
