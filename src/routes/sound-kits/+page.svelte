@@ -17,25 +17,35 @@
 
             <div class="product-image">
                 <img src={"./image/"+pack.image} alt="">
-            </div>
 
+                <div class="overlap">
+                    <div class="buttons">
+                        <button class="view">
+                            View
+                        </button>
+                        <button class="buy">
+                            ${pack.price}
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
             <div class="product-details">
                 <div class="product-name">
                     {pack.name}
                 </div>
-            
-                <div class="product-price">
-                    ${pack.price}
-                </div>
+                
             </div>
-
-            <div class="buttons">
-                <button class="view">
-                    View
-                </button>
-                <button class="buy">
-                    Buy
-                </button>
+            
+            <div class="overlapp">
+                <div class="buttons">
+                    <button class="view">
+                        View
+                    </button>
+                    <button class="buy">
+                        ${pack.price}
+                    </button>
+                </div>
             </div>
         </div>
     {/each}
@@ -44,7 +54,7 @@
 <style>
 .product{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(17rem, 50fr));
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 50fr));
     justify-content: center;
     justify-items: center;
     width: 80%;
@@ -72,6 +82,7 @@
     display: flex;
     justify-content: center;
     margin: auto;
+    position: relative;
     
 }
 
@@ -117,6 +128,7 @@
 
 
 .buttons{
+
     gap: 10px;
     margin: 20px auto;
 }
@@ -128,6 +140,10 @@
 .buy{
     background: var(--yellow-button);
     
+}
+
+.overlap{
+    display: none;
 }
 
 button{
@@ -143,6 +159,82 @@ button{
     border-radius: 4px;
     padding: 7px;
     box-shadow: 0px 1px 5px 0px var(--color-bg-purple);
+}
+
+@media  (max-width:1100px){
+
+    .product{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(10rem, 500fr));
+        justify-content: center;
+        justify-items: center;
+        width: 80%;
+        gap: 10px;
+        margin: auto;
+        color: var(--color-bg-purple);
+        position: relative;
+    }
+
+    .product-card{
+        background: #fff;
+        max-width: 70%;
+        border-radius: 4px;
+        text-align: center;
+        border: 1px solid #fff;
+    }
+
+    .product-image{
+        aspect-ratio: 1/1;
+        display: flex;
+        justify-content: center;
+        margin: auto; 
+    }
+
+    .product-image img{
+        aspect-ratio: 1/1;
+        object-fit: cover;
+        width: 100%;
+        height: auto;
+        border-radius: 4px;
+        box-shadow: 0px 1px 8px 0px var(--color-bg-purple);    
+    }
+
+    .buttons{
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        margin: auto;
+
+    }
+
+    button{
+        text-transform: uppercase;
+        font-size: 14px;
+        font-weight: 600;
+        cursor: pointer;
+        background: transparent;
+        width: 50%;
+        border: none;
+        outline: none;
+        color: #fff;
+        border-radius: 4px;
+        padding: 7px;
+        box-shadow: 0px 1px 5px 0px var(--color-bg-purple);
+    }
+
+    .overlap{
+        display: grid;
+        position: absolute;
+        grid-area: auto;
+        transform: translate(0px, 90px);
+        margin: auto;
+        margin-bottom: 4px;
+        width: 100%;
+    }
+
+    .overlapp{
+        display: none;
+    }
 }
 
 </style>
