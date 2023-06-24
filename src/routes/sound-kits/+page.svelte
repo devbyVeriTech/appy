@@ -236,7 +236,7 @@ button{
         display: grid;
         position: absolute;
         grid-area: auto;
-        transform: translate(0px, 90px);
+        transform: translate(0px, 140px);
         margin: auto;
         margin-bottom: 4px;
         width: 100%;
