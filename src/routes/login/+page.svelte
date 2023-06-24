@@ -8,7 +8,7 @@
   import BsArrowRight from "svelte-icons-pack/bs/BsArrowRight";
   import IoEyeSharp from "svelte-icons-pack/io/IoEyeSharp";
   import FaSolidEyeSlash from "svelte-icons-pack/fa/FaSolidEyeSlash";
-  import TiWarningOutline from "svelte-icons-pack/Ti/TiWarningOutline";
+//   import TiWarningOutline from "svelte-icons-pack/Ti/TiWarningOutline";
  
 
     let title = "Login";
@@ -53,14 +53,14 @@
 
                     {#if form?.notVerified}
                         <div class="verificationwarning" transition:fade={{duration:400}}>
-                            <Icon src={TiWarningOutline} color='#fff' size='1.7em'/>
+                            <!-- <Icon src={TiWarningOutline} color='#fff' size='1.7em'/> -->
                             <span>You must verify your email address</span>
                         </div>
                     {/if} 
                     
                     {#if form?.notCreated}
                         <div class="verificationwarning" transition:fade={{duration:400}}>
-                            <Icon src={TiWarningOutline} color='#fff' size='1.7em'/>
+                            <!-- <Icon src={TiWarningOutline} color='#fff' size='1.7em'/> -->
                             <span>You must create an account first</span>
                         </div>
                     {/if}
