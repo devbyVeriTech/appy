@@ -142,7 +142,7 @@ p{
 }
 
 .searchbar{
-    padding: 5px;
+    padding: 0px 5px;
 }
 
 input{
@@ -150,7 +150,7 @@ input{
     background: transparent;
     color: #fff;
     outline: none;
-    padding: 10px;
+    padding: 0px 10px;
     font-family: inherit;
     width: 100%;
     font-size: 12px;
@@ -172,7 +172,7 @@ input::placeholder{
     text-transform: uppercase;
     font-size: 13px;
     font-weight: 550;
-    line-height: 3.5;
+    line-height: 3;
 }
 
 .conna{
@@ -184,7 +184,7 @@ input::placeholder{
     top: 0;
     left: 0;
     margin: auto;
-    padding-left: 20px;
+    padding-left: 10%;
     padding-top: 100px;
     z-index: -1;
     transition: 0.5s ease;

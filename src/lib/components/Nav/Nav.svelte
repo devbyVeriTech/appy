@@ -182,7 +182,7 @@ input::placeholder{
 	border: none;
 	outline: none;
 	cursor: pointer;
-	padding: 8px 10px;
+	padding: 5px 10px;
 	border-radius: 3px;
 	color: #fff;
 	font-size: 12px;
@@ -215,7 +215,6 @@ input::placeholder{
 	top: 0;
 	touch-action: none;
 	width: 100dvw;
-	z-index: 150;
 	box-shadow: var(--bg-color) 0px 0px 7px 1px;
 	transition: all 0.3s;
 }
@@ -235,6 +234,7 @@ input::placeholder{
 	margin-left: -10px;
 	border-right: 1px solid #1f1f1f;
 	color: #fff;
+	z-index: 999;
 
 }
 
