@@ -161,7 +161,7 @@ button{
     box-shadow: 0px 1px 5px 0px var(--color-bg-purple);
 }
 
-@media  (max-width:1100px){
+@media  (max-width:1009px){
 
     .product{
         display: grid;
@@ -200,14 +200,14 @@ button{
     }
 
     .product-name{
-        font-size: 20px;
+        font-size: 17px;
         font-weight: 550;
         padding: 3px;
-        margin: auto;
         overflow: hidden;
         white-space: nowrap;
         text-overflow: ellipsis;
-        
+        box-shadow: none;
+ 
     }
 
     .buttons{
@@ -215,7 +215,6 @@ button{
         justify-content: center;
         gap: 10px;
         margin: auto;
-
     }
 
     button{
