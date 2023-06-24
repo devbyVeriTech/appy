@@ -210,11 +210,12 @@ input::placeholder{
 	height: var(--top-bar-height);
 	justify-content: center;
 	width: 100%;
+	top: 0;
+	left: 0;
+	right: 0;
 	padding: .75em;
 	position: fixed;
-	top: 0;
 	touch-action: none;
-	width: 100dvw;
 	box-shadow: var(--bg-color) 0px 0px 7px 1px;
 	transition: all 0.3s;
 	z-index: 1;
