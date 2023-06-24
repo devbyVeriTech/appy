@@ -217,6 +217,7 @@ input::placeholder{
 	width: 100dvw;
 	box-shadow: var(--bg-color) 0px 0px 7px 1px;
 	transition: all 0.3s;
+	z-index: 1;
 }
 
 .menu-items{
