@@ -211,10 +211,30 @@
                                     </div>
                                 </div>
 
+								<div class="time">
+									2:53
+								</div>
+
+								<div class="bpehm">
+									{music.bpm}
+								</div>
+
+								<div class="tagg">
+									{#each music.tag as tagg}
+										<button type="button" class="button outlined tag-btn" on:click={() => setSelectedTags(tag)}>
+											{tagg}
+										</button>
+									{/each}
+								</div>
+
                             <div class="length">
                                 <div class="d-button" role="button" aria-label="menu" tabindex="0">
 									<div class="open-button btnpad" on:click={openForm} on:keydown>
 										<Icon src={IoBagAddOutline} size='1.2em' color='white' className="custom" />
+
+										<div class="buy-wide">
+											$45.00
+										</div> 
 									</div>
 									<div class="form-popup" id="myForm">
 										<div class="pop">
@@ -430,6 +450,7 @@
 	width: fit-content;
 	justify-content: center;
 	border: none;
+	gap: 5px;
 }
 
 .btnpad{
@@ -477,7 +498,7 @@ button{
 	align-self: center;
 	gap: .875em;
 	grid-area: middle;
-	max-width: calc(100% - 3em);
+	/* max-width: calc(100% - 3em); */
     font-size: 0.8em;
 	
 }
@@ -776,6 +797,8 @@ svg:not(:root) {
 
 .list:not(:last-child){
 	border-bottom: 1px solid rgba(66,66,66,.425);
+	width: 100%;
+	margin: auto;
 }
 
 .m-item {
@@ -879,6 +902,11 @@ footer{
         padding-left: 20px;
     }
 
+	.time , .bpehm, .tagg, .buy-wide{
+		display: none;
+	}
+
+
 
 /* .featured-artist{
 	color: var(--lt-color-gray-400);
@@ -944,19 +972,30 @@ footer{
 	}
 
 	.metaplay{
-		max-width: 1270px ;
-		display: contents;
+		display: flex;
+		position: relative;
+		align-items: center;
+		justify-content: space-between;
+		font-size: 15px;
+		font-weight: 600;
+		letter-spacing: .2px;
+		cursor: pointer;
+		overflow: hidden;
+		width: 100%;
+		/* background: red; */
+		
 	}
 
 	.metaplay .thumbnail{
 		left: 0;
 		margin-left: 0;
+		top: -2px;
 		margin-right: 5rem;
+		position: absolute;
 	}
 
 	.metaplay img{
 		width: 50px;
-		left: 50px;
 	}
 	
 	.secondary-subtitle{
@@ -981,8 +1020,7 @@ footer{
     .beattitle{
         display:flex;
         justify-content: flex-start;
-        margin: auto;
-
+		max-width: 45%;
     }
 
 	.app-content-p {
@@ -991,6 +1029,61 @@ footer{
 		margin: auto;
 	}
 
+	.titleplay{
+		font-size: 1.2em;
+		display:flex;
+		flex: 1 1 100%;
+        justify-content: flex-start;
+		min-width: 45%;
+		padding-left: 60px;
+		padding-right: 25px;
+		/* border: 2px solid blue; */
+	}
+
+	.time {
+		display: flex;
+		margin-right: 50%;
+		margin: auto;
+		max-width: 10%;
+		min-width: 10%;
+		justify-content: center;
+		/* border: 2px solid green; */
+
+	} 
+	.bpehm{
+		display: flex;
+		max-width: 5%;
+		min-width: 5%;
+		padding: 10px;
+		/* border: 2px solid white; */
+
+	} 
+	.tagg{
+		display: flex;
+		max-width: 20%;
+		min-width: 20%;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		gap: 10px;
+		/* border: 2px solid yellow; */
+
+	}
+
+	.length{
+		display: flex;
+		justify-content: right;
+		max-width: 20%;
+		min-width: 20%;
+		/* border: 2px solid pink; */
+	}
+
+	.buy-wide{
+		display: contents;
+	}
+
+	.button{
+		font: inherit;
+	}
 }
 
 
