@@ -227,6 +227,12 @@ input::placeholder{
 	width: 60%;
 }
 
+.menu-items a{
+		color: var(--primary-text);
+		font-weight: 550;
+
+}
+
 .menu{
 	padding-left: 0;
 	margin-left: -10px;
