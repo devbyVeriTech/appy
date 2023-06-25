@@ -202,7 +202,7 @@ input::placeholder{
 	background: var(--purple-header);
 	border-bottom: .0625rem solid #1f1f1f;
 	display: flex;
-	height: var(--top-bar-height);
+	min-height: var(--top-bar-height);
 	justify-content: center;
 	width: 100%;
 	max-width: 100%;
