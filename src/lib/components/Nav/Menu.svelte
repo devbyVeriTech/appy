@@ -6,7 +6,7 @@
     import BsMusicNote from "svelte-icons-pack/bs/BsMusicNote"; 
     import AiOutlineCustomerService from "svelte-icons-pack/ai/AiOutlineCustomerService"; 
     import AiOutlinePhone from "svelte-icons-pack/ai/AiOutlinePhone"; 
-    import FaSolidDrum from "svelte-icons-pack/Fa/FaSolidDrum"; 
+    import FaSolidDrum from "svelte-icons-pack/fa/FaSolidDrum";
     import { fly } from 'svelte/transition';
     import { currentUser } from '$lib/pocketbase';
 
