@@ -237,7 +237,7 @@ input::placeholder{
 }
 
 .hamb{
-	filter: brightness(92%);
+	/* filter: brightness(92%); */
 }
 
 .navvy{
