@@ -98,6 +98,8 @@
 
 <style>
 
+
+
 :global(.poin) {
     cursor: pointer;
 }
@@ -239,7 +241,7 @@ input::placeholder{
 	border-right: 1px solid var(--primary-text);
 	color: var(--primary-text);
 	z-index: 999;
-	/* filter: brightness(95%); */
+	filter: brightness(95%);
 }
 
 .hamb{

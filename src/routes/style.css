@@ -149,7 +149,11 @@ html[data-theme='light'] {
     --primary-button: var(--color-bg-purple);  
     --secondary-button: var(--purple-footer);
     --tertiary-button: var(--yellow-button);
-    --form-border: var(--purple-border); 
+    --form-border: var(--purple-border);   
+}
+
+html[data-theme='light'] .logo{
+	filter: brightness(5%);
 }
 
 /* html.Dark .nav {
