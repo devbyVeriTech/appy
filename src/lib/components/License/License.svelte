@@ -37,6 +37,27 @@
 							{/each}
                         </ul>
                     </div>
+
+					<div class="bulk">
+
+						Bulk deals:
+						
+						<div class="deals">
+								<li>
+									BUY 2, GET 1 FREE
+								</li>
+								<li>
+									BUY 4, GET 2 FREE
+								</li>
+								<li>
+									BUY 6, GET 3 FREE
+								</li>
+								<li>
+									BUY 8, GET 4 FREE
+								</li>
+						</div>
+					</div>
+
                 </div>
             {/each}
         </div>
@@ -92,8 +113,8 @@
 }
 .license-p .card .price{
 	padding-top: 20px;
-	font-size: 18px;
-	font-weight: 550;
+	font-size: 36px;
+	font-weight: 700;
 	text-align: center;
 }
 .license-p .card .usage{
@@ -104,6 +125,10 @@
 
 li{
 	list-style:circle;
+}
+
+.bulk:not(:first-child){
+	display: none;
 }
 
 @media (min-width:1100px) {

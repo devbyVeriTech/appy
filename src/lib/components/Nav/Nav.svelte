@@ -55,7 +55,7 @@
 			<div class={search ? 'above' : 'searchbox'}>
 				<input type="search" bind:value={search} name="search" id="search" class="searchbar" placeholder="Search Here">
 				<button class="search-icon" type="submit">
-					<Icon src={AiOutlineSearch} size='1.4em' color={search ? '#fff' : '#69428e'} className={search ? 'poin' : 'nopoin'}/>
+					<Icon src={AiOutlineSearch} size='1.4em' color={search ? 'var(--primary-text)' : '#69428e'} className={search ? 'poin' : 'nopoin'}/>
 				</button>
 			</div>
 		</div>
@@ -135,7 +135,7 @@ li{
 .above{
     display: flex;
     align-items: center;
-    border: #fff 1px solid;
+    border: var(--primary-text) 1px solid;
     padding: 0;
     border-radius: 100px;
     padding: 0 10px;
@@ -150,7 +150,7 @@ li{
 input{
     border: none;
     background: transparent;
-    color: #fff;
+    color: var(--primary-text);
     outline: none;
     padding: 10px;
     font-family: inherit;
@@ -160,7 +160,7 @@ input{
 
 input::placeholder{
     font-size: 12px;
-    color: #a872db;
+    color: var(--primary-text);
     transition: 0.4s ease;
 }
 
@@ -241,7 +241,6 @@ input::placeholder{
 	border-right: 1px solid var(--primary-text);
 	color: var(--primary-text);
 	z-index: 999;
-	filter: brightness(95%);
 }
 
 .hamb{

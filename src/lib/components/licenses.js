@@ -8,10 +8,11 @@ export const licenses = writable ([
 		usage: 
 		[	
 			"Demo Only", 
+			"Tagged once",
 			"No digital platform distribution",
-			"No monetization",
+			"Must credit (Prod. Cherrydee)",
 			"No music video",
-			"No paid performances"
+			"Cherrydee maintains full ownership of the instrumental",
 		],
 	},
 
@@ -22,9 +23,11 @@ export const licenses = writable ([
 		usage: 
 		[
 			"Commercial Use",
+			"Tagged once",
 			"Distribute to Digital platforms",
+			"Must credit (Prod. Cherrydee)",
 			"Up to 5000 monetized streams",
-			"No music video",
+			"Cherrydee maintains full ownership of the instrumental",
 		],
 	},
 
@@ -35,16 +38,18 @@ export const licenses = writable ([
 		usage: 
 		[
 			"Professional Use",
+			"Tagged once",
 			"Distribute to Digital platforms",
+			"Must credit (Prod. Cherrydee)",
 			"Up to 10000 monetized streams",
-			"1 music video"
+			"Cherrydee maintains full ownership of the instrumental",
 		],
 	},
 
 	{
 		name:"Unlimited",
-		files:"Everything + Take down request",
-		price: "MAKE AN OFFER",
+		files:"Everything ",
+		price: "1000",
 		usage: ["Everything"],
 	},
 

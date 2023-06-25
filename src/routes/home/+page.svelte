@@ -101,8 +101,9 @@
 					bind:this={audioElement} autoplay="false">
 				</audio>
                 <div class="boxxx resp-content-width">
-					<div class="boxx">
-						<div 
+						
+						<div class="boxx">
+							<div 
 							class="img" 
 								in:fly={{x:-200, duration:300, delay:300}}
 								out:fly={{x:200, duration:300}}>
@@ -173,10 +174,15 @@
 								</div> -->
 				</div>
 
-
-
 				
-
+				
+				<!-- <div id="d3-bg-overlay">
+					<div id="d3-bg-overlay-visualizer"></div>
+					<div id="d3Container" playlist-control="reinitializeVisualizer" class="ng-isolate-scope">
+						<canvas id="visualizerCanvas" width="790" height="90"></canvas>
+					</div>
+				</div> -->
+				
 
 
                     <div class="info-bar">
@@ -691,7 +697,7 @@ small{
 .genre{
 	display: flex;
 	justify-content: flex-start;
-    color:rgb(158, 158, 158);
+    color: var(--primary-text);
     font-size: 12px;
 	margin-bottom: 5px;
 	margin-top: -10px;
@@ -850,6 +856,7 @@ footer{
         background: var(--footer-bg);
         align-items: center;
         padding: 5px;
+		z-index: 1;
         gap: 0px;
         box-shadow: 0px 0px 10px 1px var(--bg-color);
     }
@@ -906,7 +913,40 @@ footer{
 		display: none;
 	}
 
+	
+	/* #d3-bg-overlay {
+		position: absolute;
+		bottom: 0;
+		margin-inline: auto;
+		width: 100%;
+		height: 90px;
+		z-index: 9;
+		background: green;
+	}
 
+	#d3Container {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		width: 100%;
+		height: 100%;
+	}
+
+	#visualizerCanvas {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		margin: auto;
+		background: red;
+	}
+
+	.upper{
+		position:relative;
+		width: 100%;
+		padding-block: 100px;
+	} */
 
 /* .featured-artist{
 	color: var(--lt-color-gray-400);
@@ -945,7 +985,6 @@ footer{
 		padding: 40px;
 		align-items: center;
 		vertical-align: middle;
-
 	}
 	.box img{
 		width: 12rem;
@@ -968,7 +1007,9 @@ footer{
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
-		padding-left: 60px;
+		padding-left: 30px;
+		margin-left: 0;
+		margin-right: auto;
 	}
 
 	.metaplay{
