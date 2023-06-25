@@ -917,7 +917,6 @@ footer{
 		padding: 40px;
 		align-items: center;
 		vertical-align: middle;
-		margin-left: 0;
 
 	}
 	.box img{
@@ -985,6 +984,12 @@ footer{
         margin: auto;
 
     }
+
+	.app-content-p {
+		display: grid;
+		width: 65%;
+		margin: auto;
+	}
 
 }
 

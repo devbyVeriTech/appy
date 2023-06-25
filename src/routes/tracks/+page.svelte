@@ -938,6 +938,11 @@ footer{
 
     }
 
+	.app-content-p {
+		margin: auto;
+		display: grid;
+		max-width: 65%;
+	}
 }
 
 
