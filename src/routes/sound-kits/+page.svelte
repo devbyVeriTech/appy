@@ -43,7 +43,11 @@
             <div class="product-details">
                 <a href="">
                 <div class="product-name">
-                        <div class="p-name">{pack.name}</div> - <div class="p-slug">Afrobeat Sample pack</div>
+                        <div class="p-name">{pack.name}</div> 
+                        <!-- - <div class="p-slug">Afrobeat Sample pack</div> -->
+                    </div>
+                    <div class="by">
+                        by Cherrydee
                     </div>
                 </a>
             </div>
@@ -118,7 +122,7 @@
 .product-name{
     color: var(--color-bg-purple);
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     font-size: 20px;
     font-weight: 550;
     padding: 3px;
@@ -129,8 +133,14 @@
     box-shadow: 0px 1px 5px 0px var(--color-bg-purple);
     overflow: hidden;
     white-space: nowrap;
-    text-overflow: ellipsis;
-    
+    text-overflow: ellipsis;   
+}
+
+.by{
+    color: var(--color-bg-purple);
+    font-size: 12px;
+    font-weight: 550;
+    text-transform: uppercase;
 }
 
 .product-price{
