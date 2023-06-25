@@ -17,11 +17,11 @@
 
 </script>
 
-<header>
+<!-- <header>
     <Nav />
-</header>
+</header> -->
 
-<div class="space20"></div>
+<!-- <div class="space20"></div> -->
     <div class="conta"
     in:fly={{x:-200, duration:400}}
     out:fly={{x:200, duration:400}}>

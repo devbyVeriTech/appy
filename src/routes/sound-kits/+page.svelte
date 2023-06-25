@@ -11,6 +11,14 @@
     </title>
 </svelte:head>
 
+<div class="heading">
+    <h1>
+        {title}
+    </h1>
+</div>
+
+<div class="space20"></div>
+<div class="space20"></div>
 <div class="product">
     {#each $soundkits as pack}
         <div class="product-card">
@@ -52,6 +60,11 @@
 </div>
 
 <style>
+
+.heading{
+    text-align: center;
+}
+
 .product{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(15rem, 50fr));
@@ -165,7 +178,7 @@ button{
 
     .product{
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(12rem, 50fr));
+        grid-template-columns: repeat(auto-fit, minmax(14rem, 50fr));
         justify-content: center;
         justify-items: center;
         width: 80%;

@@ -96,9 +96,6 @@
 
 <style>
 
-*{
-}
-
 :global(.poin) {
     cursor: pointer;
 }

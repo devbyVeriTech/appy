@@ -837,14 +837,13 @@ footer{
         display: flex;
         justify-content: center;
         flex-direction: column;
-        line-height: 0;
+        line-height: 1;
         grid-area: "img";
         overflow: hidden;
         text-overflow: ellipsis;
         white-space: nowrap	;
         flex-wrap: nowrap;
         max-width: 80%;
-        gap: 2px;
         text-align: center;
     }
 

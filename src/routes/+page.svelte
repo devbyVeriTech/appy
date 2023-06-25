@@ -30,7 +30,7 @@
 <div class="overlay">
 
 </div>
-<div class="space20"></div>
+
 <div class="app-content-p">
   <div class="app-transition-wrapper"></div> 
   <main>
@@ -66,6 +66,11 @@
 									<button type="submit" class="create bttn">Create an account</button>
 								</a>
 							</div>
+							<div class="skip">
+								<a href="/home">
+									Skip
+								</a>
+							</div>
 						</div>
 					</div>
 					
@@ -85,6 +90,14 @@
 .buttons{
 	display: flex;
 	flex-direction: column;
+}
+
+.skip{
+	font-weight: 550;
+	text-align: right;
+	text-transform: uppercase;
+	text-decoration: underline;
+	padding-inline: 20px;
 }
 
 .overlay{
