@@ -49,7 +49,7 @@
 								<div class="detailss">
 									<a href="https://paystack.com/pay/song-writing">
 										<button type="submit" value="order" id="submit" class="details">
-											<Icon src={IoBagAddOutline} size='1.2em' color='black' />  $1,000.00
+											<Icon src={IoBagAddOutline} size='1.2em' color='var(--secondary-text)' />  $1,000.00
 										</button>
 									</a>
 									<a href="/">
@@ -150,7 +150,6 @@
 	
 	.service-name{
 		/* background: var(--lt-color-background-dark); */
-		color: var(--lt-color-white);
 		padding: 0px;
 		text-transform: uppercase;
 		margin: 0;
@@ -227,12 +226,12 @@
 		cursor: pointer;
 		border: none;
 		outline: none;
-		background: var(--lt-color-background-default);
+		background: var(--tertiary-button);
 		font-size: 13px;
 		font-weight: 700;
 		text-transform: uppercase;
 		font-family: inherit;
-		color: black;
+		color: var(--secondary-text);
 	}
 	
 	.spacer{

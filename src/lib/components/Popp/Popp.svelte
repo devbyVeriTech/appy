@@ -2,7 +2,6 @@
 	import {onMount} from "svelte";
 	import { licenses } from "../licenses";
 	import {currentUser} from '$lib/pocketbase'
-	import { Accordion, AccordionItem } from '@skeletonlabs/skeleton';
 
 
 
@@ -152,23 +151,6 @@
 												<button type="submit" class="purchase-btn" on:click={payWithPaystack}><i class="fa fa-shopping-bag"></i> <div class="price">${license.price}.00</div></button>
 											</div>
 										<div class="usage-trigger">
-
-											<Accordion>
-												<AccordionItem >
-													<svelte:fragment slot="summary">Usage Terms</svelte:fragment>
-
-													<svelte:fragment slot="content">
-														{#each license.usage as use}
-														<ul>
-														</ul>	
-															<li>
-																{use}
-															</li>
-														{/each}
-													</svelte:fragment>
-												</AccordionItem>
-												<!-- ... -->
-											</Accordion>
 
 										</div>
 									</div>

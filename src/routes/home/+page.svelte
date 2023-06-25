@@ -100,7 +100,7 @@
 				<audio src={"./audio/"+$musicList[currentSongIndex].audio}
 					bind:this={audioElement} autoplay="false">
 				</audio>
-                <div class="box resp-content-width">
+                <div class="boxxx resp-content-width">
 					<div class="boxx">
 						<div 
 							class="img" 
@@ -219,7 +219,7 @@
 									<div class="form-popup" id="myForm">
 										<div class="pop">
 											<div class="close" on:click={closeForm}>
-												<Icon src={FaTimesCircle} color='white' size='1.4em' className='iconnn'/>
+												<Icon src={FaTimesCircle} size='1.4em' className='iconnn'/>
 											</div>
 											<Popp 
 												beatname={$musicList[currentSongIndex].name}
@@ -343,6 +343,7 @@
 
 	:global(.iconnn){
 		cursor: pointer;
+		color: var(--primary-button);
 	}
 	
 	audio {
@@ -396,14 +397,14 @@
 
 
 .pop{
-	background: var(--color-bg-purple);
+	background: var(--base-bg);
 	padding-bottom: 10px;
 
 }
 
 .form-popup{
 	inset: 0;
-	border-top: #f7f7f7 3px solid;
+	border-top: var(--primary-text) 3px solid;
 	display: none;
 	position: fixed;
 	margin:0 auto;
@@ -421,8 +422,8 @@
 
 .open-button{
 	display: flex;
-	color: #fff;
-	background: var(--yellow-button);
+	color: var(--primary-text);
+	background: var(--primary-button);
 	border-radius: 5px;
 	align-items: center;
 	height: fit-content;
@@ -445,9 +446,9 @@
 	font-size: 13px;
 	font-weight: 700;
 	color: #fff;
-	background: var(--yellow-button);
+	background: var(--primary-button);
 	border-radius: 4px;
-	min-height: 41px;
+	height: 41px;
 }
 
 button{
@@ -570,19 +571,17 @@ main {
 	transform: translateZ(0);
 }
 
-.box {
+.boxxx {
 	gap: .5rem 1rem;
 	grid-template-areas: "img img" "metadata metadata" "buttons buttons ";
 	grid-template-columns: 1fr;
 }
 
-.box {
+.boxxx {
 	-webkit-margin-after: 1.3333em;
 	background-color: rgba(55,69,82,0);
-	/* border-color: #1f1f1f;
-	border-radius: .8em;
-	border-width: 1px; */
-	display: grid;
+	display: flex;
+	flex-direction: column;
 	gap: .5rem 1.25rem;
 	grid-template-areas: "img" "metadata" "buttons" "metaplay";
 	grid-template-columns: 1fr;
@@ -599,6 +598,7 @@ main {
 	max-width: calc(100vw - 2.25em) !important;
 }
 .img {
+	margin-inline: auto;
 	align-self: center;
 	aspect-ratio: 1/1;
 	grid-area: "img";
@@ -619,6 +619,7 @@ main {
 	-o-object-fit: cover;
 	object-fit: cover;
 	width: 100%;
+	margin-inline: auto;
 }
 
 .metadata {
@@ -686,14 +687,11 @@ small{
 	margin-top: 0rem;
 }
 
-.button-group:first-child{
-	display: none;
-}
 
 .outlined{
     background: transparent;
-    border: .15em solid #fafafa;
-    color: #fafafa;
+    border: .15em solid var(--primary-text);
+    color: inherit;
 }
 
 .button {
@@ -706,7 +704,7 @@ small{
 	font-weight: 500;
 	gap: .25em;
 	justify-content: center;
-	padding: .63125em 1.25em;
+	padding: .63125em 1em;
 	text-transform: capitalize;
 	transition: background 75ms linear,color 75ms linear;
 	-webkit-user-select: none;
@@ -715,6 +713,7 @@ small{
 	vertical-align: middle;
 	white-space: nowrap;
     width: fit-content;
+	height: 35px;
 }
 button{
 	cursor: pointer;
@@ -772,10 +771,13 @@ svg:not(:root) {
 .list {
 	max-width: inherit;
     justify-content: space-between;
-	border-bottom: var(--lt-color-gray-800) 1px solid;
 	padding-bottom: 6px;
-
 }
+
+.list:not(:last-child){
+	border-bottom: 1px solid rgba(66,66,66,.425);
+}
+
 .m-item {
 	align-content: center;
 	cursor: pointer;
@@ -796,7 +798,7 @@ svg:not(:root) {
 	width: 100%;
 }
 .active .titleplay{
-	color: #f98903;
+	color: var(--tertiary-text);
 	align-items: center;
 	width: 100%;
 }
@@ -822,7 +824,7 @@ footer{
         margin: 0 auto;
         overflow: hidden;
         width: 100%;
-        background: var(--purple-header);
+        background: var(--footer-bg);
         align-items: center;
         padding: 5px;
         gap: 0px;
@@ -837,7 +839,7 @@ footer{
         display: flex;
         justify-content: center;
         flex-direction: column;
-        line-height: 1;
+        line-height: 0;
         grid-area: "img";
         overflow: hidden;
         text-overflow: ellipsis;
@@ -845,6 +847,7 @@ footer{
         flex-wrap: nowrap;
         max-width: 80%;
         text-align: center;
+		font-weight: 550;
     }
 
     .prev,
@@ -899,6 +902,7 @@ footer{
 }
 .boxx{
 	display: contents;
+	margin: 0 auto;
 }
 .metaplay{
 	display: contents;
@@ -907,14 +911,14 @@ footer{
 }
 
 @media (min-width: 720px){
-	.boxx {
+	/* .boxx {
 		display: inline-flex;
 		padding: 40px;
 		align-items: center;
 		vertical-align: middle;
 		width: 100%;
 
-	}
+	} */
 	.box img{
 		width: 12rem;
 	}

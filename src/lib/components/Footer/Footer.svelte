@@ -66,24 +66,25 @@ section.footer {
     font-size: 12px;
     letter-spacing: .2px;
     line-height: 2;
-    background: var(--purple-footer);
-    color: var(--purple-footer-text);
+    background: var(--footer-bg);
+    color: var(--primary-text);
 }
 
 .copy{
     display: flex;
     justify-content: center;
-    background: var(--color-bg-purple);
+    background: var(--footer-copyright);
     width: 100%;
     margin: auto;
     padding: 10px;
     gap: 5px;
     bottom: 0;
     margin-bottom: 0;
+    color: var(--primary-text);
 }
 
 a{
-    color: var(--purple-footer-text);
+    color: var(--primary-text);
 }
 
 .foot {

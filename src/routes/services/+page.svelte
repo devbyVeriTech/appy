@@ -99,13 +99,11 @@ img{
 
 .services{
 	/* border: 1px solid var(--lt-color-border-light); */
-	min-width: 240px;
 	width: 240px;
 }
 
 .service-name{
 	/* background: var(--lt-color-background-dark); */
-	color: var(--lt-color-white);
 	padding: 0px;
 	text-transform: uppercase;
 	margin: 0;
@@ -119,6 +117,7 @@ img{
 
 
 .details{
+	margin-inline: auto;
 	margin-top: 5px;
 	padding: 10px;
 	width: 5.7rem;
@@ -126,15 +125,19 @@ img{
 }
 
 button{
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	cursor: pointer;
 	border: none;
 	outline: none;
-	background: var(--lt-color-background-default);
+	background: var(--tertiary-button);
 	font-size: 13px;
 	font-weight: 700;
 	text-transform: uppercase;
 	font-family: inherit;
-	color: black;
+	color: var(--secondary-text);
+	height: 40px;
 }
 
 

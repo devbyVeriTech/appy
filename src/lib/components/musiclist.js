@@ -10,7 +10,7 @@ export const musicList = writable ([
 	// 	genre: "Afrobeat",
 	// 	bpm: "100",
 	// 	key: "Cm",
-	// 	tag: [" Burna Boy", " Wizkid", " Skepta",]
+	// 	tag: [" Wizkid", " Skepta",]
 	// },	
 	{
 		id:"2",
@@ -21,7 +21,7 @@ export const musicList = writable ([
 		genre: "Afrobeat",
 		bpm: "106",
 		key: "Cm",
-		tag: [" Burna Boy", " Wizkid", " Skepta",]
+		tag: [" Wizkid", " Skepta",]
 	},
 	{
 		id:"3",
@@ -31,7 +31,7 @@ export const musicList = writable ([
 		artist:"Cherrydee",
 		genre: "Afrobeat",
 		bpm: "100",
-		tag: ["Rema", "Wizkid", "Burna Boy"]
+		tag: ["Rema", "Wizkid",]
 	},
 	{
 		id:"4",
@@ -41,7 +41,7 @@ export const musicList = writable ([
 		artist:"Cherrydee",
 		genre: "Afrobeat",
 		bpm: "100",
-		tag: ["Wizkid", "Burna Boy", "Tems"]
+		tag: ["Wizkid", "Tems"]
 	},
 	{
 		id:"5",
@@ -51,7 +51,7 @@ export const musicList = writable ([
 		artist:"Cherrydee",
 		genre: "Afrobeat",
 		bpm: "106",
-		tag: ["Wizkid", "Burna Boy", "CKay"]
+		tag: ["Wizkid", "CKay"]
 	},	
 	{
 		id:"6",
@@ -61,7 +61,7 @@ export const musicList = writable ([
 		artist:"Cherrydee",
 		genre: "Afrobeat",
 		bpm: "103",
-		tag: ["Kida Kudz", "Wizkid", "Burna Boy",]
+		tag: ["Kida Kudz", "Wizkid",]
 	},
 	{
 		id:"7",
@@ -71,7 +71,7 @@ export const musicList = writable ([
 		artist:"Cherrydee",
 		genre: "Afrobeat",
 		bpm: "101",
-		tag: ["Asake", " Wizkid", " Burna Boy",]
+		tag: ["Asake", " Wizkid",]
 	},
 ]
 );

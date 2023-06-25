@@ -104,7 +104,7 @@
     cursor: pointer;
     border: none;
     border-radius: 0.3rem;
-    background: var(--yellow-button);
+    background: var(--primary-button);
     color: #fff;
 }
 
@@ -120,13 +120,13 @@ input{
     border: none;
     border-bottom: .14em solid #3f2755;
     outline: none;
-    color: #fff;
+    color: var(--primary-text);
     font-family: 'Poppins', sans-serif; 
     transition: 0.5s ease;
 }
 
 input::placeholder{
-    color: #fff;
+    color: var(--primary-text);
     font-size: 12px;
     font-weight: 600;
     transition: 0.5s ease;

@@ -89,14 +89,14 @@
                                             class="hide-password"
                                             on:click={() => (hidePassword = false)}
                                             >
-                                            <Icon src={IoEyeSharp} color='#fff' size='1.15em'/>
+                                            <Icon src={IoEyeSharp} color='var(--primary-text)' size='1.15em'/>
                                         </button>
                                         {:else}
                                         <button
                                             on:click={() => (hidePassword = true)}
                                             class="hide-password"
                                             >
-                                            <Icon src={FaSolidEyeSlash} color='#fff' size='1.15em'/>
+                                            <Icon src={FaSolidEyeSlash} color='var(--primary-text)' size='1.15em'/>
                                         </button>
                                     {/if}
                             </div>
@@ -134,7 +134,7 @@
 
                         <div class="google">
                             <button name="button" type="submit" value="submit">
-                                <Icon src={FaBrandsGoogle} color='white' size="1em"/>
+                                <Icon src={FaBrandsGoogle} color='var(--primary-text)' size="1em"/>
                                     Sign in with Google
                             </button>
                         </div>
@@ -147,11 +147,6 @@
 </div>
 
 <style>
-
-.hint{
-    color: var(--purple-footer-text);
-    font-size: 12px;
-}
 
 button.hide-password{
     border: none;
@@ -174,17 +169,17 @@ button.hide-password{
 .leftline{
     height: 1px;
     width: 50%;
-    background-color: #3f2755;
+    background-color: var(--purple-border);
 }
 .rightline{
     height: 1px;
     width: 50%;
-    background-color: #3f2755;
+    background-color: var(--purple-border);
 }
 
 .SB-form-control {
 	display: flex;
-	border: 1px solid #3f2755;
+	border: 1px solid var(--purple-border);
 	border-radius: 3px;
 	overflow: hidden;
 }
@@ -221,7 +216,7 @@ button.hide-password{
     border: 1px solid #ffffff33;
     padding: 10px;
     border-radius: 4px;
-    color: #fff;
+    color: var(--primary-text);
 }
 
 .forgot-pass{
@@ -230,8 +225,12 @@ button.hide-password{
     padding: 0 10px;
     font-size: 11px;
     font-weight: bold;
+    color: inherit;
 }
 
+.forgot-pass a{
+    color: var(--primary-text);
+}
 .forgot-pass a:hover{
     text-decoration: underline;
 }
@@ -304,13 +303,10 @@ button.hide-password{
     margin: auto;
     justify-content: center;
     align-items: center;
-    color: #fff;
-    background: var(--yellow-button);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: var(--primary-text);
+    background: var(--base-bg);
     gap: 10px;
-    border: 1px solid #f98903;
+    border: 1px solid var(--purple-border);
 
 }
 
@@ -331,7 +327,7 @@ input{
     height: 38px;
     padding: 10px;
     outline: none;
-    color: #fff;
+    color: var(--primary-text);
     font-family: 'Poppins', sans-serif; 
     transition: 0.5s ease;
 }
@@ -341,7 +337,7 @@ input:focus{
 }
 
 input::placeholder{
-    color: #fff;
+    color: var(--purple-text);
     font-size: 12px;
     font-weight: 600;
     transition: 0.5s ease;

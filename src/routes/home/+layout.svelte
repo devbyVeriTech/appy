@@ -1,7 +1,6 @@
 <script>
     
     /** @type {import('../home/$types').LayoutData} */
-    import '../../app.css'
     import '../style.css'
     import Nav from '$lib/components/Nav/Nav.svelte';
     import Footer from '$lib/components/Footer/Footer.svelte';

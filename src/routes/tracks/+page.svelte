@@ -388,9 +388,9 @@
 	font-size: 13px;
 	font-weight: 700;
 	color: #fff;
-	background: var(--yellow-button);
+	background: var(--primary-button);
 	border-radius: 4px;
-	min-height: 41px;
+	height: 41px;
 }
 
 button{
@@ -488,7 +488,7 @@ button{
 
 
 .thumbnail img {
-	aspect-ratio: 1/1;
+	aspect-ratio: 1/;
 	border-radius: var(--xs-radius);
 	height: 100%;
 	-o-object-fit: cover;
@@ -521,12 +521,6 @@ main {
 }
 
 .box {
-	gap: .5rem 1rem;
-	grid-template-areas: "img img" "metadata metadata" "buttons buttons ";
-	grid-template-columns: 1fr;
-}
-
-.box {
 	-webkit-margin-after: 1.3333em;
 	background-color: rgba(55,69,82,0);
 	/* border-color: #1f1f1f;
@@ -554,6 +548,7 @@ main {
 	grid-area: "img";
 	height: auto;
 	max-width: 16rem;
+	margin-inline: auto;
 	position: relative;
 	width: var(--width);
 }
@@ -638,8 +633,8 @@ small{
 
 .outlined{
     background: transparent;
-    border: .15em solid #fafafa;
-    color: #fafafa;
+    border: .15em solid var(--primary-text);
+    color: var(--primary-text);
 }
 
 .button {
@@ -661,6 +656,8 @@ small{
 	vertical-align: middle;
 	white-space: nowrap;
     width: fit-content;
+	height: 35px;
+
 }
 button{
 	cursor: pointer;
@@ -723,7 +720,7 @@ svg:not(:root) {
 .list {
 	max-width: inherit;
     justify-content: space-between;
-	border-bottom: var(--lt-color-gray-800) 1px solid;
+	border-bottom: 1px solid rgba(66,66,66,.425);
 	padding-bottom: 6px;
 
 }
@@ -773,7 +770,7 @@ footer{
         margin: 0 auto;
         overflow: hidden;
         width: 100%;
-        background: var(--purple-header);
+        background: var(--header-bg);
         align-items: center;
         padding: 5px;
         gap: 0px;
@@ -795,8 +792,9 @@ footer{
         white-space: nowrap	;
         flex-wrap: nowrap;
         max-width: 80%;
-        gap: 2px;
         text-align: center;
+		font-weight: 600;
+		color: var(--primary-text);
     }
 
     .prev,

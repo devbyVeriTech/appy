@@ -44,7 +44,7 @@
 					<div class="things">
 
 						<div class="logo">
-							<img src="" alt="Logo">
+							<img src="./cp.png" alt="Logo">
 						</div>
 
 						<div class="welcome">
@@ -117,6 +117,13 @@
 	text-align: center;
 	font-weight: 900;
 	margin-bottom: 20px;
+	margin-inline: auto;
+}
+
+.logo img{
+	aspect-ratio: 1/1;
+	width: 2em;
+	height: auto;
 }
 
 img{
@@ -153,6 +160,7 @@ img{
 	text-shadow: black 0px 0px 4px;
 	text-transform: capitalize;
 	transition: .3s ease;
+	color: #fff;
 }
 
 
@@ -176,7 +184,7 @@ img{
 }
 
 .login{
-	background: var(--yellow-button);
+	background: var(--primary-button);
 	color: #fff;
 	transition: background 750ms linear,color 750ms linear;
 }

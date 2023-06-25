@@ -77,7 +77,7 @@
                     <div class={search ? 'above' : 'searchbox'}>
                         <input type="search" bind:value={search} name="search" id="search" class="searchbar" placeholder="Search Here">
                         <button class="search-icon" type="submit">
-                            <Icon src={AiOutlineSearch} size='1.4em' color={search ? '#fff' : '#69428e'} className={search ? 'poin' : 'nopoin'}/>
+                            <Icon src={AiOutlineSearch} size='1.4em' color={search ? 'var(--primary-text)' : '#69428e'} className={search ? 'poin' : 'nopoin'}/>
                         </button>
                     </div>
                 </ul>
@@ -108,6 +108,7 @@ p{
 }
 
 .greetings{
+    color: var(--primary-text);
     display: flex;
     align-items: center;
     gap: .3rem;
@@ -133,7 +134,7 @@ p{
     margin-top: 50px;
     display: flex;
     align-items: center;
-    border: #fff 1px solid;
+    border: var(--primary-text) 1px solid;
     padding: 0;
     border-radius: 100px;
     padding: 0 10px;
@@ -148,7 +149,7 @@ p{
 input{
     border: none;
     background: transparent;
-    color: #fff;
+    color: var(--primary-text);
     outline: none;
     padding: 0px 10px;
     font-family: inherit;
@@ -176,7 +177,7 @@ input::placeholder{
 }
 
 .conna{
-    background: #1c1224;
+    background: var(--base-bg);
     position: absolute;
     display: flex;
     width: 80%;
@@ -190,10 +191,12 @@ input::placeholder{
     transition: 0.5s ease;
     backdrop-filter: blur(3px);
     box-shadow: 20px 0px 150px 20px var(--bg-color);
+    color: var(--primary-text);
 }
 
 ul{
     list-style: none;
+    color: var(--primary-text);
 }
 
 li:hover{
@@ -203,4 +206,9 @@ li:hover{
 li:focus, li:active{
     font-size: 18px !important;
 }
+
+li{
+    color: var(--primary-text);
+}
+
 </style>

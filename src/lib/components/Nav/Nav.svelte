@@ -16,18 +16,20 @@
 <header>
 <nav class="navvy">
 	<div class="menu">
-		<Hamburger bind:open --color="#8658a0" --active-color="#fff" --layer-height="2.6px" --layer-width="20px" --layer-spacing ="3.5px"/>
-
-		{#if open}
-			<Menu />
-		{/if}
+		<div class="hamb">
+			<Hamburger bind:open --color="var(--primary-text)" --active-color="var(--primary-text)" --layer-height="2.6px" --layer-width="20px" --layer-spacing ="3.5px"/>
+	
+			{#if open}
+				<Menu />
+			{/if}
+		</div>
 	</div>
 
 
    <div class="middle">
 	<div class="logo">
 		<a href="/home">
-			<img src="" alt="Logo"> 
+			<img src="./cp.png" alt="Logo"> 
 		</a>
 	</div>
 	<div class="searchyy">
@@ -166,10 +168,6 @@ input::placeholder{
     outline: none;
 }
 
-	:global(.custom-icon) {
-    margin: 100px;
-  }
-
   .navbtns{
 	display: flex;
 	gap: 5px;
@@ -179,14 +177,14 @@ input::placeholder{
 	border: none;
 	outline: none;
 	cursor: pointer;
-	padding: 5px 10px;
+	padding: 8px 10px;
 	border-radius: 3px;
 	color: #fff;
 	font-size: 12px;
 	font-weight: 600;
 	text-transform: uppercase;
 	font-family: inherit;
-	min-width: 70px;
+	min-width: 55px;
   }
 
   .login{
@@ -195,7 +193,7 @@ input::placeholder{
   }
 
   .signup{
-	background: var(--yellow-button);
+	background: var(--primary-button);
 
   }
 
@@ -207,10 +205,11 @@ input::placeholder{
 	height: var(--top-bar-height);
 	justify-content: center;
 	width: 100%;
+	max-width: 100%;
 	top: 0;
 	left: 0;
 	right: 0;
-	padding: .75em;
+	padding-inline: .75em;
 	position: fixed;
 	touch-action: none;
 	box-shadow: var(--bg-color) 0px 0px 7px 1px;
@@ -225,27 +224,42 @@ input::placeholder{
 	gap: 40px;
 	justify-content: center;
 	margin: auto;
-	width: 59%;
+	width: 60%;
 }
 
 .menu{
 	padding-left: 0;
 	margin-left: -10px;
-	border-right: 1px solid #1f1f1f;
-	color: #fff;
+	border-right: 1px solid var(--primary-text);
+	color: var(--primary-text);
 	z-index: 999;
-
+	/* filter: brightness(95%); */
 }
 
+.hamb{
+	filter: brightness(92%);
+}
 
 .navvy{
-	background: var(--purple-header);
+	background: var(--header-bg);
 
 }
+
 .logo {
+	display: flex;
+	align-items: center;
 	padding-left: 10px;
 
 }
+
+.logo img{
+	display: flex;
+	align-items: center;
+	aspect-ratio: 1/1;
+	width: 1.5em;
+	height: auto;
+}
+
 img {
 	margin: 0;
 	align-self: center;
@@ -265,6 +279,7 @@ img {
 	gap: .275rem;
 	margin: 0 auto;
 	width: 50%;
+	filter: brightness(95%);
 }
 
 .items {
@@ -322,13 +337,6 @@ button.icon-btn::before {
 	text-decoration: inherit;
 	vertical-align: inherit;
 }
-
-button.icon-btn {
-	color: var(--color-dark);
-	cursor: pointer;
-}
-
-
 
 
 @media (prefers-reduced-motion: reduce){

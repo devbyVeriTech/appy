@@ -46,7 +46,7 @@
 
 <style>
 *{
-	scrollbar-color: var(--purple-footer) transparent;
+	scrollbar-color: var(--footer-bg) transparent;
 }
 .license-p{
 	display: flex;
@@ -73,11 +73,11 @@
 	border-radius: .3em;
 	min-width: 15rem;
 	scroll-snap-align: center;
-	border: 1px solid var(--purple-footer);
+	border: 1px solid var(--footer-bg);
 }
 
 .license-p .card .title{
-	background: var(--purple-footer);
+	background: var(--footer-bg);
 	font-weight: 600;
 	font-size: 18px;
 	padding-top: 20px;
@@ -85,7 +85,7 @@
 	text-transform: uppercase;
 }
 .license-p .card .files{
-	background: var(--purple-footer);
+	background: var(--footer-bg);
 	padding-bottom: 20px;
 	font-size: 12px;
 	text-align: center;

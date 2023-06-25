@@ -23,26 +23,29 @@
     {#each $soundkits as pack}
         <div class="product-card">
 
-            <div class="product-image">
-                <img src={"./image/"+pack.image} alt="">
-
-                <div class="overlap">
-                    <div class="buttons">
-                        <button class="view">
-                            View
-                        </button>
-                        <button class="buy">
-                            ${pack.price}
-                        </button>
+            <a href="">
+                <div class="product-image">
+                    <img src={"./image/"+pack.image} alt="">
+    
+                    <div class="overlap">
+                        <div class="buttons">
+                            <button class="view">
+                                View
+                            </button>
+                            <button class="buy">
+                                ${pack.price}
+                            </button>
+                        </div>
                     </div>
                 </div>
-            </div>
+            </a>
             
             <div class="product-details">
+                <a href="">
                 <div class="product-name">
-                    {pack.name}
-                </div>
-                
+                        <div class="p-name">{pack.name}</div> - <div class="p-slug">Afrobeat Sample pack</div>
+                    </div>
+                </a>
             </div>
             
             <div class="overlapp">
@@ -113,10 +116,13 @@
 }
 
 .product-name{
+    color: var(--color-bg-purple);
+    display: flex;
+    justify-content: flex-start;
     font-size: 20px;
     font-weight: 550;
     padding: 3px;
-    width: 82%;
+    width: 100%;
     margin: auto;
     border-top-left-radius: 4px;
     border-top-right-radius: 4px;
@@ -168,7 +174,7 @@ button{
     width: 40%;
     border: none;
     outline: none;
-    color: #fff;
+    color: var(--primary-text);
     border-radius: 4px;
     padding: 7px;
     box-shadow: 0px 1px 5px 0px var(--color-bg-purple);
@@ -194,6 +200,7 @@ button{
         border-radius: 4px;
         text-align: center;
         border: 1px solid #fff;
+        color: var(--primary-text);
     }
 
     .product-image{
@@ -213,18 +220,27 @@ button{
     }
 
     .product-name{
-        font-size: 17px;
+        display: flex;
+        align-items: baseline;
+        font-size: 18px;
         font-weight: 550;
+        gap: 3px;
         padding: 3px;
         overflow: hidden;
         white-space: nowrap;
         text-overflow: ellipsis;
         box-shadow: none;
- 
+    }
+
+    .p-slug{
+        font-size: 16px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
     }
 
     .buttons{
-        display: flex;
+        display: none;
         justify-content: center;
         gap: 10px;
         margin: auto;
