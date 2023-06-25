@@ -858,11 +858,12 @@ footer{
 
 @media (min-width: 720px){
 	.boxx {
-		display: inline-flex;
+		display: flex;
+		margin-left: 0;
+		margin-right: auto;
 		padding: 40px;
 		align-items: center;
 		vertical-align: middle;
-		width: 100%;
 	}
 
 	.here{

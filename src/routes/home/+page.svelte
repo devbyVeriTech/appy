@@ -911,14 +911,15 @@ footer{
 }
 
 @media (min-width: 720px){
-	/* .boxx {
-		display: inline-flex;
+	.boxx {
+		display: flex;
+		margin: auto;
 		padding: 40px;
 		align-items: center;
 		vertical-align: middle;
-		width: 100%;
+		margin-left: 0;
 
-	} */
+	}
 	.box img{
 		width: 12rem;
 	}
