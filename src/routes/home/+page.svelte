@@ -1079,10 +1079,13 @@ footer{
 
 	.buy-wide{
 		display: contents;
+		color: #fff;
 	}
 
-	.button{
+	.list .button{
 		font: inherit;
+		background: var(--secondary-button); 
+		color: #fff;
 	}
 }
 
