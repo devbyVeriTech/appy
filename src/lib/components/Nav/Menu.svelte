@@ -6,6 +6,7 @@
     import BsMusicNote from "svelte-icons-pack/bs/BsMusicNote"; 
     import AiOutlineCustomerService from "svelte-icons-pack/ai/AiOutlineCustomerService"; 
     import AiOutlinePhone from "svelte-icons-pack/ai/AiOutlinePhone"; 
+    import FaSolidDrum from "svelte-icons-pack/Fa/FaSolidDrum"; 
     import { fly } from 'svelte/transition';
     import { currentUser } from '$lib/pocketbase';
 
@@ -62,6 +63,13 @@
                             <a href="/services">
                                 <Icon src={AiOutlineCustomerService} size='1.4em' color='#69428e'/>
                                 Services
+                            </a> 
+                        </li>
+                        
+                        <li>
+                            <a href="/sound-kits">
+                                <Icon src={FaSolidDrum} size='1.4em' color='#69428e'/>
+                                Sound Kits
                             </a> 
                         </li>
                         
