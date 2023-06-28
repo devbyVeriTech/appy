@@ -1,11 +1,12 @@
 <script>
-    import Icon from 'svelte-icons-pack/Icon.svelte';
-	import AiOutlineSearch from "svelte-icons-pack/ai/AiOutlineSearch"; 
-    import AiOutlineUser from "svelte-icons-pack/ai/AiOutlineUser"; 
-    import AiOutlineHome from "svelte-icons-pack/ai/AiOutlineHome"; 
-    import BsMusicNote from "svelte-icons-pack/bs/BsMusicNote"; 
-    import AiOutlineCustomerService from "svelte-icons-pack/ai/AiOutlineCustomerService"; 
-    import AiOutlinePhone from "svelte-icons-pack/ai/AiOutlinePhone"; 
+    // import Icon from 'svelte-icons-pack/Icon.svelte';
+	// import AiOutlineSearch from "svelte-icons-pack/ai/AiOutlineSearch"; 
+    // import AiOutlineUser from "svelte-icons-pack/ai/AiOutlineUser"; 
+    // import AiOutlineHome from "svelte-icons-pack/ai/AiOutlineHome"; 
+    // import BsMusicNote from "svelte-icons-pack/bs/BsMusicNote"; 
+    // import AiOutlineCustomerService from "svelte-icons-pack/ai/AiOutlineCustomerService"; 
+    // import AiOutlinePhone from "svelte-icons-pack/ai/AiOutlinePhone"; 
+    // import FaSolidDrum from "svelte-icons-pack/Fa/FaSolidDrum";
 </script>
 
 <div class="icons">
@@ -24,6 +25,9 @@
     </div>
     <div class="cs">
         <Icon src={AiOutlineCustomerService} size='1.4em' color='#69428e'/>
+    </div>
+    <div class="drum">
+        <Icon src={FaSolidDrum} size='14em' color='#69428e'/>
     </div>
     <div class="phone">
         <Icon src={AiOutlinePhone} size='1.4em' color='#69428e'/>
@@ -86,7 +90,7 @@
         ;
         opacity: 20%;
     }
-
+/* 
     .home, .music, .user, .cs, .drum, .phone{
         position: absolute;
         opacity: 5%;
@@ -108,5 +112,5 @@
         left: 20%;
         inset: 10;
         top: 200%;
-    }
+    } */
 </style>
