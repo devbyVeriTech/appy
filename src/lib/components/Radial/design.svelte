@@ -6,7 +6,6 @@
     import BsMusicNote from "svelte-icons-pack/bs/BsMusicNote"; 
     import AiOutlineCustomerService from "svelte-icons-pack/ai/AiOutlineCustomerService"; 
     import AiOutlinePhone from "svelte-icons-pack/ai/AiOutlinePhone"; 
-    import FaSolidDrum from "svelte-icons-pack/Fa/FaSolidDrum";
 </script>
 
 <div class="icons">
@@ -25,9 +24,6 @@
     </div>
     <div class="cs">
         <Icon src={AiOutlineCustomerService} size='1.4em' color='#69428e'/>
-    </div>
-    <div class="drum">
-        <Icon src={FaSolidDrum} size='14em' color='#69428e'/>
     </div>
     <div class="phone">
         <Icon src={AiOutlinePhone} size='1.4em' color='#69428e'/>
