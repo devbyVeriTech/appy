@@ -67,7 +67,7 @@
 
 <style>
 *{
-	scrollbar-color: var(--footer-bg) transparent;
+	scrollbar-color: none;
 }
 .license-p{
 	display: flex;

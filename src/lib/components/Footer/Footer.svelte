@@ -13,18 +13,18 @@
             <div class="column1">
                 <li><a href="/home">Home</a></li>
                 <li><a href="/tracks">Tracks</a></li>
-                <li><a href="/discography">Discography</a></li>
+                <!-- <li><a href="/discography">Discography</a></li> -->
                 <li><a href="/sound-kits">Sound Kits</a></li>
             </div>
             <div class="column2">
                 <li><a href="/services">Services</a></li>
-                <li><a href="/blog">Blog</a></li>
+                <!-- <li><a href="/blog">Blog</a></li> -->
                 <li><a href="/about">About</a></li>
                 <li><a href="/contact">Contact</a></li>
             </div>
             <div class="column3">
                 <li><a href="/licensing-info">Licensing Info</a></li>
-                <li><a href="/terms">Terms of use</a></li>
+                <!-- <li><a href="/terms">Terms of use</a></li> -->
                 <li><a href="/privacy-policy">Privacy policy</a></li>
             </div>
 

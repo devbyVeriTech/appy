@@ -80,7 +80,7 @@
 }
 
 :root * {
-	scrollbar-color: #c7c7c7 rgba(94,94,94,.184);
+	/* scrollbar-color: #c7c7c7 rgba(94,94,94,.184); */
 	scrollbar-gutter: .833333rem;
 	scrollbar-width: thin;
     scroll-behavior: smooth;

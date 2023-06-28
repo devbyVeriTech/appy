@@ -57,6 +57,7 @@
         margin-top: 27px;
     }
     .license-p{
+        scrollbar-color: transparent transparent;
         margin: 0 auto;
         scroll-snap-type:x mandatory;
         overflow-anchor:auto mandatory;

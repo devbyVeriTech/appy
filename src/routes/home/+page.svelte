@@ -427,6 +427,7 @@
 
 
 .license-p{
+	scrollbar-color: transparent transparent;
 	overflow-x: hidden;
 	scroll-snap-type:x mandatory;
 	overflow-anchor:auto mandatory;
