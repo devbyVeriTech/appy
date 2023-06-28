@@ -383,7 +383,8 @@
 	.radial{
 		position: absolute;
 		z-index: -10;
-		max-width: 100%;
+		width: 95%;
+		max-width: 95%;
 		height: 100%;
 		z-index: -1;
 	}
