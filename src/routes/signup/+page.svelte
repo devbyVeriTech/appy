@@ -28,6 +28,12 @@
                     </h1>
                 </div>
 
+                <div class="already">
+                    <a href="/login">
+                        Already have an account
+                    </a>
+                </div>
+
                 <form method="POST" use:enhance={() => {
                     return async ({ result }) =>{
                         pb.authStore.loadFromCookie(document.cookie);
@@ -114,10 +120,6 @@
                             </button>
                         </div>
 
-                        <div class="already">
-                            Already have an account? 
-                            <a href="/login">Sign in Here</a>
-                        </div>
                     </div>
                 </form>
             </div>
@@ -218,13 +220,13 @@
 input{
     display: block;
     background: transparent;
+    color: var(--primary-text);
     border: none;
     width: 100%;
     font-size: 12px;
     height: 38px;
     padding: 10px;
     outline: none;
-    color: #fff;
     font-family: 'Poppins', sans-serif; 
     transition: 0.5s ease;
 }
@@ -234,7 +236,7 @@ input:focus{
 }
 
 input::placeholder{
-    color: #fff;
+    color: var(--primary-text);
     font-size: 12px;
     font-weight: 600;
     transition: 0.5s ease;

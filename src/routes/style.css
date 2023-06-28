@@ -138,7 +138,7 @@ html[data-theme='dark'] {
 }
 
 html[data-theme='light'] {
-    --base-bg: linear-gradient(180deg,var(--footer-bg) 10%, var(--color-dark));
+    --base-bg: linear-gradient(180deg,var(--footer-bg) 10%, #d9cae7);
     color: var(--color-bg-purple);
     --primary-text: var(--color-bg-purple);
     --secondary-text: var(--color-dark);
@@ -152,7 +152,26 @@ html[data-theme='light'] {
     --form-border: var(--purple-border);   
 }
 
+html[data-theme='white'] {
+    --base-bg: #fff;
+    color: var(--color-bg-purple);
+    --primary-text: var(--color-bg-purple);
+    --secondary-text: var(--color-dark);
+    --tertiary-text: var(--purple-border);
+    --footer-bg: #d9d9d9;
+    --footer-text: var(--primary-text);
+    --header-bg: #fff;
+    --primary-button: var(--color-bg-purple);  
+    --secondary-button: var(--purple-footer);
+    --tertiary-button: var(--yellow-button);
+    --form-border: var(--purple-border);   
+}
+
 html[data-theme='light'] .logo{
+	filter: brightness(5%);
+}
+
+html[data-theme='white'] .logo{
 	filter: brightness(5%);
 }
 

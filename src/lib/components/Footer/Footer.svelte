@@ -73,7 +73,7 @@ section.footer {
 .copy{
     display: flex;
     justify-content: center;
-    background: var(--footer-copyright);
+    background: var(--base-bg);
     width: 100%;
     margin: auto;
     padding: 10px;

@@ -1,4 +1,5 @@
 <script lang="ts">
+	import "./index.scss"
 	import { fly, fade } from "svelte/transition";
 	import { createEventDispatcher } from "svelte";
 	import { clickOutside } from "$lib/actions/clickOutside";
@@ -27,7 +28,6 @@
 	>
 		<div class="modal-container">
 			<slot name="header" />
-				
 			<slot />
 		</div>
 	</div>

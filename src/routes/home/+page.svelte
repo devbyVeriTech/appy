@@ -8,7 +8,7 @@
 	import IoBagAddOutline from "svelte-icons-pack/bs/BsBagPlus"; 
 	import IoEllipsisVertical from "svelte-icons-pack/io/IoEllipsisVertical"; 
 	import { fly } from "svelte/transition";
-	import FaTimesCircle from "svelte-icons-pack/fa/FaTimesCircle";
+	import Radial from "$lib/components/Radial/design.svelte"
 	import BsPlayCircleFill from "svelte-icons-pack/bs/BsPlayCircleFill";
 	import BsPauseCircleFill from "svelte-icons-pack/bs/BsPauseCircleFill";
 	import FaSolidStepBackward from "svelte-icons-pack/fa/FaSolidStepBackward";
@@ -146,13 +146,18 @@
 							<div class="button-group">
 								<Modal>
 									<Content>
-									  <Purchase 
-											<slot/>
-									  			beatname={$musicList[currentSongIndex].name}
+										<div class="modal-back">
+											<div class="hea">
+												<slot name="header">Licenses</slot>
+											</div>
+											<Popp 
+												beatname={$musicList[currentSongIndex].name}
 												beatavatar={"./image/"+$musicList[currentSongIndex].image}
 												beatbpm={$musicList[currentSongIndex].bpm}
 												beatkey={$musicList[currentSongIndex].key}
 												beatgenre={$musicList[currentSongIndex].genre}/>
+												
+										</div>
 									</Content>
 									  
 									<Trigger>
@@ -174,7 +179,10 @@
 								</div> -->
 				</div>
 
-				
+				<div class="radial">
+					<Radial/>
+				</div>
+
 				
 				<!-- <div id="d3-bg-overlay">
 					<div id="d3-bg-overlay-visualizer"></div>
@@ -235,26 +243,32 @@
 
                             <div class="length">
                                 <div class="d-button" role="button" aria-label="menu" tabindex="0">
-									<div class="open-button btnpad" on:click={openForm} on:keydown>
-										<Icon src={IoBagAddOutline} size='1.2em' color='white' className="custom" />
-
-										<div class="buy-wide">
-											$45.00
-										</div> 
-									</div>
-									<div class="form-popup" id="myForm">
-										<div class="pop">
-											<div class="close" on:click={closeForm}>
-												<Icon src={FaTimesCircle} size='1.4em' className='iconnn'/>
-											</div>
-											<Popp 
-												beatname={$musicList[currentSongIndex].name}
-												beatavatar={"./image/"+$musicList[currentSongIndex].image}
-												beatbpm={$musicList[currentSongIndex].bpm}
-												beatkey={$musicList[currentSongIndex].key}
-												beatgenre={$musicList[currentSongIndex].genre}/>
-										</div>
-									</div>
+											<Modal>
+												<Content>
+													<div class="modal-back">
+														<div class="hea">
+															<slot name="header">Licenses</slot>
+														</div>
+														<Popp 
+															beatname={$musicList[currentSongIndex].name}
+															beatavatar={"./image/"+$musicList[currentSongIndex].image}
+															beatbpm={$musicList[currentSongIndex].bpm}
+															beatkey={$musicList[currentSongIndex].key}
+															beatgenre={$musicList[currentSongIndex].genre}/>
+															
+													</div>
+												</Content>
+												  
+												<Trigger>
+													<div class="open-button btnpad" >
+														<Icon src={IoBagAddOutline} size='1.2em' color='white' className="custom" />
+				
+														<div class="buy-wide">
+															$45.00
+														</div> 
+													</div>
+												</Trigger>
+											</Modal>
                                 </div>
                             </div>
 
@@ -290,7 +304,6 @@
                 </div>
             </main>       
     </div>
-
 
 	<footer bind:this={mainElement}>
         <!-- <audio src={"./audio/"+$musicList[currentSongIndex].audio}
@@ -367,6 +380,32 @@
 
 <style>
 
+	.radial{
+		position: absolute;
+		z-index: -10;
+		width: 100%;
+		height: 100%;
+		z-index: -1;
+	}
+
+	.modal-back{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		background: var(--base-bg);
+		border: var(--bg-color) 1px solid;
+		border-radius: 8px;
+		padding: 20px;
+	}
+
+	.hea{
+		display: flex;
+		width: 100%;
+		justify-content: center;
+		padding: 30px 0px 0px;
+		font-size: 1.5em;
+		font-weight: 600;
+	}
 	:global(.iconnn){
 		cursor: pointer;
 		color: var(--primary-button);
@@ -412,36 +451,6 @@
 	
 }
 
-.close{
-	width: fit-content;
-	right: 20;
-	margin-right: 20;
-	margin-left: auto;
-	padding: 20px;
-	z-index: 10;
-}
-
-
-.pop{
-	background: var(--base-bg);
-	padding-bottom: 10px;
-
-}
-
-.form-popup{
-	inset: 0;
-	border-top: var(--primary-text) 3px solid;
-	display: none;
-	position: fixed;
-	margin:0 auto;
-	top: 0;
-	bottom: 1;
-	right: 0px;
-	z-index: 1;
-	width: clamp(200px, 400px, 100%);
-	cursor: default;
-	
-}
 .nospacer{
 	margin-top: -150px;
 }
@@ -580,6 +589,7 @@ button{
 }
 
 .app-content-p {
+	position: relative;
 	display: grid;
 }
 

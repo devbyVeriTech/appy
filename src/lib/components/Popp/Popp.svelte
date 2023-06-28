@@ -1,4 +1,4 @@
-<script >
+<script lang="ts">
 	import {onMount} from "svelte";
 	import { licenses } from "../licenses";
 	import {currentUser} from '$lib/pocketbase'
@@ -190,7 +190,7 @@ ul{
 	flex-direction: column;
 	vertical-align: middle;
 	margin-bottom: 10px;
-	background: var(--purple-header);
+	background: var(--purple-footer-text);
 	border-radius: 5px;
 	border: #f0f0f018 1px solid;
 	padding: 20px;
@@ -222,7 +222,7 @@ ul{
 
 button{
 	border: none ;
-	background: var(--yellow-button);
+	background: var(--primary-button);
 	color: #fff;
 	font-weight: 600;
 	text-transform: uppercase;
@@ -384,7 +384,7 @@ small{
 	flex-direction: row;
 	justify-content: center;
 	font-size: 9px;
-	color: rgb(255, 129, 90);
+	color: var(--primary-text);
 	gap: 20px;
 	align-items: center;
 }
@@ -392,7 +392,7 @@ small{
 .genre{
 	display: flex;
 	justify-content: space-between;
-    color:rgb(158, 158, 158);
+    color:var(--primary-text);
     font-size: 1.17em;
     line-height: 5px;
 	gap: 50px;
