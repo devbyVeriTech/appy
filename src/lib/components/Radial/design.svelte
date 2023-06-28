@@ -1,11 +1,5 @@
 <script>
-    // import Icon from 'svelte-icons-pack/Icon.svelte';
-	// import AiOutlineSearch from "svelte-icons-pack/ai/AiOutlineSearch"; 
-    // import AiOutlineUser from "svelte-icons-pack/ai/AiOutlineUser"; 
-    // import AiOutlineHome from "svelte-icons-pack/ai/AiOutlineHome"; 
-    // import BsMusicNote from "svelte-icons-pack/bs/BsMusicNote"; 
-    // import AiOutlineCustomerService from "svelte-icons-pack/ai/AiOutlineCustomerService"; 
-    // import AiOutlinePhone from "svelte-icons-pack/ai/AiOutlinePhone"; 
+
 </script>
 
 <div class="icons">
@@ -14,21 +8,16 @@
     <div class="circle circle3"></div>
     <div class="circle circle4"></div>
     <!-- <div class="home">
-        <Icon src={AiOutlineHome} size='3em' color='#69428e'/>
     </div>
     <div class="music">
-        <Icon src={BsMusicNote} size='6em' color='#69428e'/>
     </div>
     <div class="user">
-        <Icon src={AiOutlineUser} size='1.4em' color='#69428e'/>
     </div>
     <div class="cs">
-        <Icon src={AiOutlineCustomerService} size='1.4em' color='#69428e'/>
     </div>
     <div class="drum">
     </div>
     <div class="phone">
-        <Icon src={AiOutlinePhone} size='1.4em' color='#69428e'/>
     </div> -->
 </div>
 
