@@ -383,7 +383,7 @@
 	.radial{
 		position: absolute;
 		z-index: -10;
-		width: 100%;
+		max-width: 100%;
 		height: 100%;
 		z-index: -1;
 	}
@@ -427,6 +427,13 @@
 
 
 .license-p{
+	scrollbar-color: transparent transparent;
+	overflow-x: hidden;
+	scroll-snap-type:x mandatory;
+	overflow-anchor:auto mandatory;
+}
+
+.license-p::-webkit-scrollbar{
 	scrollbar-color: transparent transparent;
 	overflow-x: hidden;
 	scroll-snap-type:x mandatory;

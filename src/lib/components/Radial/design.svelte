@@ -26,6 +26,8 @@
     .icons{
         display: block;
         position: relative;
+        width: 100%;
+        max-width: 100%;
     }
 
     .circle1{

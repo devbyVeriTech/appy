@@ -62,6 +62,15 @@
         scroll-snap-type:x mandatory;
         overflow-anchor:auto mandatory;
     }
+    
+    .license-p::-webkit-scrollbar{
+        scrollbar-color: transparent transparent;
+        margin: 0 auto;
+        scroll-snap-type:x mandatory;
+        overflow-anchor:auto mandatory;
+    }
+
+
     .headd{
         display: flex;
         align-items: center;
