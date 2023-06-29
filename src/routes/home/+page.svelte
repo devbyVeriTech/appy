@@ -3,6 +3,7 @@
 	import {musicList} from "$lib/components/musiclist.js"
 	import License from "$lib/components/License/License.svelte";
 	import BottomPlayer from "$lib/components/BottomPlayer/BottomPlayer.svelte";
+	import Toggle from "$lib/components/Toggle/Toggle.svelte";
   	import Popp from "$lib/components/Popp/Popp.svelte";
 	import Icon from 'svelte-icons-pack'
 	import IoBagAddOutline from "svelte-icons-pack/bs/BsBagPlus"; 
@@ -123,7 +124,7 @@
 								</button>
 								
 							</div>
-							
+						
 							<div class="spacer"></div>
 
 							<div class="button-group">
@@ -216,9 +217,9 @@
 									{music.bpm}
 								</div>
 
-								<div class="tagg">
+								<div class="taggg">
 									{#each music.tag as tagg}
-										<button type="button" class="button outlined tag-btn" on:click={() => setSelectedTags(tag)}>
+										<button type="button" class="button outlined tag-btn">
 											{tagg}
 										</button>
 									{/each}
@@ -288,6 +289,13 @@
             </main>       
     </div>
 
+		
+	<div class="toggle">
+		<Toggle
+			size="2em"/>
+	</div>
+
+
 	<footer bind:this={mainElement}>
         <!-- <audio src={"./audio/"+$musicList[currentSongIndex].audio}
         bind:this={audioElement}
@@ -297,23 +305,23 @@
             
             <div class="prev">
                 <i type="button" on:click={prev}>
-                    <Icon src={FaSolidStepBackward} color='white'/>
+                    <Icon src={FaSolidStepBackward} color='var(--primary-text)'/>
                 </i>
             </div>
 
             <div class="playpause">
                 <i type="button" on:click={playpause}>
                     {#if playerState=="play"}
-                        <Icon src={BsPauseCircleFill} size='1.6em' />                        
+                        <Icon src={BsPauseCircleFill} size='1.6em' color='var(--primary-text)'/>                        
                     {:else}
-                        <Icon src={BsPlayCircleFill} size='1.6em' />                        
+                        <Icon src={BsPlayCircleFill} size='1.6em' color='var(--primary-text)'/>                        
                     {/if}
                 </i>
             </div>
 
             <div class="next">
                 <i type="button" on:click={next}>
-                    <Icon src={FaSolidStepForward} color='white' />
+                    <Icon src={FaSolidStepForward} color='var(--primary-text)'/>
                 </i>
             </div>
 
@@ -328,23 +336,23 @@
             
             <div class="prev">
                 <i type="button" on:click={prev}>
-                    <Icon src={FaSolidStepBackward} color='white'/>
+                    <Icon src={FaSolidStepBackward} color='var(--primary-text)'/>
                         </i>
             </div>
         
             <div class="playpause">
                 <i type="button" on:click={playpausestop}>
                     {#if playerState=="play"}
-                        <Icon src={BsPauseCircleFill} size='1.6em' />                        
+                        <Icon src={BsPauseCircleFill} size='1.6em' color='var(--primary-text)'/>                        
                     {:else}
-                        <Icon src={BsPlayCircleFill} size='1.6em' />                        
+                        <Icon src={BsPlayCircleFill} size='1.6em' color='var(--primary-text)'/>                        
                     {/if}
                 </i>
             </div>
         
             <div class="next">
                 <i type="button" on:click={next}>
-                    <Icon src={FaSolidStepForward} color='white' />
+                    <Icon src={FaSolidStepForward} color='var(--primary-text)' />
                 </i>
             </div>
         
@@ -362,6 +370,10 @@
 		pausebtn={BsPauseCircleFill}/> -->
 
 <style>
+
+	.toggle{
+		display: none;
+	}
 
 	.radial{
 		position: absolute;
@@ -436,6 +448,7 @@
 .tag-btn{
 	display: flex;
 	max-width: 90px;
+	padding-inline: 10px;
 	white-space: nowrap;
 	justify-content: flex-start;
 	overflow: hidden;
@@ -620,6 +633,11 @@ main {
 	-webkit-user-select: none;
 	user-select: none;
 	width: auto;
+}
+
+.boxx{
+	display: flex;
+	flex-direction: column;
 }
 
 .resp-content-width {
@@ -911,7 +929,7 @@ footer{
         padding-left: 20px;
     }
 
-	.time , .bpehm, .tagg, .buy-wide{
+	.time , .bpehm, .taggg, .buy-wide{
 		display: none;
 	}
 
@@ -965,14 +983,16 @@ footer{
 
 }
 
-@media screen and (max-width: 719px){
+@media screen and (max-width: 799px){
 .img {
 	align-self: center;
 	justify-self: center;
 }
 .boxx{
-	display: contents;
-	margin: 0 auto;
+	display: flex;
+	margin: auto;
+	align-items: center;
+	vertical-align: middle;
 }
 .metaplay{
 	display: contents;
@@ -980,14 +1000,16 @@ footer{
 
 }
 
-@media (min-width: 720px){
+@media (min-width: 800px){
 	.boxx {
 		display: flex;
+		flex-direction: row;
 		margin: auto;
 		padding: 40px;
 		align-items: center;
 		vertical-align: middle;
 	}
+
 	.box img{
 		width: 12rem;
 	}
@@ -1067,9 +1089,11 @@ footer{
     }
 
 	.app-content-p {
-		display: grid;
-		width: 65%;
-		margin: auto;
+		display: flex;
+		width: 100%;
+		max-width: clamp(20%, 65%, 100%);
+		margin-inline: auto;
+		justify-content: center;
 	}
 
 	.titleplay{
@@ -1101,7 +1125,7 @@ footer{
 		/* border: 2px solid white; */
 
 	} 
-	.tagg{
+	.taggg{
 		display: flex;
 		max-width: 20%;
 		min-width: 20%;
@@ -1129,6 +1153,15 @@ footer{
 		font: inherit;
 		background: var(--secondary-button); 
 		color: #fff;
+	}
+
+	.toggle{
+		display: block;
+		position: fixed;
+		bottom: 0;
+		right: 0;
+		margin: 80px 60px;
+		z-index: 50;
 	}
 }
 

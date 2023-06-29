@@ -167,19 +167,16 @@ html[data-theme='white'] {
     --form-border: var(--purple-border);   
 }
 
-html[data-theme='light'] .logo{
+html[data-theme='light'] .logo, html[data-theme='white'] .logo{
 	filter: brightness(5%);
 }
 
-html[data-theme='white'] .logo{
-	filter: brightness(5%);
-}
 
 /* html.Dark .nav {
 	background: var(--top-bg);
 } */
 
-body, html {
+body {
 	background: var(--base-bg);
     color: var(--primary-text);
 	inset: 0;
@@ -204,7 +201,7 @@ h2{
 
 a{
     text-decoration: none;
-    color: var(--main-text-color);
+    color: var(--primary-text);
   }
 
 main {
@@ -230,4 +227,8 @@ img{
 
 .space20 {
     height: 20px;
+  }
+
+  button{
+    cursor: pointer;
   }

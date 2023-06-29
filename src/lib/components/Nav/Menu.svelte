@@ -8,6 +8,7 @@
     import AiOutlinePhone from "svelte-icons-pack/ai/AiOutlinePhone"; 
     import VscPackage from "svelte-icons-pack/vsc/VscPackage";
     import { fly } from 'svelte/transition';
+    import Toggle from '../Toggle/Toggle.svelte';
     import { currentUser } from '$lib/pocketbase';
 
 
@@ -20,19 +21,34 @@
 
             {#if $currentUser}                
                 <div class="greetings">
-                    Hi, 
-                    <p>
-                        <a href="/my-account">
-                            {$currentUser.username}
-                        </a>
-                    </p>
+
+                    <div class="hi">
+                        Hi, 
+                        <p>
+                            <a href="/my-account">
+                                {$currentUser.username}
+                            </a>
+                        </p>
+                    </div>
+
+                    <div class="toggle">
+                        <Toggle/>
+                    </div>
                 </div>
                 {:else}
                 <div class="greetings">
-                    Hi, 
-                    <p>
-                        Guest
-                    </p>     
+
+                    <div class="hi">
+
+                        Hi, 
+                        <p>
+                            Guest
+                        </p>     
+                    </div>
+
+                    <div class="toggle">
+                        <Toggle/>
+                    </div>
                 </div>
             {/if}
 
@@ -103,6 +119,10 @@
     pointer-events: none;
 }
 
+.toggle{
+    margin-inline-end: 10px;
+}
+
 a{
     display: flex;
     align-items: center;
@@ -120,11 +140,16 @@ p{
     color: var(--primary-text);
     display: flex;
     align-items: center;
+    justify-content: space-between;
     gap: .3rem;
     font-weight: normal;
     text-transform: capitalize;
     padding-left: 40px;
     margin: -40px 0 20px 0px;
+}
+
+.hi{
+    display: flex;
 }
 
 .searchbox{
