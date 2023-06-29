@@ -84,6 +84,7 @@
 	scrollbar-gutter: .833333rem;
 	scrollbar-width: thin;
     scroll-behavior: smooth;
+    data-theme:dark;
 }
 
 html {
