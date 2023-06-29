@@ -43,17 +43,6 @@
 	}
 
 
-	function openForm(){
-		document.getElementById("myForm").style.display = "block";
-		document.getElementById("list").style.display = "none";
-
-	}
-	function closeForm(){
-		document.getElementById("myForm").style.display = "none";
-		document.getElementById("list").style.display = "contents";
-	}
-	
-
 	function playpause() {
 		if (playerState == "play"){
 			playerState = "pause";
@@ -77,12 +66,6 @@
 			currentSongIndex = (currentSongIndex + 1) % $musicList.length;
 			playerState = "play";
 	}
-
-
-	function seekTo (){
-		
-	}
-
 
 
 
@@ -129,7 +112,7 @@
                     
 							<div class="button-group">
 								{#each $musicList[currentSongIndex].tag as tag}
-								<button type="button" class="button outlined tag-btn" on:click={() => setSelectedTags(tag)}>
+								<button type="button" class="button outlined tag-btn">
 										{tag}
 									</button>
 									{/each}

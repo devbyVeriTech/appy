@@ -5,7 +5,6 @@
     import Nav from '$lib/components/Nav/Nav.svelte';
     import Footer from '$lib/components/Footer/Footer.svelte';
     import { fly } from 'svelte/transition';
-
 </script>
 
 <header>

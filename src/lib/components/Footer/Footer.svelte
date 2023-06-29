@@ -44,10 +44,10 @@
 
     <div class="social">
         <a href="https://www.youtube.com/@iamcherrydee">
-            <Icon src={FaBrandsYoutube} color='#fca311' size="1.3em" className="customIcon"/>
+            <Icon src={FaBrandsYoutube} color='red' size="1.3em" className="customIcon"/>
         </a>
         <a href="https://www.instagram.com/icherrydee">
-            <Icon src={FaBrandsInstagram} color='#fca311' size="1.14em" className="customIcon"/>
+            <Icon src={FaBrandsInstagram} color='var(--primary-text)' size="1.14em" className="customIcon"/>
         </a>
     </div>
 

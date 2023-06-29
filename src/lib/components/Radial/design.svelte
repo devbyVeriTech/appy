@@ -70,7 +70,7 @@
     }
     
     .circle {
-        border-radius: 50%;
+        border-radius: 100%;
         box-shadow: 
         var(--base-bg) 0px 0px 1px 15px, 
         var(--footer-bg) 0px 0px 1px 50px,
