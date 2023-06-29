@@ -15,7 +15,7 @@
     let search = "" ;
 
 </script>
-    <div class="conna"  transition:fly={{x:-200, duration:400}}>
+    <div class="conna"  transition:fly={{x:-350, duration:50}}>
 
         <div class="menutins">
 
@@ -222,7 +222,7 @@ input::placeholder{
     padding-left: 10%;
     padding-top: 100px;
     z-index: -1;
-    transition: 0.5s ease;
+    /* transition: 0.5s ease; */
     backdrop-filter: blur(3px);
     box-shadow: 20px 0px 150px 20px var(--bg-color);
     color: var(--primary-text);
