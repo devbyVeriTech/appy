@@ -85,9 +85,9 @@
                                     name="password" 
                                     id="password" 
                                     placeholder="PASSWORD" 
-                                    pattern="[a-zA-Z0-9]"
                                     required>
-                            </div>
+                                </div>
+                                <!-- pattern="[a-zA-Z0-9]" -->
                             <div class="hint" style="color: {password? "" : "#fff"};">
                                 <ul>
                                     <li>
