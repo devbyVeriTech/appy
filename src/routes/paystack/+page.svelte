@@ -45,7 +45,7 @@
             function payWithPaystack(event) {
               event.preventDefault();
               // @ts-ignore
-              config.email = $currentUser.email, email;
+              config.email = email;
               // @ts-ignore
               config.amount = parseFloat(paymentAmount)*100;
         
