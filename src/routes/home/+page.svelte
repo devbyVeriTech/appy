@@ -296,10 +296,8 @@
 	</div>
 
 
-	<footer bind:this={mainElement}>
-        <!-- <audio src={"./audio/"+$musicList[currentSongIndex].audio}
-        bind:this={audioElement}
-        ></audio> -->
+	<div class="footer" bind:this={mainElement}>
+       
 
         <div class="control"> 
             
@@ -332,7 +330,7 @@
                     <p>{$musicList[currentSongIndex].artist}</p>
                 </div>
 
-        <div class="control-dis"> 
+        <!-- <div class="control-dis"> 
             
             <div class="prev">
                 <i type="button" on:click={prev}>
@@ -356,9 +354,9 @@
                 </i>
             </div>
         
-        </div>
+        </div> -->
             
-    </footer>
+    </div>
 	<!-- <BottomPlayer 
         beatnam={$musicList[currentSongIndex].name}
         beatavata={"./image/"+$musicList[currentSongIndex].image}
@@ -864,14 +862,13 @@ svg:not(:root) {
 }
 
 
-footer{
+.footer{
         display: flex;
         align-items: center;
         justify-content: space-between;
         bottom: 0;
         position: fixed;
         margin: 0 auto;
-        overflow: hidden;
         width: 100%;
         background: var(--footer-bg);
         align-items: center;
@@ -886,18 +883,20 @@ footer{
     }
 
     .beattitle{
+		position: fixed, absolute;
         display: flex;
         justify-content: center;
         flex-direction: column;
         line-height: 0;
-        grid-area: "img";
         overflow: hidden;
         text-overflow: ellipsis;
         white-space: nowrap	;
         flex-wrap: nowrap;
-        max-width: 80%;
+        max-width: 100%;
         text-align: center;
 		font-weight: 550;
+		margin: auto;
+		margin-right: 42%;
     }
 
     .prev,
@@ -924,7 +923,7 @@ footer{
     }
     .control-dis{
         display: flex;
-        visibility: hidden;
+        opacity: 0;
         align-items: center;
         padding-left: 20px;
     }
@@ -1074,7 +1073,7 @@ footer{
 		justify-content: flex-start;
 	}
 
-	footer{
+	.footer{
         display: flex;
         justify-content: space-evenly;
     }
@@ -1085,7 +1084,20 @@ footer{
     .beattitle{
         display:flex;
         justify-content: flex-start;
-		max-width: 45%;
+		position: fixed, absolute;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        line-height: 0;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap	;
+        flex-wrap: nowrap;
+        max-width: 80%;
+        text-align: center;
+		font-weight: 550;
+		margin: auto;
+		margin-right: 48.3%;
     }
 
 	.app-content-p {
