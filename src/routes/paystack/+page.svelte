@@ -1,9 +1,10 @@
 <script>
   import { currentUser } from "$lib/pocketbase";
 
-    let paymentAmount = "500";
-    let firstName = "Hello";
-    let lastName = "Jerry";
+    let email = "";
+    let paymentAmount = "";
+    let firstName = "";
+    let lastName = "";
 
     /**@param {{ preventDefault: () => void; }} event*/
     
@@ -44,7 +45,7 @@
             function payWithPaystack(event) {
               event.preventDefault();
               // @ts-ignore
-              config.email = $currentUser.email;
+              config.email = $currentUser.email, email;
               // @ts-ignore
               config.amount = parseFloat(paymentAmount)*100;
         
@@ -59,15 +60,17 @@
 </svelte:head>
 
 <form id="paymentForm" on:submit|nonpassive={payWithPaystack}>
-  {#if $currentUser}
-    
+  
   
   <div class="form-group">
-  
-      <label for="email">Email Address</label>
-  
+    
+    <label for="email">Email Address</label>
+    
+    {#if $currentUser}
       <input type="email" id="email-address" bind:value={$currentUser.email} required />
-      
+      {:else}
+      <input type="email" id="email-address" bind:value={email} required />
+    {/if}
     </div>
     
     <div class="form-group">
@@ -99,8 +102,8 @@
       <button type="submit"> Pay </button>
       
     </div>
-    
-    {/if}
+  
+      
   </form>
   
   
