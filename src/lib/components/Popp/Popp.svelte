@@ -13,15 +13,16 @@
 	export let beatbpm ="";
 	export let beatkey ="";
 
-	let email = "";
+	let email = "cherrydeeonthebeat@gmail.com";
 	let paymentAmount =""
     
 
 	let config ={
 		key: "pk_test_803a6685b209a0bf43f351743cd9134bf1f36b9f",
-		email: "",
+		email: "cherrydeeonthebeat@gmail.com",
 		product: beatname,
 		amount: 0 * 100,
+		currency: "USD",
 		ref: '' + Math.floor(Math.random() * 100000000 + 1),
 		onClose: function()	{
 			alert('Window Closed');
@@ -81,7 +82,7 @@
 
 </script>
 <svelte:head>
-	<script scr="https://js.paystack.co/vl/inline.js"></script>
+	<script src="https://js.paystack.co/vl/inline.js"></script>
 </svelte:head>
 
 <div class="spacer"></div>
