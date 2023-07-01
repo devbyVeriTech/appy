@@ -61,49 +61,138 @@
 
 <form id="paymentForm" on:submit|nonpassive={payWithPaystack}>
   
-  
-  <div class="form-group">
-    
-    <label for="email">Email Address</label>
-    
-    {#if $currentUser}
-      <input type="email" id="email-address" bind:value={$currentUser.email} required />
-      {:else}
-      <input type="email" id="email-address" bind:value={email} required />
-    {/if}
-    </div>
-    
-    <div class="form-group">
+        
+      <!-- <label for="email">Email Address</label> -->
       
-      <label for="amount">Amount</label>
-  
-      <input type="tel" id="amount" bind:value={paymentAmount} required />
       
-    </div>
-    
-    <div class="form-group">
-  
-      <label for="first-name">First Name</label>
-  
-      <input type="text" id="first-name" bind:value={firstName} />
+      <div class="form">
+        <div class="fields">
+          <p class={email ? 'above' : 'center'}>YOUR EMAIL</p>
+          {#if $currentUser}
+          <input bind:value={$currentUser.email} type="email" name="name" id="email-address" placeholder="YOUR EMAIL">
+          {:else}
+            <input bind:value={email} type="email" name="name" id="email-address" placeholder="YOUR EMAIL">
+          {/if}
+      </div>
+
+      <div class="fields">
+          <p class={paymentAmount ? 'above' : 'center'}>AMOUNT</p>
+          <input bind:value={paymentAmount} type="tel" name="paymentAmount" id="amount" placeholder="AMOUNT">
+      </div>
       
-    </div>
-    
-    <div class="form-group">
-  
-      <label for="last-name">Last Name</label>
-  
-      <input type="text" id="last-name" bind:value={lastName} />
-  
-    </div>
-  
-    <div class="form-submit">
-  
-      <button type="submit"> Pay </button>
-      
-    </div>
+      <div class="fields">
+          <p class={firstName ? 'above' : 'center'}>FIRST NAME</p>
+          <input bind:value={firstName} type="text" name="firstName" id="first-name" placeholder="FIRST NAME">
+      </div>
+
+      <div class="fields">                        
+          <p class={lastName ? 'above' : 'center'}>LAST NAME</p>
+          <input bind:value={lastName} type="text" name="lastName" id="last-name" placeholder="LAST NAME">
+      </div>
+      <div class="button">
+        <button type="submit"> Pay </button>
+      </div>
+  </div>
   
       
   </form>
   
-  
+  <style>
+
+form{
+  padding-inline: 20px;
+}
+
+.above,
+.center{
+    /* position: absolute; */
+    transform: translateY(10%);
+    pointer-events: none;
+    transition: 0.3s ease;
+}
+
+.above{
+    top: 50;
+    left: 10px;
+    padding: 0 2px;
+
+}
+
+.center{
+    top: 50%;
+    left: 6px;
+    opacity: 0;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    padding: 0px 10px;
+    justify-content: center;
+    margin: auto;
+    
+}
+.form p{
+    font-size: 10px;
+    font-weight: 600;
+}
+
+
+.page-title{
+    display: flex;
+    justify-content: center;
+}
+.page-title h1{
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.button{
+    padding-top: 55px;
+    display: flex;
+    justify-content: flex-end;
+}
+.button button{
+    height: 52px;
+    font-size: 15px;
+    padding: 15px;
+    font-weight: 700;
+    font-family: inherit;
+    outline: none;
+    cursor: pointer;
+    border: none;
+    border-radius: 0.3rem;
+    background: var(--primary-button);
+    color: #fff;
+}
+
+.fields{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+input{
+    display: block;
+    background: transparent;
+    border: none;
+    border-bottom: .14em solid #3f2755;
+    outline: none;
+    color: var(--primary-text);
+    font-family: 'Poppins', sans-serif; 
+    transition: 0.5s ease;
+}
+
+input:focus{
+  border-bottom: .14em solid var(--primary-text);
+}
+
+input::placeholder{
+    color: var(--primary-text);
+    font-size: 12px;
+    font-weight: 600;
+    transition: 0.5s ease;
+}
+
+  </style>
