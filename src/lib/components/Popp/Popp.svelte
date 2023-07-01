@@ -1,11 +1,7 @@
 <script lang="ts">
-	import {onMount} from "svelte";
 	import { licenses } from "../licenses";
 	import {currentUser} from '$lib/pocketbase'
 
-
-
-	let playerState = "pause";
 	let mainElement;
 	
 
@@ -15,8 +11,8 @@
 	export let beatbpm ="";
 	export let beatkey ="";
 
-	let email = "cherrydee@gmail.com";
-	let price =""
+	let email = "help@gmail.com";
+	let paymentAmount ="30000";
     
 
     /**@param {{ preventDefault: () => void; }} event*/
@@ -35,6 +31,7 @@
 		onClose: function()	{
 			alert('Window Closed');
 		},
+		// @ts-ignore
 
 		callback: function(/** @type {{reference :string; }} */ response){
 
@@ -49,11 +46,13 @@
 
 	/** @param {{ preventDefault: () => void; }} event*/
 	
+			// @ts-ignore
+
 	function payWithPaystack(event){
 		event.preventDefault();
 		config.email = email;
 		// @ts-ignore
-		config.amount = parseFloat(price)*100;
+		config.amount = parseFloat(paymentAmount)*100;
 		// @ts-ignore
 		let handler = PaystackPop.setup(config);
 		handler.openIframe()
@@ -132,7 +131,7 @@
 										</label>
 										<input type="email" name="email" id="email-address" bind:value={email} hidden>
 										<label for="price">
-												<input type="tel" bind:value={price} name="paymentAmount" id="amount" hidden>
+												<input type="tel" bind:value={paymentAmount} name="paymentAmount" id="amount" hidden>
 											</label>
 											<div class="buy-btn">
 												<button type="submit" class="purchase-btn"> <div class="price"> ₦ {price}</div></button>

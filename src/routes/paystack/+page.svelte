@@ -138,16 +138,6 @@ form{
     font-weight: 600;
 }
 
-
-.page-title{
-    display: flex;
-    justify-content: center;
-}
-.page-title h1{
-    font-size: 25px;
-    font-weight: 700;
-}
-
 .button{
     padding-top: 55px;
     display: flex;
