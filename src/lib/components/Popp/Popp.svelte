@@ -6,9 +6,7 @@
 
 
 	let playerState = "pause";
-	let usageterms;
 	let mainElement;
-	let triggerbtn = "closed";
 	
 
 	export let beatavatar ="";
@@ -18,36 +16,44 @@
 	export let beatkey ="";
 
 	let email = "cherrydee@gmail.com";
-	let paymentAmount ="5000"
+	let price =""
     
+
+    /**@param {{ preventDefault: () => void; }} event*/
 
 	let config ={
 		key: "pk_test_803a6685b209a0bf43f351743cd9134bf1f36b9f",
-		email: "cherrydee@gmail.com",
-		product: beatname,
-		currency: "NGN",
-		ref: '' + Math.floor(Math.random() * 100000000 + 1),
+
+		email: '',
+
+		amount: '',
+
+		currency: 'NGN',
+
+		ref: ''+Math.floor(Math.random() * 100000000 + 1),
+
 		onClose: function()	{
 			alert('Window Closed');
 		},
 
-		callback: function(/**@type {{reference:string}}*/ response){
-			let message = 'Payment complete! Reference: ' + response.reference;
+		callback: function(/** @type {{reference :string; }} */ response){
 
-			alert(message);
+		let message = 'Payment complete! Reference: ' + response.reference;
+
+		alert(message);
+
 		}
 	};
 	
 
 
-	/**
-   * @param {{ preventDefault: () => void; }} event
-   */
+	/** @param {{ preventDefault: () => void; }} event*/
+	
 	function payWithPaystack(event){
 		event.preventDefault();
 		config.email = email;
 		// @ts-ignore
-		config.amount = parseFloat (paymentAmount) *100;
+		config.amount = parseFloat(price)*100;
 		// @ts-ignore
 		let handler = PaystackPop.setup(config);
 		handler.openIframe()
@@ -57,26 +63,9 @@
 
 
 
-	onMount (function(){
+	// onMount (function(){
 
-	})
-
-	function triggerusage() {
-		if (triggerbtn == "open"){
-			triggerbtn = "close";
-			usageterms.close();
-		} else {
-			triggerbtn = "open";
-			usageterms.open();
-		}
-
-		if (playerState == "stop"){
-			playerState = "play";
-			audioElement.play();
-		} 
-	}
-
-	let current = "def";
+	// })
 
 </script>
 <svelte:head>
@@ -88,11 +77,11 @@
 <div class="spacer"></div>
     <div class="app-content-p">
             <main bind:this={mainElement}>
-				<form id="paymentForm" on:submit|nonpassive={payWithPaystack} method="POST">
+				<form id="paymentForm" on:submit|nonpassive={payWithPaystack}>
 						<div class="box resp-content-width">
 							<div class="boxx">
 								<div class="img">
-									<img class="svelte-1vm3yrq" src={beatavatar}>
+									<img class="svelte-1vm3yrq" src={beatavatar} alt="">
 								</div>
 								
 									<div class="meta-play">
@@ -125,34 +114,34 @@
 							<div class="info-bar"> </div>
 
 							<div class="license-container">
-								{#each $licenses as license}
+								{#each $licenses as {price, name, files}}
 									<div class="license">
 										<div class="license-name">
 											<label for="title" class="license-title">
-												{license.name}
-												<input type="text" value={license.name} hidden name="title" id="title">
+												{name}
+												<input type="text" value={name} hidden name="title" id="title">
 											</label>
 											<br>
 											<label for="files" class="files">
-												{license.files}
-												<input type="text" value={license.files} hidden name="files" id="files">
+												{files}
+												<input type="text" value={files} hidden name="files" id="files">
 											</label>
 										</div>
 
 										<label for="email">
 										</label>
-										<input type="email" name="email" id="email" bind:value={email} hidden>
-										<label for="paymentAmount">
-											<input type="text" bind:value={paymentAmount} name="paymentAmount" id="paymentAmount" hidden>
-										</label>
+										<input type="email" name="email" id="email-address" bind:value={email} hidden>
+										<label for="price">
+												<input type="tel" bind:value={price} name="paymentAmount" id="amount" hidden>
+											</label>
 											<div class="buy-btn">
-												<button type="submit" class="purchase-btn"><i class="fa fa-shopping-bag"></i> <div class="price">${license.price}.00</div></button>
+												<button type="submit" class="purchase-btn"> <div class="price"> ₦ {price}</div></button>
 											</div>
-										<div class="usage-trigger">
-
+											<div class="usage-trigger">
+												
+											</div>
 										</div>
-									</div>
-								{/each}
+										{/each}
 								
 							</div>
 
@@ -169,9 +158,6 @@
 
 <style>
 
-ul{
-	margin: 0;
-}
 
 .license-container{
 	display: flex;
@@ -248,11 +234,6 @@ button:hover{
 	list-style: circle;
 }
 
-
-.usage-trigger li, .usage-trigger ul{
-	list-style: circle;
-	margin: 0;
-}
 
 .bpm{
 	display: flex;

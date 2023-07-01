@@ -4,7 +4,7 @@ export const licenses = writable ([
 	{
 		name:"MP3 + WAV",
 		files:"MP3 and WAV",
-		price: "45",
+		price: "30000",
 		usage: 
 		[	
 			"Demo Only", 
@@ -19,14 +19,14 @@ export const licenses = writable ([
 	{
 		name:"Premium",
 		files:"MP3, WAV and TRACK STEMS",
-		price: "75",
+		price: "100000",
 		usage: 
 		[
 			"Commercial Use",
 			"Tagged once",
 			"Distribute to Digital platforms",
 			"Must credit (Prod. Cherrydee)",
-			"Up to 5000 monetized streams",
+			"Up to 50,000 monetized streams",
 			"Cherrydee maintains full ownership of the instrumental",
 		],
 	},
@@ -34,14 +34,14 @@ export const licenses = writable ([
 	{
 		name:"Exclusive",
 		files:"MP3, WAV and TRACK STEMS",
-		price: "200",
+		price: "250000",
 		usage: 
 		[
 			"Professional Use",
 			"Tagged once",
 			"Distribute to Digital platforms",
 			"Must credit (Prod. Cherrydee)",
-			"Up to 10000 monetized streams",
+			"Up to 100,000 monetized streams",
 			"Cherrydee maintains full ownership of the instrumental",
 		],
 	},
@@ -49,7 +49,7 @@ export const licenses = writable ([
 	{
 		name:"Unlimited",
 		files:"Everything ",
-		price: "1000",
+		price: "500000",
 		usage: ["Everything"],
 	},
 

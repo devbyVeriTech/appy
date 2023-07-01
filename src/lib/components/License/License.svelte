@@ -25,7 +25,7 @@
                     </div>
 
                     <div class="price">
-                        ${license.price}.00
+                        ₦{license.price}
                     </div>
 
                     <div class="usage">
