@@ -8,7 +8,7 @@
     import AiOutlinePhone from "svelte-icons-pack/ai/AiOutlinePhone"; 
     import VscPackage from "svelte-icons-pack/vsc/VscPackage";
     import { fly } from 'svelte/transition';
-    import Toggle from '../Toggle/Toggle.svelte';
+    import Toggle from '../Toggle/Mobile-Toggle.svelte';
     import { currentUser } from '$lib/pocketbase';
 
 
@@ -47,7 +47,8 @@
                     </div>
 
                     <div class="toggle">
-                        <Toggle/>
+                        <Toggle
+                        size="1.24em"/>
                     </div>
                 </div>
             {/if}
