@@ -1,7 +1,8 @@
 <script>
     import './style.css'
     import Nav from '$lib/components/Nav/Nav.svelte';
-    import { fly } from 'svelte/transition';
+    import { fade } from 'svelte/transition';
+    import Toggle from "$lib/components/Toggle/Toggle.svelte";
 
 </script>
 
@@ -11,8 +12,7 @@
 
 <!-- <div class="space20"></div> -->
     <div class="conta"
-    in:fly={{x:-200, duration:400}}
-    out:fly={{x:200, duration:400}}>
+    transition:fade={{duration:100, delay:100}}>
         <div class="space20"></div>
         <slot/>
     </div>
@@ -21,10 +21,33 @@
     <div class="footer">
         <div class="spade"></div>
         
+        <div class="toggle">
+            <Toggle
+                size="2em"/>
+        </div>
         
     </div>
 </footer>                                                                                                                                                                                                                                         
 
 <style>
+    footer{
+        position: relative;
+    }
+
+    .toggle{
+		display: none;
+	}
+
+    @media (min-width:800px){
+        .toggle{
+            display: block;
+            position: fixed;
+            bottom: 0;
+            right: 0;
+            margin: 80px 60px;
+            z-index: 50;
+        }
+    }
+    
 
 </style>

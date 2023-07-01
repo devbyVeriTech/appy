@@ -46,6 +46,9 @@
                             <a href={link.url}>
                                 <div class="icons">
                                     <img src="./{link.image}" alt="" style="height: {link.size};"> 
+                                    <div class="social-name">
+                                        {link.name}
+                                    </div>
                                 </div>
                             </a>
                         {/each}
@@ -120,12 +123,21 @@ img{
 .icons{
     display: flex;
     align-items: center;
+    justify-content: space-between;
     background: #fff;
     flex-direction: row;
-    padding: 0px 10px;
+    padding: 0px 20px;
+    gap: 20px;
     margin-bottom: 10px;
+    border: 1px solid var(--form-border);
     border-radius: 4px;
     height:40px;
+}
+
+.social-name{
+    text-transform: uppercase;
+    font-size: 11px;
+    font-weight: 550;
 }
 
 .icons img{

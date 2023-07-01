@@ -89,7 +89,7 @@
 
 html {
     scrollbar-color: #3f2755 transparent;
-    scrollbar-width: thin;
+    scrollbar-width: none;
     scroll-behavior: smooth;
 	--Dark-base: #010102;
 	--Dim-base: #010102;

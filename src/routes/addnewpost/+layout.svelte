@@ -1,7 +1,7 @@
 <script>
     import '../style.css'
     import Nav from '$lib/components/Nav/Nav.svelte';
-    import { fly } from 'svelte/transition';
+    import { fade } from 'svelte/transition';
 
 
 
@@ -13,8 +13,7 @@
 
 <div class="space20"></div>
     <div class="conta"
-    in:fly={{x:-200, duration:400}}
-    out:fly={{x:200, duration:400}}>
+    transition:fade={{duration:100, delay:100}}>
         <div class="space20"></div>
         <slot/>
     </div>

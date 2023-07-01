@@ -3,7 +3,6 @@
 	import {musicList} from "$lib/components/musiclist.js"
 	import License from "$lib/components/License/License.svelte";
 	import BottomPlayer from "$lib/components/BottomPlayer/BottomPlayer.svelte";
-	import Toggle from "$lib/components/Toggle/Toggle.svelte";
   	import Popp from "$lib/components/Popp/Popp.svelte";
 	import Icon from 'svelte-icons-pack'
 	import IoBagAddOutline from "svelte-icons-pack/bs/BsBagPlus"; 
@@ -290,10 +289,7 @@
     </div>
 
 		
-	<div class="toggle">
-		<Toggle
-			size="2em"/>
-	</div>
+	
 
 
 	<div class="footer" bind:this={mainElement}>
@@ -369,9 +365,7 @@
 
 <style>
 
-	.toggle{
-		display: none;
-	}
+	
 
 	.radial{
 		position: absolute;
@@ -1167,14 +1161,6 @@ svg:not(:root) {
 		color: #fff;
 	}
 
-	.toggle{
-		display: block;
-		position: fixed;
-		bottom: 0;
-		right: 0;
-		margin: 80px 60px;
-		z-index: 50;
-	}
 }
 
 

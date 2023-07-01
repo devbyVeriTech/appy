@@ -1,7 +1,7 @@
 <script>
     import Nav from '$lib/components/Nav/Nav.svelte';
     import Footer from '../../lib/components/Footer/Footer.svelte';
-    import { fly } from 'svelte/transition';
+    import { fade } from 'svelte/transition';
 
 </script>
 
@@ -10,8 +10,7 @@
 </header>
 
     <div class="conta" 
-    in:fly={{x:-200, duration:300, delay:300}}
-    out:fly={{x:200, duration:300}}>
+    transition:fade={{duration:100, delay:100}}>
         <div class="spade"></div>
         <slot/>
     </div>
