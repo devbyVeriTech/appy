@@ -5,6 +5,10 @@
 
 
 
+	let playerState = "pause";
+	let usageterms;
+	let mainElement;
+	let triggerbtn = "closed";
 	
 
 	export let beatavatar ="";
@@ -13,15 +17,15 @@
 	export let beatbpm ="";
 	export let beatkey ="";
 
-	let email = "";
-	let paymentAmount =""
+	let email = "cherrydee@gmail.com";
+	let paymentAmount ="5000"
     
 
 	let config ={
 		key: "pk_test_803a6685b209a0bf43f351743cd9134bf1f36b9f",
-		email: "",
+		email: "cherrydee@gmail.com",
 		product: beatname,
-		amount: 0 * 100,
+		currency: "NGN",
 		ref: '' + Math.floor(Math.random() * 100000000 + 1),
 		onClose: function()	{
 			alert('Window Closed');
@@ -43,18 +47,13 @@
 		event.preventDefault();
 		config.email = email;
 		// @ts-ignore
-		config.amount = {paymentAmount} *100;
+		config.amount = parseFloat (paymentAmount) *100;
 		// @ts-ignore
 		let handler = PaystackPop.setup(config);
 		handler.openIframe()
 	}
 	
     
-	let playerState = "pause";
-	let usageterms;
-	let mainElement;
-	
-	let triggerbtn = "closed";
 
 
 
@@ -81,7 +80,7 @@
 
 </script>
 <svelte:head>
-	<script scr="https://js.paystack.co/vl/inline.js"></script>
+	<script src="https://js.paystack.co/vl/inline.js"></script>
 </svelte:head>
 
 <div class="spacer"></div>
@@ -90,7 +89,6 @@
     <div class="app-content-p">
             <main bind:this={mainElement}>
 				<form id="paymentForm" on:submit|nonpassive={payWithPaystack} method="POST">
-					{#if currentUser}						
 						<div class="box resp-content-width">
 							<div class="boxx">
 								<div class="img">
@@ -148,7 +146,7 @@
 											<input type="text" bind:value={paymentAmount} name="paymentAmount" id="paymentAmount" hidden>
 										</label>
 											<div class="buy-btn">
-												<button type="submit" class="purchase-btn" on:click={payWithPaystack}><i class="fa fa-shopping-bag"></i> <div class="price">${license.price}.00</div></button>
+												<button type="submit" class="purchase-btn"><i class="fa fa-shopping-bag"></i> <div class="price">${license.price}.00</div></button>
 											</div>
 										<div class="usage-trigger">
 
@@ -162,7 +160,6 @@
 				
 
 						</div>
-					{/if}
 				</form>
             </main>       
     </div>
