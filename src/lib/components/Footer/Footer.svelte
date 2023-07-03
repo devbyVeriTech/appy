@@ -8,7 +8,9 @@
     <div class="foot">
         <div class="layout">
             <div class="logo">
-                LOGO
+                <a href="/home">
+                    <img src="./cp.png" alt="Logo"> 
+                </a>
             </div>
             <div class="column1">
                 <li><a href="/home">Home</a></li>
@@ -68,6 +70,18 @@ section.footer {
     line-height: 2;
     background: var(--footer-bg);
     color: var(--primary-text);
+}
+
+.logo {
+	display: flex;
+}
+
+.logo img{
+	display: flex;
+	align-items: center;
+	aspect-ratio: 1/1;
+	width: 3em;
+	height: auto;
 }
 
 .copy{

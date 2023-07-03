@@ -3,7 +3,7 @@ const paymentForm = document.getElementById('paymentForm');
 paymentForm.addEventListener("submit", payWithPaystack, false);
 
 
-function payWithPaystack(e) {
+export function payWithPaystack(e) {
 
   e.preventDefault();
 
