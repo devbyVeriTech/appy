@@ -2,7 +2,7 @@
 	import { Modal, Content, Trigger}  from "sv-popup"
 
   import {onMount} from "svelte";
-	import {licenses} from "../licenses.js"
+	import {licenses} from "../licenses"
 
 	
 

@@ -29,7 +29,7 @@
 		ref: ''+Math.floor(Math.random() * 100000000 + 1),
 
 		onClose: function()	{
-			alert('Window Closed');
+			alert('Payment cancelled by you');
 		},
 		// @ts-ignore
 
@@ -48,15 +48,17 @@
 	
 			// @ts-ignore
 
-	function payWithPaystack(event){
-		event.preventDefault();
-		config.email = email;
-		// @ts-ignore
-		config.amount = parseFloat(paymentAmount)*100;
-		// @ts-ignore
-		let handler = PaystackPop.setup(config);
-		handler.openIframe()
-	}
+			function payWithPaystack(event) {
+              event.preventDefault();
+              // @ts-ignore
+              config.email = email;
+              // @ts-ignore
+              config.amount = parseFloat(paymentAmount)*100;
+        
+              // @ts-ignore
+              let handler = PaystackPop.setup(config);
+              handler.openIframe();
+            };
 	
     
 
@@ -76,9 +78,8 @@
 <div class="spacer"></div>
     <div class="app-content-p">
             <main bind:this={mainElement}>
-				<form id="paymentForm" on:submit|nonpassive={payWithPaystack}>
-						<div class="box resp-content-width">
-							<div class="boxx">
+				<div class="box resp-content-width">
+					<div class="boxx">
 								<div class="img">
 									<img class="svelte-1vm3yrq" src={beatavatar} alt="">
 								</div>
@@ -107,31 +108,32 @@
 												</small>
 											</div>
 											<!-- </em> -->
-									</div>
-							</div>
-
-							<div class="info-bar"> </div>
-
-							<div class="license-container">
-								{#each $licenses as {price, name, files}}
-									<div class="license">
-										<div class="license-name">
-											<label for="title" class="license-title">
-												{name}
-												<input type="text" value={name} hidden name="title" id="title">
-											</label>
-											<br>
-											<label for="files" class="files">
-												{files}
-												<input type="text" value={files} hidden name="files" id="files">
-											</label>
 										</div>
+									</div>
+									
+									<div class="info-bar"> </div>
+									
+								<div class="license-container">
+								{#each $licenses as {price, name, files}}
+									<form id="paymentForm" on:submit|nonpassive={payWithPaystack}>
+										<div class="license">
+											<div class="license-name">
+												<label for="title" class="license-title">
+													{name}
+													<input type="text" value={name} hidden name="title" id="title">
+												</label>
+												<br>
+												<label for="files" class="files">
+													{files}
+													<input type="text" value={files} hidden name="files" id="files">
+												</label>
+											</div>
 
-										<label for="email">
-										</label>
-										<input type="email" name="email" id="email-address" bind:value={email} hidden>
-										<label for="price">
-												<input type="tel" bind:value={paymentAmount} name="paymentAmount" id="amount" hidden>
+											<label for="email">
+											</label>
+											<input type="email" name="email" id="email-address" bind:value={email} hidden>
+											<label for="price">
+													<input type="tel" bind:value={paymentAmount} name="paymentAmount" id="amount" hidden>
 											</label>
 											<div class="buy-btn">
 												<button type="submit" class="purchase-btn"> <div class="price"> ₦ {price}</div></button>
@@ -140,7 +142,8 @@
 												
 											</div>
 										</div>
-										{/each}
+									</form>
+								{/each}
 								
 							</div>
 
@@ -148,7 +151,6 @@
 				
 
 						</div>
-				</form>
             </main>       
     </div>
 
