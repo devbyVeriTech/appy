@@ -50,7 +50,16 @@ export const licenses = writable ([
 		name:"Unlimited",
 		files:"Everything ",
 		price: "500000",
-		usage: ["Everything"],
+		usage: 
+		[
+			"Professional Use",
+			"Tagged once",
+			"Distribute to Digital platforms",
+			"Must credit (Prod. Cherrydee)",
+			"Unlimited monetized streams",
+			"Unlimited music video",
+			"You have the full ownership of the instrumental"
+		],
 	},
 
 ]
