@@ -74,13 +74,13 @@ section.footer {
 
 .logo {
 	display: flex;
+    aspect-ratio: 1/1;
 }
 
 .logo img{
 	display: flex;
 	align-items: center;
-	aspect-ratio: 1/1;
-	width: 3em;
+	width: 2.1em;
 	height: auto;
 }
 
