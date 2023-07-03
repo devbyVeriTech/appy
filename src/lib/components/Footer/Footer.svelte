@@ -75,6 +75,7 @@ section.footer {
 .logo {
 	display: flex;
     aspect-ratio: 1/1;
+    padding-block: 5px;
 }
 
 .logo img{
