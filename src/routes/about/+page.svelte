@@ -138,6 +138,7 @@ img{
     text-transform: uppercase;
     font-size: 11px;
     font-weight: 550;
+    color: var(--color-bg-purple);
 }
 
 .icons img{

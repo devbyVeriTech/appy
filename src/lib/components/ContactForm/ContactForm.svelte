@@ -1,4 +1,6 @@
 <script>
+    import { applyAction, enhance } from "$app/forms";
+    import {pb} from '$lib/pocketbase'
     export let title = "Contact";
     let name = "";
     let email =""
@@ -13,7 +15,7 @@
                     </h1>
                 </div>
 
-                <form action="">
+                <form>
                     <div class="form">
                         <div class="fields">
                             <p class={name ? 'above' : 'center'}>YOUR NAME</p>
