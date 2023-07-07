@@ -2,6 +2,8 @@
     import Icon from "svelte-icons-pack";
     import FaBrandsYoutube from "svelte-icons-pack/fa/FaBrandsYoutube";
     import FaBrandsInstagram from "svelte-icons-pack/fa/FaBrandsInstagram";
+    import Policy from "../Policy/Policy.svelte";
+	import { Modal, Content, Trigger}  from "sv-popup"
 </script>
 
 <section class="footer">
@@ -27,7 +29,17 @@
             <div class="column3">
                 <li><a href="/licensing-info">Licensing Info</a></li>
                 <!-- <li><a href="/terms">Terms of use</a></li> -->
-                <li><a href="/privacy-policy">Privacy policy</a></li>
+                <Modal>
+                    <Content>
+                        <div class="modal-back">
+                            <Policy/>
+                        </div>
+                    </Content>
+                    <Trigger>
+                        Privacy policy
+                    </Trigger>
+                </Modal>
+                <!-- <li><a href="/privacy-policy">Privacy policy</a></li> -->
             </div>
 
             <div class="lib">
@@ -67,9 +79,20 @@ section.footer {
     border-top: 0.01em solid var(--lt-color-border-darker);
     font-size: 12px;
     letter-spacing: .2px;
+    position: relative;
     line-height: 2;
     background: var(--footer-bg);
     color: var(--primary-text);
+}
+
+.modal-back{
+
+    background: var(--base-bg);
+    border: var(--bg-color) 1px solid;
+    border-radius: 8px;
+    padding: 20px;
+    overflow-y: scroll;
+    height: 800px;
 }
 
 .logo {

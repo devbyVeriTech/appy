@@ -1,6 +1,4 @@
 <script>
-    import FaTimesCircle from "svelte-icons-pack/fa/FaTimesCircle";
-    import Icon from "svelte-icons-pack";
     let title = "Privacy Policy";
 </script>
 
@@ -16,9 +14,6 @@
             Privacy Policy
         </div>
 
-        <div class="close" onclick="history.back()">
-            <Icon src={FaTimesCircle} color='var(--primary-text)' size='1.4em'/>
-        </div>
     </div>
 
     <div class="space20"></div>
@@ -407,5 +402,8 @@
         margin-top: 30px;
         line-height: 0;
     }
+
+
+
 
 </style>
