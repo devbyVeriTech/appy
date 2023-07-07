@@ -1,23 +1,26 @@
 <script>
 	import {onMount} from "svelte";
 	import {musicList} from "$lib/components/musiclist.js"
+	import License from "$lib/components/License/License.svelte";
 	import BottomPlayer from "$lib/components/BottomPlayer/BottomPlayer.svelte";
   	import Popp from "$lib/components/Popp/Popp.svelte";
-	import License from "$lib/components/License/License.svelte";
 	import Icon from 'svelte-icons-pack'
-	import IoEllipsisVertical from "svelte-icons-pack/io/IoEllipsisVertical"; 
 	import IoBagAddOutline from "svelte-icons-pack/bs/BsBagPlus"; 
-	import FaTimesCircle from "svelte-icons-pack/fa/FaTimesCircle";
+	import IoEllipsisVertical from "svelte-icons-pack/io/IoEllipsisVertical"; 
+	import { fly } from "svelte/transition";
+	import Radial from "$lib/components/Radial/design.svelte"
 	import BsPlayCircleFill from "svelte-icons-pack/bs/BsPlayCircleFill";
 	import BsPauseCircleFill from "svelte-icons-pack/bs/BsPauseCircleFill";
 	import FaSolidStepBackward from "svelte-icons-pack/fa/FaSolidStepBackward";
     import FaSolidStepForward from "svelte-icons-pack/fa/FaSolidStepForward";
 
-	
+
+
 
 
 	import { Modal, Content, Trigger}  from "sv-popup"
 	import Purchase from "$lib/components/Purchase/Purchase.svelte"
+  import ContactForm from "$lib/components/ContactForm/ContactForm.svelte";
 
 
 	// import store from "../components/store/store"
@@ -26,31 +29,19 @@
 	
     
 	let currentSongIndex = 0;
-	let playerState = "pause";
-	let audioElement;
-	let mainElement;
+	let playerState ="pause";
+	let audioElement ;
+	let mainElement ;
 
 	onMount (function(){
 
 	})
-
 
 	function setSong(i){
 		currentSongIndex = i;
 		playerState = "play";
 	}
 
-
-	function openForm(){
-		document.getElementById("myForm").style.display = "block";
-		document.getElementById("list").style.display = "none";
-
-	}
-	function closeForm(){
-		document.getElementById("myForm").style.display = "none";
-		document.getElementById("list").style.display = "contents";
-	}
-	
 
 	function playpause() {
 		if (playerState == "play"){
@@ -60,7 +51,6 @@
 			playerState = "play";
 			audioElement.play();
 		}
-
 	}
 
 	
@@ -77,6 +67,8 @@
 			playerState = "play";
 	}
 
+
+
 </script>
 <svelte:head>
 	<title>
@@ -87,19 +79,23 @@
 <div class="nospacer"></div>
     <div class="app-content-p">
         <div class="app-transition-wrapper"></div> 
-            <main bind:this={mainElement}>
+            <main bind:this={mainElement} >
 				<audio src={"./audio/"+$musicList[currentSongIndex].audio}
-				bind:this={audioElement}></audio>
-                <div class="box resp-content-width">
-
-					<div class="here">
-					<div class="boxx">
-						<div class="img">
-							<img class="svelte-1vm3yrq" src={"./image/"+$musicList[currentSongIndex].image} alt="{$musicList[currentSongIndex].name}">
+					bind:this={audioElement} autoplay="false">
+				</audio>
+                <div class="boxxx resp-content-width">
+						
+						<div class="boxx">
+							<div 
+							class="img" 
+								in:fly={{x:-200, duration:300, delay:300}}
+								out:fly={{x:200, duration:300}}>
+								<img class="svelte-1vm3yrq" src={"./image/"+$musicList[currentSongIndex].image} alt="{$musicList[currentSongIndex].name}">
 						</div>
 						
 					<div class="meta-play">
 						<div class="metadata">
+							<div class="space20"></div>
 							<span class="secondary subtitle-group">
 								<small class="subtitle">
 									<div class="genre">
@@ -116,7 +112,7 @@
                     
 							<div class="button-group">
 								{#each $musicList[currentSongIndex].tag as tag}
-								<button type="button" class="button outlined tag-btn" on:click={() => setSelectedTags(tag)}>
+								<button type="button" class="button outlined tag-btn">
 										{tag}
 									</button>
 									{/each}
@@ -127,46 +123,57 @@
 								</button>
 								
 							</div>
-							
+						
 							<div class="spacer"></div>
 
 							<div class="button-group">
 								<Modal>
 									<Content>
-									  <Purchase 
-									  			beatname={$musicList[currentSongIndex].name}
+										<div class="modal-back">
+											<div class="hea">
+												<slot name="header">Licenses</slot>
+											</div>
+											<Popp 
+												beatname={$musicList[currentSongIndex].name}
 												beatavatar={"./image/"+$musicList[currentSongIndex].image}
 												beatbpm={$musicList[currentSongIndex].bpm}
 												beatkey={$musicList[currentSongIndex].key}
 												beatgenre={$musicList[currentSongIndex].genre}/>
+												
+										</div>
 									</Content>
 									  
 									<Trigger>
 									  <button class="pay-button">
-										<Icon src={IoBagAddOutline} size='1.3em' color='white' />
+										<Icon src={IoBagAddOutline} size='1.2em' color='white' />
 										  $45.00
 									  </button>
 									</Trigger>
-								</Modal>
+								  </Modal>
 										<button type="button" class="pay-button">
 											<Icon src={IoEllipsisVertical} size='1.2em' color='white' />
 										</button>
 
-							</div>
+									</div>
 
-							
-						</div>
-						<!-- <div class="wave">
+								</div>
+								<!-- <div class="wave">
 
-						</div> -->
-					</div>
+								</div> -->
+				</div>
 
-			</div>
-
-
+				<div class="radial">
+					<Radial/>
+				</div>
 
 				
-
+				<!-- <div id="d3-bg-overlay">
+					<div id="d3-bg-overlay-visualizer"></div>
+					<div id="d3Container" playlist-control="reinitializeVisualizer" class="ng-isolate-scope">
+						<canvas id="visualizerCanvas" width="790" height="90"></canvas>
+					</div>
+				</div> -->
+				
 
 
                     <div class="info-bar">
@@ -201,40 +208,130 @@
                                     </div>
                                 </div>
 
+								<div class="time">
+									2:53
+								</div>
+
+								<div class="bpehm">
+									{music.bpm}
+								</div>
+
+								<div class="taggg">
+									{#each music.tag as tagg}
+										<button type="button" class="button outlined tag-btn">
+											{tagg}
+										</button>
+									{/each}
+								</div>
+
                             <div class="length">
                                 <div class="d-button" role="button" aria-label="menu" tabindex="0">
-									<div class="open-button btnpad" on:click={openForm} on:keydown>
-										<Icon src={IoBagAddOutline} size='1.3em' color='white' className="custom" />
-									</div>
-									<div class="form-popup" id="myForm">
-										<div class="pop">
-											<div class="close" on:click={closeForm}>
-												<Icon src={FaTimesCircle} color='white' size='1.4em' className='iconnn'/>
-											</div>
-											<Popp 
-												beatname={$musicList[currentSongIndex].name}
-												beatavatar={"./image/"+$musicList[currentSongIndex].image}
-												beatbpm={$musicList[currentSongIndex].bpm}
-												beatkey={$musicList[currentSongIndex].key}
-												beatgenre={$musicList[currentSongIndex].genre}/>
-										</div>
-									</div>
+											<Modal>
+												<Content>
+													<div class="modal-back">
+														<div class="hea">
+															<slot name="header">Licenses</slot>
+														</div>
+														<Popp 
+															beatname={$musicList[currentSongIndex].name}
+															beatavatar={"./image/"+$musicList[currentSongIndex].image}
+															beatbpm={$musicList[currentSongIndex].bpm}
+															beatkey={$musicList[currentSongIndex].key}
+															beatgenre={$musicList[currentSongIndex].genre}/>
+															
+													</div>
+												</Content>
+												  
+												<Trigger>
+													<div class="open-button btnpad" >
+														<Icon src={IoBagAddOutline} size='1.2em' color='white' className="custom" />
+				
+														<div class="buy-wide">
+															$45.00
+														</div> 
+													</div>
+												</Trigger>
+											</Modal>
                                 </div>
                             </div>
 
                             </div>
-						
+
+
+							
                         </article>
                     </div>
 				</div>
 				<div class="divider"></div>
 				{/each}
-
-
-
-
-                </div>
+				
             </main>       
+    </div>
+
+		
+	
+
+
+	<div class="footer" bind:this={mainElement}>
+       
+
+        <div class="control"> 
+            
+            <div class="prev">
+                <i type="button" on:click={prev}>
+                    <Icon src={FaSolidStepBackward} color='var(--primary-text)'/>
+                </i>
+            </div>
+
+            <div class="playpause">
+                <i type="button" on:click={playpause}>
+                    {#if playerState=="play"}
+                        <Icon src={BsPauseCircleFill} size='1.6em' color='var(--primary-text)'/>                        
+                    {:else}
+                        <Icon src={BsPlayCircleFill} size='1.6em' color='var(--primary-text)'/>                        
+                    {/if}
+                </i>
+            </div>
+
+            <div class="next">
+                <i type="button" on:click={next}>
+                    <Icon src={FaSolidStepForward} color='var(--primary-text)'/>
+                </i>
+            </div>
+
+        </div>
+
+                <div class="beattitle">
+                    <h3>{$musicList[currentSongIndex].name}</h3>
+                    <p>{$musicList[currentSongIndex].artist}</p>
+                </div>
+
+        <!-- <div class="control-dis"> 
+            
+            <div class="prev">
+                <i type="button" on:click={prev}>
+                    <Icon src={FaSolidStepBackward} color='var(--primary-text)'/>
+                        </i>
+            </div>
+        
+            <div class="playpause">
+                <i type="button" on:click={playpausestop}>
+                    {#if playerState=="play"}
+                        <Icon src={BsPauseCircleFill} size='1.6em' color='var(--primary-text)'/>                        
+                    {:else}
+                        <Icon src={BsPlayCircleFill} size='1.6em' color='var(--primary-text)'/>                        
+                    {/if}
+                </i>
+            </div>
+        
+            <div class="next">
+                <i type="button" on:click={next}>
+                    <Icon src={FaSolidStepForward} color='var(--primary-text)' />
+                </i>
+            </div>
+        
+        </div> -->
+            
     </div>
 	<!-- <BottomPlayer 
         beatnam={$musicList[currentSongIndex].name}
@@ -242,86 +339,64 @@
         producer={$musicList[currentSongIndex].artist}
 		prev={prev}
 		next={next}
-		playpausestop={playpausestop}
-		play="fa fa-play-circle fa-xl"
-		pause="fa fa-pause"/> -->
-
-		<footer bind:this={mainElement}>
-			<!-- <audio src={"./audio/"+$musicList[currentSongIndex].audio}
-			bind:this={audioElement}
-			></audio> -->
-	
-			<div class="control"> 
-				
-				<div class="prev">
-					<i type="button" on:click={prev}>
-						<Icon src={FaSolidStepBackward} color='white'/>
-					</i>
-				</div>
-	
-				<div class="playpause">
-					<i type="button" on:click={playpause}>
-						{#if playerState=="play"}
-							<Icon src={BsPauseCircleFill} size='1.6em' />                        
-						{:else}
-							<Icon src={BsPlayCircleFill} size='1.6em' />                        
-						{/if}
-					</i>
-				</div>
-	
-				<div class="next">
-					<i type="button" on:click={next}>
-						<Icon src={FaSolidStepForward} color='white' />
-					</i>
-				</div>
-	
-			</div>
-	
-					<div class="beattitle">
-						<h3>{$musicList[currentSongIndex].name}</h3>
-						<p>{$musicList[currentSongIndex].artist}</p>
-					</div>
-	
-			<div class="control-dis"> 
-				
-				<div class="prev">
-					<i type="button" on:click={prev}>
-						<Icon src={FaSolidStepBackward} color='white'/>
-							</i>
-				</div>
-			
-				<div class="playpause">
-					<i type="button" on:click={playpause}>
-						{#if playerState=="play"}
-							<Icon src={BsPauseCircleFill} size='1.6em' />                        
-						{:else}
-							<Icon src={BsPlayCircleFill} size='1.6em' />                        
-						{/if}
-					</i>
-				</div>
-			
-				<div class="next">
-					<i type="button" on:click={next}>
-						<Icon src={FaSolidStepForward} color='white' />
-					</i>
-				</div>
-			
-			</div>
-				
-		</footer>
+		playpause={playpause}
+		playbtn={BsPlayCircleFill}
+		pausebtn={BsPauseCircleFill}/> -->
 
 <style>
+
+	
+
+	.radial{
+		position: absolute;
+		z-index: -10;
+		width: 95%;
+		max-width: 95%;
+		height: 100%;
+		z-index: -1;
+	}
+
+	.modal-back{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		background: var(--base-bg);
+		border: var(--bg-color) 1px solid;
+		border-radius: 8px;
+		padding: 20px;
+	}
+
+	.hea{
+		display: flex;
+		width: 100%;
+		justify-content: center;
+		padding: 30px 0px 0px;
+		font-size: 1.5em;
+		font-weight: 600;
+	}
+	:global(.iconnn){
+		cursor: pointer;
+		color: var(--primary-button);
+	}
 	
 	audio {
 		display: none;
 }
 
-:global(.custom) {
-  }
+
+.wave{
+	padding: 40px 0px;
+	height: 50px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: auto;
+}
 
 .tag-btn{
 	display: flex;
 	max-width: 90px;
+	padding-inline: 10px;
 	white-space: nowrap;
 	justify-content: flex-start;
 	overflow: hidden;
@@ -329,49 +404,21 @@
 	
 }
 
-.close{
-	width: fit-content;
-	right: 20;
-	margin-right: 20;
-	margin-left: auto;
-	padding: 20px;
-}
-.close i{
-	right: 50px;
-}
-
-.pop{
-	background: var(--color-bg-purple);
-	width: max-content;
-}
-
-.form-popup{
-	inset: 0;
-	border-top: #f7f7f7 3px solid;
-	display: none;
-	position: fixed;
-	margin:0 auto;
-	top: 0;
-	bottom: 1;
-	right: 0px;
-	width: 100%;
-	z-index: 150;
-	
-}
 .nospacer{
 	margin-top: -150px;
 }
 
 .open-button{
 	display: flex;
-	color: #fff;
-	background: var(--yellow-button);
+	color: var(--primary-text);
+	background: var(--primary-button);
 	border-radius: 5px;
 	align-items: center;
 	height: fit-content;
 	width: fit-content;
 	justify-content: center;
 	border: none;
+	gap: 5px;
 }
 
 .btnpad{
@@ -419,7 +466,7 @@ button{
 	align-self: center;
 	gap: .875em;
 	grid-area: middle;
-	max-width: calc(100% - 3em);
+	/* max-width: calc(100% - 3em); */
     font-size: 0.8em;
 	
 }
@@ -466,14 +513,7 @@ button{
     font-size: 12px;
 }
 
-.wave{
-	padding: 40px 0px;
-	height: 50px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	margin: auto;
-}
+
 
 
 .thumbnail{
@@ -488,7 +528,7 @@ button{
 
 
 .thumbnail img {
-	aspect-ratio: 1/;
+	aspect-ratio: 1/1;
 	border-radius: var(--xs-radius);
 	height: 100%;
 	-o-object-fit: cover;
@@ -502,6 +542,7 @@ button{
 }
 
 .app-content-p {
+	position: relative;
 	display: grid;
 }
 
@@ -520,13 +561,17 @@ main {
 	transform: translateZ(0);
 }
 
-.box {
+.boxxx {
+	gap: .5rem 1rem;
+	grid-template-areas: "img img" "metadata metadata" "buttons buttons ";
+	grid-template-columns: 1fr;
+}
+
+.boxxx {
 	-webkit-margin-after: 1.3333em;
 	background-color: rgba(55,69,82,0);
-	/* border-color: #1f1f1f;
-	border-radius: .8em;
-	border-width: 1px; */
-	display: grid;
+	display: flex;
+	flex-direction: column;
 	gap: .5rem 1.25rem;
 	grid-template-areas: "img" "metadata" "buttons" "metaplay";
 	grid-template-columns: 1fr;
@@ -538,17 +583,22 @@ main {
 	width: auto;
 }
 
+.boxx{
+	display: flex;
+	flex-direction: column;
+}
+
 .resp-content-width {
 	margin: 0 auto;
 	max-width: calc(100vw - 2.25em) !important;
 }
 .img {
+	margin-inline: auto;
 	align-self: center;
 	aspect-ratio: 1/1;
 	grid-area: "img";
 	height: auto;
 	max-width: 16rem;
-	margin-inline: auto;
 	position: relative;
 	width: var(--width);
 }
@@ -564,6 +614,7 @@ main {
 	-o-object-fit: cover;
 	object-fit: cover;
 	width: 100%;
+	margin-inline: auto;
 }
 
 .metadata {
@@ -614,8 +665,8 @@ small{
 .genre{
 	display: flex;
 	justify-content: flex-start;
-    color:rgb(158, 158, 158);
-    font-size: 1.5em;
+    color: var(--primary-text);
+    font-size: 12px;
 	margin-bottom: 5px;
 	margin-top: -10px;
 }
@@ -631,10 +682,11 @@ small{
 	margin-top: 0rem;
 }
 
+
 .outlined{
     background: transparent;
     border: .15em solid var(--primary-text);
-    color: var(--primary-text);
+    color: inherit;
 }
 
 .button {
@@ -647,7 +699,7 @@ small{
 	font-weight: 500;
 	gap: .25em;
 	justify-content: center;
-	padding: .63125em 1.25em;
+	padding: .63125em 1em;
 	text-transform: capitalize;
 	transition: background 75ms linear,color 75ms linear;
 	-webkit-user-select: none;
@@ -657,13 +709,9 @@ small{
 	white-space: nowrap;
     width: fit-content;
 	height: 35px;
-
 }
 button{
 	cursor: pointer;
-}
-button i{
-    width: 20px;
 }
 
 /* element {
@@ -698,8 +746,6 @@ svg:not(:root) {
     font-size: 12px;
 }
 
-
-
 /* .info-bar .index {
 	display: none;
 	justify-self: center;
@@ -720,10 +766,15 @@ svg:not(:root) {
 .list {
 	max-width: inherit;
     justify-content: space-between;
-	border-bottom: 1px solid rgba(66,66,66,.425);
 	padding-bottom: 6px;
-
 }
+
+.list:not(:last-child){
+	border-bottom: 1px solid rgba(66,66,66,.425);
+	width: 100%;
+	margin: auto;
+}
+
 .m-item {
 	align-content: center;
 	cursor: pointer;
@@ -744,7 +795,7 @@ svg:not(:root) {
 	width: 100%;
 }
 .active .titleplay{
-	color: #f98903;
+	color: var(--tertiary-text);
 	align-items: center;
 	width: 100%;
 }
@@ -761,18 +812,18 @@ svg:not(:root) {
 }
 
 
-footer{
+.footer{
         display: flex;
         align-items: center;
         justify-content: space-between;
         bottom: 0;
         position: fixed;
         margin: 0 auto;
-        overflow: hidden;
         width: 100%;
-        background: var(--header-bg);
+        background: var(--footer-bg);
         align-items: center;
         padding: 5px;
+		z-index: 1;
         gap: 0px;
         box-shadow: 0px 0px 10px 1px var(--bg-color);
     }
@@ -782,19 +833,20 @@ footer{
     }
 
     .beattitle{
+		position: fixed, absolute;
         display: flex;
         justify-content: center;
         flex-direction: column;
         line-height: 0;
-        grid-area: "img";
         overflow: hidden;
         text-overflow: ellipsis;
         white-space: nowrap	;
         flex-wrap: nowrap;
-        max-width: 80%;
+        max-width: 100%;
         text-align: center;
-		font-weight: 600;
-		color: var(--primary-text);
+		font-weight: 550;
+		margin: auto;
+		margin-right: 42%;
     }
 
     .prev,
@@ -819,13 +871,45 @@ footer{
         align-items: center;
         padding-left: 20px;
     }
-    .control-dis{
-        display: flex;
-        visibility: hidden;
-        align-items: center;
-        padding-left: 20px;
-    }
 
+	.time , .bpehm, .taggg, .buy-wide{
+		display: none;
+	}
+
+	
+	/* #d3-bg-overlay {
+		position: absolute;
+		bottom: 0;
+		margin-inline: auto;
+		width: 100%;
+		height: 90px;
+		z-index: 9;
+		background: green;
+	}
+
+	#d3Container {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		width: 100%;
+		height: 100%;
+	}
+
+	#visualizerCanvas {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		margin: auto;
+		background: red;
+	}
+
+	.upper{
+		position:relative;
+		width: 100%;
+		padding-block: 100px;
+	} */
 
 /* .featured-artist{
 	color: var(--lt-color-gray-400);
@@ -842,13 +926,16 @@ footer{
 
 }
 
-@media screen and (max-width: 719px){
+@media screen and (max-width: 799px){
 .img {
 	align-self: center;
 	justify-self: center;
 }
 .boxx{
-	display: contents;
+	display: flex;
+	margin: auto;
+	align-items: center;
+	vertical-align: middle;
 }
 .metaplay{
 	display: contents;
@@ -856,20 +943,14 @@ footer{
 
 }
 
-@media (min-width: 720px){
+@media (min-width: 800px){
 	.boxx {
 		display: flex;
-		margin-left: 0;
-		margin-right: auto;
+		flex-direction: row;
+		margin: auto;
 		padding: 40px;
 		align-items: center;
 		vertical-align: middle;
-	}
-
-	.here{
-		display: flex;
-		align-items: center;
-		justify-content: center;
 	}
 
 	.box img{
@@ -893,23 +974,36 @@ footer{
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
-		padding-left: 60px;
+		padding-left: 30px;
+		margin-left: 0;
+		margin-right: auto;
 	}
 
 	.metaplay{
-		max-width: 1270px ;
-		display: contents;
+		display: flex;
+		position: relative;
+		align-items: center;
+		justify-content: space-between;
+		font-size: 15px;
+		font-weight: 600;
+		letter-spacing: .2px;
+		cursor: pointer;
+		overflow: hidden;
+		width: 100%;
+		/* background: red; */
+		
 	}
 
 	.metaplay .thumbnail{
 		left: 0;
 		margin-left: 0;
+		top: -2px;
 		margin-right: 5rem;
+		position: absolute;
 	}
 
 	.metaplay img{
 		width: 50px;
-		left: 50px;
 	}
 	
 	.secondary-subtitle{
@@ -923,7 +1017,7 @@ footer{
 		justify-content: flex-start;
 	}
 
-	footer{
+	.footer{
         display: flex;
         justify-content: space-evenly;
     }
@@ -934,15 +1028,89 @@ footer{
     .beattitle{
         display:flex;
         justify-content: flex-start;
-        margin: auto;
-
+		position: fixed, absolute;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        line-height: 0;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap	;
+        flex-wrap: nowrap;
+        max-width: 80%;
+        text-align: center;
+		font-weight: 550;
+		margin: auto;
+		margin-right: 48.3%;
     }
 
 	.app-content-p {
-		margin: auto;
-		display: grid;
-		max-width: 65%;
+		display: flex;
+		width: 100%;
+		max-width: clamp(20%, 65%, 100%);
+		margin-inline: auto;
+		justify-content: center;
 	}
+
+	.titleplay{
+		font-size: 1.2em;
+		display:flex;
+		flex: 1 1 100%;
+        justify-content: flex-start;
+		min-width: 45%;
+		padding-left: 60px;
+		padding-right: 25px;
+		/* border: 2px solid blue; */
+	}
+
+	.time {
+		display: flex;
+		margin-right: 50%;
+		margin: auto;
+		max-width: 10%;
+		min-width: 10%;
+		justify-content: center;
+		/* border: 2px solid green; */
+
+	} 
+	.bpehm{
+		display: flex;
+		max-width: 5%;
+		min-width: 5%;
+		padding: 10px;
+		/* border: 2px solid white; */
+
+	} 
+	.taggg{
+		display: flex;
+		max-width: 20%;
+		min-width: 20%;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		gap: 10px;
+		/* border: 2px solid yellow; */
+
+	}
+
+	.length{
+		display: flex;
+		justify-content: right;
+		max-width: 20%;
+		min-width: 20%;
+		/* border: 2px solid pink; */
+	}
+
+	.buy-wide{
+		display: contents;
+		color: #fff;
+	}
+
+	.list .button{
+		font: inherit;
+		background: var(--secondary-button); 
+		color: #fff;
+	}
+
 }
 
 

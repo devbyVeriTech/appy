@@ -101,6 +101,7 @@ let lastName = "";
 	width: 100dvw;
 	height:100vh;
 	height:100dvh;
+	top: 0;
 	position: fixed;
 	backdrop-filter: blur(1px) ;
 	overflow: hidden;
@@ -125,6 +126,7 @@ let lastName = "";
 img{
 	height: 100vh;
 	height: 100dvh;
+	top: 0;
 	width: 100dvw;
 	overflow: hidden;
 	scroll-behavior: smooth;
