@@ -92,7 +92,8 @@ section.footer {
     border-radius: 8px;
     padding: 20px;
     overflow-y: scroll;
-    height: 800px;
+    max-height: 800px;
+    height: 600px;
 }
 
 .logo {
@@ -175,6 +176,18 @@ a{
 
     .social{
         display: none;
+    }
+}
+
+@media (max-width:400px){
+    .modal-back{
+        background: var(--base-bg);
+        border: var(--bg-color) 1px solid;
+        border-radius: 8px;
+        padding: 20px;
+        overflow-y: scroll;
+        max-height: 400px;
+        height: 600px;
     }
 }
 </style>
