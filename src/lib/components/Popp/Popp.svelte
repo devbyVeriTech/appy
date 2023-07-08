@@ -1,6 +1,9 @@
 <script lang="ts">
 	import { licenses } from "../licenses";
 	import {currentUser} from '$lib/pocketbase'
+	import Popp2 from "./Popp2.svelte";
+  import Popp3 from "./Popp3.svelte";
+  import Popp4 from "./Popp4.svelte";
 
 	let mainElement;
 	
@@ -13,6 +16,8 @@
 
 	let email = "help@gmail.com";
 	let paymentAmount ="30000";
+	let files = "MP3 + WAV ";
+	let name = "MP3+ WAV";
     
 
     /**@param {{ preventDefault: () => void; }} event*/
@@ -114,7 +119,6 @@
 									<div class="info-bar"> </div>
 									
 								<div class="license-container">
-								{#each $licenses as {price, name, files}}
 									<form id="paymentForm" on:submit|nonpassive={payWithPaystack}>
 										<div class="license">
 											<div class="license-name">
@@ -136,15 +140,17 @@
 													<input type="tel" bind:value={paymentAmount} name="paymentAmount" id="amount" hidden>
 											</label>
 											<div class="buy-btn">
-												<button type="submit" class="purchase-btn"> <div class="price"> ₦ {price}</div></button>
+												<button type="submit" class="purchase-btn"> <div class="price"> ₦ {paymentAmount}</div></button>
 											</div>
 											<div class="usage-trigger">
 												
 											</div>
 										</div>
 									</form>
-								{/each}
-								
+									
+								<Popp2/>
+								<Popp3/>
+								<Popp4/>
 							</div>
 
 

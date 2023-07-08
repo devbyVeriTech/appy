@@ -93,11 +93,70 @@
         <button type="submit"> Pay </button>
       </div>
   </div>
+
+<!-- 
+  <div class="wad">
+
+    <div class="menu">
+      <button name="select" id="select" class="but">click
+      </button>
+      
+      <div class="pan">
+        <li>Heyloou</li>
+        <li>Heyloou</li>
+        <li>Heyloou</li>
+        <li>Heyloou</li>
+      </div>
+    </div>
+    <div class="menu">
+      <button name="select" id="select" class="but">click
+      </button>
+      
+      <div class="pan">
+        <a href="/let">Heyloou</a>
+        <a href="/let">Heyloou</a>
+        <a href="/let">Heyloou</a>
+        <a href="/let">Heyloou</a>
+      </div>
+    </div>
+  </div> -->
+
+
+
   
       
   </form>
   
   <style>
+
+    .wad{
+      display: flex;
+      gap: 300px;
+    }
+
+.menu{
+  position: relative;
+  
+}
+
+.pan{
+  position: absolute;
+  top: 100%;
+  opacity: 0;
+  border: 1px solid var(--form-border);
+  padding: 10px;
+  border-radius: 4px;
+  transform: translateY(-20px);
+  transition: opacity 150ms ease, transform 150ms ease;
+  pointer-events: none;
+  list-style: none;
+}
+
+.menu > .but:focus + .pan{
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
 
 form{
   padding-inline: 20px;
