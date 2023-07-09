@@ -1,5 +1,8 @@
 <script lang="ts">
 
+export let beatname ="";
+
+
 	let email = "help@gmail.com";
 	let paymentAmount ="100000";
 	let files = "MP3, WAV and TRACK STEMS";
@@ -9,7 +12,7 @@
     /**@param {{ preventDefault: () => void; }} event*/
 
 	let config ={
-		key: "pk_test_803a6685b209a0bf43f351743cd9134bf1f36b9f",
+		key: "pk_test_2c6e05db5ee1b8e9539815da0cd5b8840688dfb7",
 
 		email: '',
 
@@ -64,6 +67,7 @@
 								<div class="license-container">
 									<form id="paymentForm" on:submit|nonpassive={payWithPaystack}>
 										<div class="license">
+											<input bind:value={beatname} type="text" name="firstName" id="first-name" hidden>
 											<div class="license-name">
 												<label for="title" class="license-title">
 													{name}

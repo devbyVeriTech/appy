@@ -23,7 +23,7 @@
     /**@param {{ preventDefault: () => void; }} event*/
 
 	let config ={
-		key: "pk_test_803a6685b209a0bf43f351743cd9134bf1f36b9f",
+		key: "pk_test_2c6e05db5ee1b8e9539815da0cd5b8840688dfb7",
 
 		email: '',
 
@@ -93,7 +93,6 @@
 										<div class="metadata">
 											<div class="info-title">
 												<label for="beatname" class="box-title">{beatname}</label>
-												<input type="text" value={beatname} id="beatname" name="beatname" hidden>
 											</div>
 											<span class="secondary subtitle-group">
 											</span>
@@ -121,6 +120,7 @@
 								<div class="license-container">
 									<form id="paymentForm" on:submit|nonpassive={payWithPaystack}>
 										<div class="license">
+											<input bind:value={beatname} type="text" name="firstName" id="first-name" hidden>
 											<div class="license-name">
 												<label for="title" class="license-title">
 													{name}
@@ -148,9 +148,12 @@
 										</div>
 									</form>
 									
-								<Popp2/>
-								<Popp3/>
-								<Popp4/>
+								<Popp2
+									beatname={beatname}/>
+								<Popp3
+								beatname={beatname}/>
+								<Popp4
+								beatname={beatname}/>
 							</div>
 
 
