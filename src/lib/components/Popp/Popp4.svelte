@@ -11,7 +11,7 @@
     /**@param {{ preventDefault: () => void; }} event*/
 
 	let config ={
-		key: "pk_test_2c6e05db5ee1b8e9539815da0cd5b8840688dfb7",
+		key: "pk_live_b7466fca5b3e9d23c2ac77115b27ed3a8afdbadf",
 
 		email: '',
 

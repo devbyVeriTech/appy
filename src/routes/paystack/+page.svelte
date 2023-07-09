@@ -10,7 +10,7 @@
     
     let config = {
 
-        key: 'pk_test_803a6685b209a0bf43f351743cd9134bf1f36b9f',
+        key: 'pk_test_2c6e05db5ee1b8e9539815da0cd5b8840688dfb7',
 
         // key: 'pk_live_b72fee4b04840e6fe2ad223432ed22a49e32fb90',
 
